@@ -26,10 +26,10 @@ Viewers watch as the game automatically opens treasure chests in an endless loop
 
 | Rarity | Probability | Visual |
 |--------|-------------|--------|
-| Common | 60% | Green glow |
-| Rare | 30% | Blue glow |
-| Epic | 9% | Purple glow |
-| Legendary | 1% | Gold glow |
+| Common | 60% | Soft green `#10b981` |
+| Rare | 30% | Cool blue `#3b82f6` |
+| Epic | 9% | Deep purple `#8b5cf6` |
+| Legendary | 1% | Molten gold `#f59e0b` |
 
 ## Implementation Notes
 

@@ -71,6 +71,7 @@ After 90 consecutive non-legendary opens, the next chest is guaranteed legendary
 ║                                       ║
 ║    ┌──────────────────────────┐        ║
 ║    │  OPENED: 142  │ ★ 3 ◆ 12│        ║
+║    │   ★ = Legendary  ◆ = Epic │        ║
 ║    └──────────────────────────┘        ║
 ║       LAST FIND: Epic Amulet          ║
 ╚═══════════════════════════════════════╝
@@ -115,7 +116,7 @@ Frame 9: Stage resets, normal pacing resumes
 
 | Event               | Duration (ms) | Easing                        | Notes                          |
 |----------------------|---------------|-------------------------------|--------------------------------|
-| Chest entrance       | 600           | `cubic-bezier(0.34, 1.56, 0.64, 1)` | Overshoot bounce arrival |
+| Chest entrance       | 600           | `cubic-bezier(0.34, 1.56, 0.64, 1)` | Overshoot bounce arrival (value >1 is intentional — creates spring effect) |
 | Idle bob             | 2000          | `ease-in-out`                 | Continuous until open triggers |
 | Anticipation shake   | 400           | `linear`                      | 4 oscillations, ±3px          |
 | Lid open             | 500           | `cubic-bezier(0.22, 1, 0.36, 1)` | Starts slow, accelerates    |
