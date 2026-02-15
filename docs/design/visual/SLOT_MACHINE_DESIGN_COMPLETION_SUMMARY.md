@@ -82,7 +82,7 @@
 - FR-6: Progressive Complexity & Discovery System (pattern unlocks, learning progression)
 
 **Enhanced Motion Timing Table:**
-- Expanded from 11 to 40+ animation events
+- Expanded from 11 to 38 animation events
 - Added reel 4-6 stop timings
 - Added pattern detection and visualization animations (5 types)
 - Added discovery celebrations, near-miss hints
@@ -144,7 +144,7 @@ Comprehensive, testable requirements organized into 7 categories (80+ total requ
 - Pattern visualization system (5 pattern types)
 
 **Animation & Timing Requirements (TR-1 to TR-3)**
-- **Motion timing table** - 40+ animation events with exact durations, easing functions, and delay patterns
+- **Motion timing table** - 38 animation events with exact durations, easing functions, and delay patterns
 - Interaction timing budgets (scales with reel count)
 - Performance budgets for frame rates and execution
 
@@ -260,12 +260,12 @@ Each stage includes:
 - Week 8: Post-launch review
 
 **Appendix: Open Questions & Decisions Log**
-- 4 open questions requiring decisions
-- 4 documented decisions with rationale
+- 3 open questions requiring decisions
+- 5 documented decisions with rationale
 - Template for future decisions
 
 **Updated Ready-for-Implementation Checklist**
-- Expanded from 9 items to 40+ items
+- Expanded from 9 items to 70+ items
 - Organized by phase (Design, Implementation, Polish)
 - Clear progress tracking with [x] completed items
 
@@ -284,7 +284,7 @@ Each stage includes:
 - **Testable requirements:** QA can derive test cases directly
 
 ### For Project Management
-- **Trackable progress:** 40+ item checklist with clear states
+- **Trackable progress:** 70+ item checklist with clear states
 - **Risk management:** 6-stage review process catches issues early
 - **Timeline planning:** Next Steps section provides realistic phases
 
@@ -307,7 +307,7 @@ Each stage includes:
 
 ### If You're Implementing Code
 1. Start with Asset Inventory > Code Implementation Checklist
-2. Reference Motion Timing Table (TR-1) for exact CSS values (40+ events)
+2. Reference Motion Timing Table (TR-1) for exact CSS values (38 events)
 3. Use Functional Requirements (FR-1 to FR-6) to validate completeness
 4. Check Technical Requirements (TC-*) for code patterns
 5. Implement pattern detection and visualization systems (FR-6, VR-12)
@@ -338,7 +338,7 @@ This completion follows established patterns:
 
 ✅ **Actionable and specific**
 - Every requirement is testable/measurable (80+ requirements)
-- Animation timing table has exact millisecond values (40+ events)
+- Animation timing table has exact millisecond values (38 events)
 - Asset specifications include exact file sizes and formats
 
 ✅ **Professionally structured**
@@ -375,7 +375,7 @@ This completion follows established patterns:
 - ✅ Multi-reel system with 5 complexity tiers (1-6 reels)
 - ✅ Progressive pattern discovery (5 pattern types, unlock progression)
 - ✅ 7 categories of formal requirements (80+ total, FR-1 to FR-6, VR-1 to VR-12)
-- ✅ Complete motion timing table (40+ animation events)
+- ✅ Complete motion timing table (38 animation events)
 - ✅ 6-stage review process with checklists
 - ✅ Complete asset inventory (60+ visual, 18+ audio)
 - ✅ Comprehensive implementation checklist (70+ items)
@@ -402,7 +402,7 @@ This completion follows established patterns:
 
 3. **Quality is measurable**
    - Performance budgets (updated for richer assets)
-   - Animation timing specifications (40+ events)
+   - Animation timing specifications (38 events)
    - Success metrics defined
 
 4. **Timeline is realistic**
@@ -439,7 +439,7 @@ This completion follows established patterns:
 **For Project Manager:**
 1. Schedule Stage 2 review meeting
 2. Assign designers to mockup creation
-3. Update project timeline with 6-week phases
+3. Update project timeline with 8-12 week phases
 4. Track progress via implementation checklist
 
 ---
@@ -458,6 +458,6 @@ For changes or clarifications, update the main document and increment the versio
 ---
 
 **Document Status:** ✅ Complete and Ready for Mockup Phase  
-**Main Document Version:** 2.0  
+**Main Document Version:** 3.0  
 **Summary Author:** GitHub Copilot Agent  
 **Review Recommended:** Design Lead, Development Lead, Product Owner

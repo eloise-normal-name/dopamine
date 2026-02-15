@@ -1165,8 +1165,8 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 
 **Participants:** Development team, QA lead, design lead  
 **Deliverables Required:**
-- [x] Functional requirements (FR-1 through FR-3)
-- [x] Visual requirements (VR-1 through VR-5)
+- [x] Functional requirements (FR-1 through FR-6)
+- [x] Visual requirements (VR-1 through VR-12)
 - [x] Animation timing table (TR-1)
 - [x] Audio requirements (AR-1 through AR-2)
 - [x] Accessibility requirements (AC-1 through AC-3)
@@ -1691,10 +1691,6 @@ The slot machine design is considered **complete** when:
    - **Decision needed by:** Stage 2 review
    - **Impact:** Mobile UI design
 
-4. **Background animation:** Static or animated night-market scene?
-   - **Decision needed by:** Stage 2 review
-   - **Impact:** Performance budget, visual complexity
-
 ### Decisions Made
 1. **Q:** How many symbols in initial version?  
    **A:** 5 symbols (Cherry, Lemon, Orange, Seven, Jackpot) - simple first, expand later
@@ -1716,9 +1712,15 @@ The slot machine design is considered **complete** when:
    **Date:** [This document]
    **Rationale:** Disney animation principles (anticipation, ease-out)
 
+5. **Q:** Background animation: Static or animated night-market scene?  
+   **A:** Fully animated living night market with 3-5 parallax depth layers and environmental micro-events
+   **Date:** 2026-02-15
+   **Rationale:** Dual-mode entertainment philosophy requires persistent ambient motion; see "Living Night Market Environment" section
+
 ---
 
-**Document Version:** 2.0  
+**Document Version:** 3.0  
 **Last Updated:** 2026-02-15  
 **Status:** ✅ Requirements Complete - Mockup Phase In Progress  
 **Next Review:** Stage 2 (Mockup Review) - TBD
+
