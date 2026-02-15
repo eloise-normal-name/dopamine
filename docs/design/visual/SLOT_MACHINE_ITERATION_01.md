@@ -15,10 +15,176 @@ Keep the familiar 3-reel loop, but shift tone from casino realism to playful arc
    Wins should pulse and sparkle, never flash aggressively.
 3. **One strong visual hook**  
    Keep the purple Dopamine gradient UI shell, but make the reel window feel like a glowing marquee.
-4. **Symbol simplicity first**  
-   Keep symbol set to 5 icons (Cherry, Lemon, Orange, Seven, Jackpot) until polish phase.
+4. **Layered visual depth**  
+   Move beyond flat simplicity with parallax background layers, atmospheric particles, and animated environmental elements that create a living, breathing night market scene.
 5. **Animation pacing**  
    Reels should stop left -> right with clear delay so anticipation is readable even when passively watching.
+
+## Attention-Grabbing & Differentiating Features
+
+### Core Philosophy: Dual-Mode Entertainment
+This slot machine serves two viewing modes simultaneously:
+- **Passive Background Mode**: Mesmerizing ambient animation that works as desk/stream companion
+- **Active Hypnotic Mode**: Engaging visual hooks and micro-events that reward sustained attention
+
+### Key Differentiating Features
+
+#### 1. Living Night Market Environment
+**What makes it compete:** Instead of static casino floor or generic background, the game exists inside a fully animated night market scene.
+
+- **Parallax depth layers** (3-5 layers):
+  - Far background: City skyline silhouette with slow-moving window lights
+  - Mid background: Market stalls with hanging lanterns that sway gently
+  - Near background: Neon signs with animated kanji/symbols cycling through colors
+  - Foreground: Occasional floating paper lanterns or fireflies drifting across the view
+  
+- **Environmental micro-events** (every 30-90 seconds):
+  - Passing pedestrian silhouette crosses behind the machine
+  - Market vendor arranges items in peripheral stall
+  - Distant firework burst illuminates the sky
+  - Neon sign flickers and re-stabilizes
+  - These are subtle enough for background mode but rewarding to notice
+
+**Genre-appropriate:** Many modern slots have themed environments, but most are static. This makes the background active without being distracting.
+
+#### 2. Symbol Evolution & Reactive Machine
+**What makes it compete:** Symbols aren't just spinning icons—they respond to game state and build visual narrative.
+
+- **Symbol micro-animations** (idle state):
+  - Cherry: subtle bob and glossy highlight shift (breathing effect)
+  - Lemon: interior glow pulses like bioluminescence
+  - Orange: segments rotate slowly showing different facets
+  - Seven: metallic surface reflects passing environmental lights
+  - Jackpot: star points twinkle in sequence, magenta particles orbit
+
+- **Reactive machine frame**:
+  - Win streaks: Frame glow intensifies, color shifts (purple → gold → magenta)
+  - Near-misses: Brief frame pulse and subtle shake
+  - Jackpot ready: Corner ornaments pulse in sequence (building anticipation)
+  - Loss streaks: Frame dims slightly (recovers on next win)
+
+**Genre-appropriate:** Reactive UI is standard in premium slots. This adds polish-level feedback without reinventing mechanics.
+
+#### 3. Cascade Particle System
+**What makes it compete:** Wins trigger multi-layered particle effects that fill the screen space elegantly.
+
+- **Win tier particle cascades**:
+  - **Small win**: Confetti burst from matching symbols (200 particles, 1s duration)
+  - **Medium win**: Neon light trails arc across the screen (400 particles, 1.5s)
+  - **Big win**: Cherry blossom petals spiral upward with sparkles (800 particles, 2s)
+  - **Jackpot**: Full-screen particle explosion with market lanterns floating up, neon light beams radiating outward, and holographic text shimmer (2000+ particles, 3-4s)
+
+- **Particle physics**:
+  - Gravity, wind drift, and fade-out for natural motion
+  - Particles interact with depth layers (some behind machine, some in front)
+  - Color-coded to symbol themes (cherry particles are red, jackpot are gold/magenta)
+
+**Genre-appropriate:** Modern slots heavily use particle effects. This adds visual luxury and screen presence.
+
+#### 4. Persistent Ambient Animation Loop
+**What makes it compete:** The game never truly idles—there's always something moving.
+
+- **Continuous motion elements**:
+  - Neon tubes: Animated glow pulse traveling through marquee border (4-second loop)
+  - Background lanterns: Gentle swing animation (8-second loop, offset timing)
+  - Market atmosphere: Heat haze effect above distant food stalls
+  - Reel reflections: Environmental lights reflect on reel glass (changes with background events)
+  - Credit counter: Numbers have subtle shimmer even when static
+
+- **Hypnotic rhythm**:
+  - Animations use harmonic timing (loops at 2s, 4s, 8s intervals)
+  - Creates satisfying visual "beats" without being repetitive
+  - No two 30-second windows look identical due to micro-event randomization
+
+**Genre-appropriate:** Premium slots use ambient animation. This makes every frame interesting for passive viewing.
+
+#### 5. Dynamic Symbol Depth & Reel Mechanics
+**What makes it compete:** Reels have physical presence and believable motion.
+
+- **3D reel cylinder illusion**:
+  - Symbols appear on curved reel surface (subtle perspective distortion)
+  - Symbols above/below visible window show partial peek (creates depth)
+  - Shadow gradient suggests reel cylinder depth
+  - Light reflection moves across spinning reel surface
+
+- **Enhanced spin physics**:
+  - Reel acceleration: slight "catch" at spin start (mechanical feel)
+  - Deceleration bounce: overshoot by 1-2 symbols then settle back (satisfying physics)
+  - Stop impact: subtle screen shake on each reel stop (haptic-style feedback)
+  - Sound synchronization: click sounds match visible ratchet positions
+
+**Genre-appropriate:** 3D reel presentation is industry-standard. This adds physical believability.
+
+#### 6. Attention-Pulse System (Passive → Active Transition)
+**What makes it compete:** Game subtly draws focus when something interesting happens.
+
+- **Escalating attention cues**:
+  - Near-miss (2/3 symbols matched): Frame pulse + spotlight effect on third reel
+  - Streak building (3+ wins): Background begins color-shift animation
+  - Jackpot symbol visible: Faint glow ray points from symbol to jackpot meter
+  - Long idle (60s+): One random element does a "hey, look at me" animation (reel symbol waves, neon sign flashes message)
+
+- **Gentle escalation**:
+  - Cues start subtle (can be ignored in background mode)
+  - Build in intensity for active viewers
+  - Never intrusive or anxiety-inducing
+
+**Genre-appropriate:** Modern slots use attention management. This makes it work for both engagement styles.
+
+#### 7. Micro-Narrative System
+**What makes it compete:** Symbols and environment tell a tiny story over time.
+
+- **Symbol personality**:
+  - Cherry acts "cheerful" (bouncy idle animation, happy particle trails on win)
+  - Seven acts "prestigious" (slow rotation, metallic gleam, sophisticated particles)
+  - Jackpot acts "magical" (ethereal glow, sparkle orbit, special win SFX)
+
+- **Environmental story beats**:
+  - Market vendors occasionally "notice" big wins (silhouette turns toward screen)
+  - Lanterns brighten during win celebrations (environmental sympathy)
+  - Background music tempo subtly increases during win streaks
+  - Night deepens or lightens based on credit balance (environmental mood)
+
+**Genre-appropriate:** Themed slots often have narrative elements. This adds character without cutscenes.
+
+### Why This Avoids "Student Project" Appearance
+
+**Professional polish markers:**
+1. **Layered complexity**: Multiple depth planes with independent animation systems (requires production pipeline)
+2. **Particle budget**: 2000+ particles for jackpot (shows technical capacity)
+3. **Harmonic timing**: All animations use musical timing relationships (shows design sophistication)
+4. **Persistent ambient motion**: Never static (premium slots never sleep)
+5. **Reactive environmental storytelling**: Background responds to gameplay (integrated systems)
+6. **Physical believability**: Realistic reel physics and lighting (attention to craft)
+
+**Differentiation without divergence:**
+- All features exist in premium slot games individually
+- Unique combination: Night market theme + dual-mode design + environmental reactivity
+- Genre-appropriate mechanics (3-reel, paylines, symbols) with presentation innovation
+- Players instantly understand it's a slot machine, but notice it's a _crafted_ one
+
+### Production Feasibility
+
+**Asset requirements:**
+- 3-5 parallax background layers (illustrative or photo-composite)
+- 15-20 animated environmental elements (neon signs, lanterns, silhouettes)
+- 5 symbol base designs + 5 animated variants + 5 win-state variants
+- 4-tier particle systems (200-2000 particles per tier)
+- Reel frame with 4 reactivity states
+- 8-12 sound effects with environmental ambient track
+
+**Technical implementation:**
+- CSS animations + JavaScript for logic (no WebGL required, though could enhance)
+- Layered DOM elements with z-index depth
+- Particle system: Canvas 2D or CSS transform-based
+- All animations target 60fps on mid-tier devices
+
+**Timeline alignment:**
+- Concept art phase: 2-3 weeks (environment, symbols, particles)
+- Asset production: 3-4 weeks (illustration, animation frames)
+- Implementation: 2-3 weeks (code + integration)
+- Polish: 1-2 weeks (timing, particle tuning, sound mix)
+- **Total: 8-12 weeks** (professional but achievable)
 
 ## Sample Art (Low-Fidelity)
 
@@ -443,6 +609,25 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - **FR-3.4** Spin animation shall show motion blur or scroll effect
 - **FR-3.5** Each reel stop shall have distinct visual feedback
 
+#### FR-4: Attention-Pulse System
+- **FR-4.1** System shall provide escalating attention cues for noteworthy events:
+  - Near-miss (2/3 symbols matched): Frame pulse + third reel spotlight
+  - Win streak (3+ consecutive): Background color-shift animation
+  - Jackpot symbol visible: Glow ray from symbol to jackpot meter
+  - Long idle (60s+): Random element "attention grab" animation
+- **FR-4.2** Attention cues shall start subtle and build in intensity
+- **FR-4.3** No attention cue shall be intrusive or anxiety-inducing
+- **FR-4.4** System shall support both passive background and active engagement modes
+
+#### FR-5: Environmental Reactivity
+- **FR-5.1** Background elements shall respond to gameplay events:
+  - Big wins: Lanterns brighten, environmental "celebration"
+  - Win streaks: Background music tempo increases subtly
+  - Market vendors: Silhouettes occasionally "notice" big wins
+  - Night cycle: Environment mood shifts based on credit balance
+- **FR-5.2** Environmental reactions shall be optional and configurable
+- **FR-5.3** All environmental effects shall enhance, not distract from core gameplay
+
 ### 2. Visual Requirements
 
 #### VR-1: Color Palette
@@ -482,6 +667,61 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - **VR-5.3** Easing functions shall follow Disney animation principles (anticipation, ease-out)
 - **VR-5.4** No animation shall cause content layout shift
 
+#### VR-6: Environmental Depth & Layers
+- **VR-6.1** Background shall implement 3-5 parallax depth layers for visual richness
+- **VR-6.2** Far background: City skyline silhouette with animated window lights
+- **VR-6.3** Mid background: Market stalls with hanging lanterns (gentle sway animation)
+- **VR-6.4** Near background: Neon signs with color-cycling animations
+- **VR-6.5** Foreground: Floating elements (lanterns, fireflies) drifting across view
+- **VR-6.6** Layer motion speed shall scale with depth (far layers move slower)
+
+#### VR-7: Ambient Animation System
+- **VR-7.1** Game shall never be fully static—continuous ambient motion required
+- **VR-7.2** Environmental micro-events shall trigger every 30-90 seconds:
+  - Passing pedestrian silhouettes
+  - Market vendor movements
+  - Distant firework bursts
+  - Neon sign flickers
+- **VR-7.3** Symbol idle animations (when reels stopped):
+  - Cherry: subtle bob and glossy highlight shift
+  - Lemon: interior glow pulse effect
+  - Orange: slow segment rotation
+  - Seven: reflective surface responds to environmental lights
+  - Jackpot: star points twinkle in sequence, particle orbit
+- **VR-7.4** Neon marquee border: animated glow pulse (4-second loop)
+- **VR-7.5** All ambient loops use harmonic timing (2s, 4s, 8s intervals)
+
+#### VR-8: Particle System Specifications
+- **VR-8.1** Win celebrations shall use tiered particle effects:
+  - Small win: 200 particles, 1s duration (confetti burst)
+  - Medium win: 400 particles, 1.5s duration (neon light trails)
+  - Big win: 800 particles, 2s duration (cherry blossom petals + sparkles)
+  - Jackpot: 2000+ particles, 3-4s duration (full-screen celebration)
+- **VR-8.2** Particles shall exhibit realistic physics (gravity, wind drift, fade-out)
+- **VR-8.3** Particles shall respect depth layers (some behind machine, some in front)
+- **VR-8.4** Particle colors shall match symbol themes
+- **VR-8.5** Particle system shall maintain 60fps on mid-tier devices
+
+#### VR-9: Reactive Machine Frame
+- **VR-9.1** Machine frame shall react to game state:
+  - Win streaks: Frame glow intensifies, color shifts (purple → gold → magenta)
+  - Near-misses: Brief frame pulse and subtle shake
+  - Jackpot ready: Corner ornaments pulse in sequence
+  - Loss streaks: Frame dims slightly (recovers on next win)
+- **VR-9.2** Frame reactions shall be subtle enough for background viewing
+- **VR-9.3** All frame states shall transition smoothly (300-500ms)
+
+#### VR-10: 3D Reel Presentation
+- **VR-10.1** Reels shall appear as 3D cylinders with perspective distortion
+- **VR-10.2** Symbols above/below visible window shall show partial peek (depth cue)
+- **VR-10.3** Shadow gradient shall suggest reel cylinder depth
+- **VR-10.4** Light reflections shall move across spinning reel surface
+- **VR-10.5** Reel physics shall include:
+  - Acceleration "catch" at spin start
+  - Deceleration bounce (overshoot 1-2 symbols, settle back)
+  - Stop impact with subtle screen shake
+  - Sound synchronization with ratchet positions
+
 ### 3. Animation & Timing Requirements
 
 #### TR-1: Motion Timing Table
@@ -493,12 +733,26 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 | **Reel 1 Stop** | 400ms | cubic-bezier(0.25, 0.1, 0.25, 1) | 0ms (immediate) |
 | **Reel 2 Stop** | 400ms | cubic-bezier(0.25, 0.1, 0.25, 1) | +300ms after Reel 1 |
 | **Reel 3 Stop** | 400ms | cubic-bezier(0.25, 0.1, 0.25, 1) | +300ms after Reel 2 |
-| **Symbol Settle** | 100ms | ease-out | On each reel stop |
+| **Deceleration Bounce** | 150ms | cubic-bezier(0.68, -0.55, 0.265, 1.55) | On each reel stop |
+| **Symbol Settle** | 100ms | ease-out | After bounce |
 | **Win Pulse** | 600ms | ease-in-out | After all reels stopped |
 | **Win Glow** | 800ms | ease-out | Simultaneous with pulse |
 | **Win Sparkle** | 1000ms | ease-out | Staggered 100ms intervals |
+| **Particle Burst (Small)** | 1000ms | ease-out | On win detected |
+| **Particle Cascade (Medium)** | 1500ms | ease-out | On win detected |
+| **Particle Storm (Big)** | 2000ms | ease-out | On win detected |
+| **Particle Explosion (Jackpot)** | 3500ms | ease-out | On jackpot |
 | **Credit Update** | 300ms | ease-out | After win animations |
 | **Idle Reset** | 500ms | ease-in-out | 2000ms after credit update |
+| **Symbol Idle Bob** | 2000ms | ease-in-out | Continuous loop |
+| **Symbol Glow Pulse** | 4000ms | ease-in-out | Continuous loop |
+| **Neon Border Pulse** | 4000ms | linear | Continuous loop |
+| **Lantern Sway** | 8000ms | ease-in-out | Continuous loop (offset per lantern) |
+| **Background Layer Drift** | 60000ms | linear | Continuous loop (parallax) |
+| **Frame Reaction** | 400ms | ease-out | On game state change |
+| **Near-Miss Pulse** | 500ms | cubic-bezier(0.4, 0, 0.2, 1) | On near-miss detected |
+| **Attention Grab** | 1200ms | cubic-bezier(0.34, 1.56, 0.64, 1) | On 60s idle |
+| **Environmental Event** | 2000-4000ms | ease-in-out | Random 30-90s intervals |
 
 #### TR-2: Interaction Timing
 - **TR-2.1** Auto-spin interval: 3000ms minimum between spin cycles
@@ -557,22 +811,30 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 ### 6. Performance Requirements
 
 #### PR-1: Load Performance
-- **PR-1.1** Initial page load: <2 seconds on 3G connection
-- **PR-1.2** Total asset size (HTML/CSS/JS/images): <500KB
-- **PR-1.3** Symbol images: <20KB each (optimized SVG or compressed PNG)
-- **PR-1.4** First Contentful Paint: <1.5 seconds
+- **PR-1.1** Initial page load: <3 seconds on 3G connection (increased for richer assets)
+- **PR-1.2** Total initial asset bundle: <1.2MB (base game + critical assets)
+- **PR-1.3** Progressive asset loading: background layers load after game functional
+- **PR-1.4** Symbol images: <20KB each base, <10KB each for animation frames
+- **PR-1.5** First Contentful Paint: <1.5 seconds
+- **PR-1.6** Time to Interactive: <3.5 seconds
 
 #### PR-2: Runtime Performance
-- **PR-2.1** Memory usage: <50MB heap size during active gameplay
-- **PR-2.2** No memory leaks over 100+ spin cycles
-- **PR-2.3** Smooth 60fps during all animations
-- **PR-2.4** CPU usage: <30% on mid-tier devices
+- **PR-2.1** Memory usage: <80MB heap size with full environmental system active
+- **PR-2.2** No memory leaks over 100+ spin cycles with particles
+- **PR-2.3** Smooth 60fps during standard gameplay (reels + basic particles)
+- **PR-2.4** Acceptable 45-60fps during jackpot celebration (2000+ particles)
+- **PR-2.5** CPU usage: <40% on mid-tier devices with ambient animations
+- **PR-2.6** Particle system shall degrade gracefully on low-end devices
+- **PR-2.7** Environmental events shall pause during active spin (focus performance)
 
-#### PR-3: Browser Compatibility
+#### PR-3: Browser Compatibility & Optimization
 - **PR-3.1** Support: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
-- **PR-3.2** Graceful degradation for older browsers
+- **PR-3.2** Graceful degradation for older browsers (disable ambient loops, reduce particles)
 - **PR-3.3** Mobile support: iOS 14+, Android 10+
 - **PR-3.4** Responsive: 320px to 2560px viewport width
+- **PR-3.5** Touch-optimized for mobile (no hover-dependent features)
+- **PR-3.6** GPU acceleration for transforms and particles (use will-change hints)
+- **PR-3.7** Adaptive quality: reduce effects on low-battery or high-load conditions
 
 ### 7. Technical Requirements
 
@@ -817,14 +1079,44 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - Background: transparent
 
 #### UI Graphics
-- [ ] `reel-frame.svg` - Decorative border around reel window
+- [ ] `reel-frame.svg` - Decorative border around reel window with reactive states
+- [ ] `reel-frame-win.svg` - Win state frame variant (gold/magenta glow)
 - [ ] `glow-overlay.png` - Neon glow effect (multiply/screen blend)
 - [ ] `sparkle-particle.svg` - For win celebrations (reusable sprite)
 - [ ] `title-graphic.svg` - "NEON NIGHT MARKET" stylized text
+- [ ] `corner-ornament.svg` - Animated corner decorations (4 variants for jackpot ready state)
 
-#### Background Elements
-- [ ] `background-gradient.svg` - Dark purple base gradient
-- [ ] `neon-lights-texture.png` - Optional atmospheric overlay (subtle)
+#### Background Elements (Parallax Layers)
+- [ ] `layer-1-skyline.svg` - Far background: City skyline silhouette
+- [ ] `layer-2-buildings.png` - Mid-far: Buildings with animated window lights
+- [ ] `layer-3-market-stalls.svg` - Mid background: Market stall structures
+- [ ] `layer-4-lanterns.svg` - Mid-near: Hanging lanterns (multiple for sway animation)
+- [ ] `layer-5-neon-signs.svg` - Near background: Neon signs (3-5 variants)
+- [ ] `layer-6-foreground-elements.svg` - Foreground: Floating lanterns, fireflies
+- [ ] `background-gradient.svg` - Base dark purple gradient
+- [ ] `heat-haze-overlay.png` - Atmospheric effect (optional, subtle)
+
+#### Environmental Elements (Micro-Events)
+- [ ] `pedestrian-silhouette-1.svg` - Passing pedestrian (3 variants for variety)
+- [ ] `pedestrian-silhouette-2.svg`
+- [ ] `pedestrian-silhouette-3.svg`
+- [ ] `vendor-animation-sprite.svg` - Market vendor movements (sprite sheet)
+- [ ] `firework-burst.svg` - Distant firework effects (3 color variants)
+- [ ] `neon-flicker-overlay.png` - Neon sign flicker effect
+
+#### Particle System Assets
+- [ ] `confetti-particle.svg` - Small win confetti (10 color variants)
+- [ ] `neon-trail-particle.svg` - Medium win light trails (5 color variants)
+- [ ] `cherry-blossom-petal.svg` - Big win petals (3 size variants)
+- [ ] `sparkle-star.svg` - General sparkle effect (4 size variants)
+- [ ] `jackpot-beam.svg` - Jackpot light beam rays
+- [ ] `jackpot-hologram.svg` - Jackpot holographic text effect
+
+#### Symbol Animation Variants (Idle States)
+- [ ] Each symbol needs 3 additional states:
+  - `{symbol}-idle-frame1.svg` through `{symbol}-idle-frame4.svg` (4-frame idle loop)
+  - `{symbol}-win-frame1.svg` through `{symbol}-win-frame3.svg` (3-frame celebration)
+  - Total: 5 symbols × 7 frames = 35 additional symbol frames
 
 ### Audio Assets Required
 
@@ -833,12 +1125,25 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - [ ] `reel-stop-1.ogg` - Click sound, 440 Hz base, 50ms, <10KB
 - [ ] `reel-stop-2.ogg` - Click sound, 494 Hz base, 50ms, <10KB
 - [ ] `reel-stop-3.ogg` - Click sound, 523 Hz base, 50ms, <10KB
+- [ ] `reel-bounce.ogg` - Deceleration bounce impact, 100ms, <10KB
 - [ ] `win-small.ogg` - Pleasant chime, 200ms, <15KB
 - [ ] `win-medium.ogg` - Cascade notes, 500ms, <30KB
 - [ ] `win-big.ogg` - Triumphant fanfare, 1000ms, <50KB
 - [ ] `win-jackpot.ogg` - Extended celebration, 2000ms, <80KB
+- [ ] `particle-burst-small.ogg` - Confetti pop, 150ms, <10KB
+- [ ] `particle-cascade.ogg` - Neon trail whoosh, 300ms, <15KB
+- [ ] `near-miss-pulse.ogg` - Subtle tension sound, 200ms, <12KB
+- [ ] `frame-glow-shift.ogg` - Frame state change sound, 150ms, <10KB
+
+#### Ambient/Environmental Audio
+- [ ] `ambient-night-market.ogg` - Background loop: distant market sounds, 30s loop, <200KB
+- [ ] `ambient-crowd-murmur.ogg` - Very subtle crowd ambience, 20s loop, <150KB
+- [ ] `neon-hum.ogg` - Gentle electrical hum (optional), 10s loop, <100KB
+- [ ] `firework-distant.ogg` - Environmental micro-event, 800ms, <30KB
+- [ ] `lantern-chime.ogg` - Gentle wind chime for lantern sway, 500ms, <20KB
 
 **Format:** OGG Vorbis (primary), MP3 (fallback)
+**Mixing:** Ambient tracks at 20-30% volume, effects at 60% volume, all user-adjustable
 
 ### Code Implementation Checklist
 
@@ -858,18 +1163,39 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - [ ] `destroy()` method: cleanup listeners and timers
 - [ ] `_updateReel(reelIndex, symbolIndex)` - private helper
 - [ ] `_checkWin()` - detect winning combinations
+- [ ] `_checkNearMiss()` - detect near-miss situations (2/3 match)
 - [ ] `_animateWin()` - trigger celebration animations
+- [ ] `_animateParticles(tier)` - particle system for win tiers
 - [ ] `_updateCredits(amount)` - animate credit counter
+- [ ] `_updateFrameState(state)` - update reactive frame (win/streak/loss)
+- [ ] `_triggerEnvironmentalEvent()` - random environmental micro-events
+- [ ] `_startAmbientAnimations()` - initialize continuous background loops
+- [ ] `_handleIdleTimeout()` - attention grab after 60s idle
+- [ ] `_updateParallaxLayers()` - parallax scrolling effects (optional)
 
 #### CSS Animations
 - [ ] `@keyframes spin` - reel spinning effect
 - [ ] `@keyframes stop` - reel stop with settle
+- [ ] `@keyframes bounce` - deceleration bounce (overshoot)
 - [ ] `@keyframes pulse` - winning symbol pulse
 - [ ] `@keyframes glow` - neon glow effect
 - [ ] `@keyframes sparkle` - particle effects
 - [ ] `@keyframes countUp` - credit counter animation
+- [ ] `@keyframes symbolBob` - idle symbol bob animation (cherry)
+- [ ] `@keyframes symbolGlow` - idle symbol glow pulse (lemon, jackpot)
+- [ ] `@keyframes symbolRotate` - idle symbol rotation (orange)
+- [ ] `@keyframes symbolReflect` - idle reflection shift (seven)
+- [ ] `@keyframes neonPulse` - border neon pulse (4s loop)
+- [ ] `@keyframes lanternSway` - hanging lantern sway (8s loop)
+- [ ] `@keyframes parallaxDrift` - background layer drift
+- [ ] `@keyframes frameGlow` - reactive frame state transitions
+- [ ] `@keyframes particleFall` - particle gravity/fade animation
+- [ ] `@keyframes nearMissPulse` - near-miss frame pulse
+- [ ] `@keyframes attentionGrab` - idle timeout attention animation
+- [ ] `@keyframes fireworkBurst` - environmental firework effect
+- [ ] `@keyframes pedestrianWalk` - passing silhouette animation
 - [ ] Responsive media queries (320px, 768px, 1024px breakpoints)
-- [ ] `prefers-reduced-motion` alternative animations
+- [ ] `prefers-reduced-motion` alternative animations (disable ambient loops, reduce particles)
 
 #### Configuration (config.js)
 - [ ] Symbol array: `['cherry', 'lemon', 'orange', 'seven', 'jackpot']`
@@ -878,6 +1204,17 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - [ ] Timing constants: spin duration, stop delays, celebration length
 - [ ] Credit settings: starting balance, bet amount
 - [ ] Animation easing functions (from TR-1 table)
+- [ ] Particle system configuration:
+  - Particle counts per tier (200/400/800/2000)
+  - Particle physics constants (gravity, wind, fade rate)
+  - Particle color palettes per symbol
+- [ ] Environmental event configuration:
+  - Micro-event frequency (30-90s random intervals)
+  - Event type weights (pedestrian/vendor/firework/flicker)
+  - Ambient animation timing (2s/4s/8s harmonic loops)
+- [ ] Parallax layer speeds (depth-based scaling)
+- [ ] Attention pulse thresholds (near-miss, streak, idle timeout)
+- [ ] Frame reactivity states and color shifts
 
 #### Accessibility Implementation
 - [ ] ARIA labels on all controls

@@ -1,8 +1,73 @@
 # Slot Machine Design Document - Completion Summary
 
-**Date:** 2026-02-15  
+**Date:** 2026-02-15 (Updated with attention-grabbing features)  
 **Document:** [SLOT_MACHINE_ITERATION_01.md](SLOT_MACHINE_ITERATION_01.md)  
-**Status:** Requirements & Review Process Complete ✅
+**Status:** Enhanced Design Complete - Ready for Mockup Phase ✅
+
+---
+
+## Latest Update: Attention-Grabbing & Differentiating Features Added
+
+**Response to feedback:** "Move away from visual simplicity. Add features that make this game noticeable and able to compete for people's attention."
+
+### What Makes This Design Stand Out
+
+**Dual-Mode Entertainment Philosophy:**
+- Works as **passive background entertainment** (ambient, mesmerizing)
+- Works as **continuous hypnotic distraction** (rewarding sustained attention)
+- Never looks like a student project—professional polish throughout
+
+**7 Key Differentiating Features:**
+
+1. **Living Night Market Environment** - 3-5 parallax depth layers, animated background micro-events
+2. **Symbol Evolution & Reactive Machine** - Symbols have personality, idle animations, frame reacts to game state
+3. **Cascade Particle System** - 200-2000 particles per win tier, realistic physics
+4. **Persistent Ambient Animation** - Harmonic timing loops (2s/4s/8s), hypnotic rhythm, never static
+5. **Dynamic 3D Reel Mechanics** - Cylinder illusion, deceleration bounce, realistic physics
+6. **Attention-Pulse System** - Gentle escalation from background→active engagement
+7. **Micro-Narrative System** - Environmental storytelling, symbol personality
+
+**Professional Polish Markers:**
+- Multi-layered complexity with independent animation systems
+- 2000+ particle budget for jackpot celebrations
+- Harmonic timing relationships (musical precision)
+- Environmental reactivity (background responds to gameplay)
+- Physical believability (realistic motion and lighting)
+
+**Genre-Appropriate Innovation:**
+- All features exist in premium slots individually
+- Unique combination: Night market theme + dual-mode design + environmental reactivity
+- Players instantly recognize it's a slot machine, but notice it's a _crafted_ one
+
+### New Requirements Added
+
+**Visual Requirements expanded to VR-1 through VR-10:**
+- VR-6: Environmental Depth & Layers (parallax system)
+- VR-7: Ambient Animation System (continuous motion)
+- VR-8: Particle System Specifications (200-2000 particles)
+- VR-9: Reactive Machine Frame (state-based reactions)
+- VR-10: 3D Reel Presentation (cylinder illusion, physics)
+
+**Functional Requirements expanded to FR-1 through FR-5:**
+- FR-4: Attention-Pulse System (escalating engagement cues)
+- FR-5: Environmental Reactivity (background responds to gameplay)
+
+**Enhanced Motion Timing Table:**
+- Expanded from 11 to 25+ animation events
+- Added ambient loops (symbol bob, glow pulse, lantern sway)
+- Added particle animations (burst, cascade, explosion)
+- Added environmental events (fireworks, pedestrians, flickers)
+
+**Expanded Asset Inventory:**
+- **Visual assets:** 9 → 60+ items (parallax layers, environmental elements, particles, symbol variants)
+- **Audio assets:** 8 → 18+ items (added ambient tracks, environmental sounds, interaction SFX)
+- Total production scope reflects premium slot quality
+
+**Updated Performance Requirements:**
+- Increased load budget to <1.2MB (richer assets)
+- Memory budget increased to <80MB (environmental system)
+- Adaptive quality system for graceful degradation
+- GPU acceleration requirements specified
 
 ---
 
