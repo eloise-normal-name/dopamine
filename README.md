@@ -20,6 +20,38 @@ Auto-playing web games that are fun to watch! A collection of browser-based game
 - **🎲 Dice Roll** - Endless dice rolling with probability visualization
 - **🃏 Card Flip** - Self-playing memory card game
 
+## 🗺️ Development Milestones
+
+### Phase 1: Foundation ✅
+- [x] Project structure and documentation
+- [x] Common CSS framework
+- [x] Landing page
+- [x] Single slot machine game
+
+### Phase 2: Core Games 🚧
+- [ ] Gacha/loot box game
+- [ ] Dice rolling game
+- [ ] Card flip memory game
+- [ ] Shared utilities library (random, animation, audio)
+
+### Phase 3: Enhanced Features
+- [ ] Sound effects and music
+- [ ] Visual particle effects
+- [ ] Advanced animations
+- [ ] Mobile optimizations
+
+### Phase 4: Dashboard & Analytics
+- [ ] Game statistics dashboard
+- [ ] Play history tracking
+- [ ] Achievement system
+- [ ] User preferences
+
+### Phase 5: Polish & Distribution
+- [ ] Progressive Web App (PWA) support
+- [ ] Offline functionality
+- [ ] Performance optimizations
+- [ ] Comprehensive testing
+
 ## 🚀 Getting Started
 
 1. Clone the repository:
