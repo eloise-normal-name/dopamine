@@ -2,13 +2,25 @@
 
 This directory contains concept art and visual development work that guides future asset creation for Dopamine games.
 
+## Prompt-Based Concept Art Approach
+
+**Important**: This concept art system is designed around **AI-generated prompts** rather than hand-drawn artwork. The focus is on crafting creative, inspirational prompts for AI image generation tools (DALL-E, Midjourney, Stable Diffusion, Codex, etc.) that:
+
+- **Inspire visual exploration** - Prompts are written to spark creativity and enable diverse interpretations
+- **Allow for happy accidents** - Intentional openness lets AI tools surprise us with unexpected creative directions
+- **Generate rapid iteration** - Multiple variations can be explored quickly through prompt refinement
+- **Communicate vision through language** - Evocative descriptions replace technical specifications as the primary creative tool
+
+This approach recognizes that AI coding/concept agents cannot create images directly, but can craft sophisticated prompts that enable visual concept generation through specialized AI image tools.
+
 ## Purpose
 
-Concept art serves as visual blueprints for:
+Concept art (generated from prompts) serves as visual blueprints for:
 - **Future asset development** - What to build and how it should look
-- **Art direction** - Establishing consistent visual style
+- **Art direction** - Establishing consistent visual style through curated prompt outputs
 - **Production planning** - Identifying what assets are needed
 - **Team alignment** - Shared vision across designers, developers, and artists
+- **Creative exploration** - Discovering unexpected visual directions through AI-generated variations
 
 ## Directory Structure
 

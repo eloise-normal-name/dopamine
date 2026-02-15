@@ -1,161 +1,154 @@
 # Artist Quick Start Guide
 
-**Welcome, Concept Artist!** This guide helps you get started creating visual assets for Dopamine games.
+**Welcome!** This guide helps you create visual concepts for Dopamine games using **AI-assisted prompt-based concept art**.
 
-## 🎨 Your Mission
+## 🎨 The Prompt-Based Approach
 
-Create concept art for the **"Neon Night Market Slots"** game. You'll be designing:
-1. A spectacular slot machine jackpot celebration scene
-2. A detailed atmospheric night market environment
-3. Close-up technical studies of slot machine components
+This project uses a **creative prompt methodology** where:
+- **AI coding agents** (Copilot/Codex) craft inspirational prompts
+- **AI image tools** (DALL-E, Midjourney, Stable Diffusion) generate visual concepts from prompts
+- **Human curators** (you!) select, refine, and develop the most inspiring results
+
+**Philosophy**: We prioritize creative exploration over technical specification. Prompts are designed to inspire and enable iteration, not to dictate exact outputs.
+
+## Your Role
+
+You're here to:
+1. **Generate concepts** using the creative prompts provided
+2. **Curate and select** the most inspiring AI-generated results
+3. **Iterate and refine** concepts toward production-ready assets
+4. **Embrace creative accidents** - sometimes unexpected results are the best ones
 
 ## 📁 Where Everything Lives
 
 ### Your Main Documents
 - **This guide**: `/assets/concept-art/ARTIST_QUICKSTART.md`
-- **Art briefs**: `/assets/concept-art/slot-machine/README.md`
+- **Creative prompts**: `/assets/concept-art/slot-machine/AI_IMAGE_GENERATION_PROMPTS.md` ⭐ START HERE
+- **Art briefs** (technical details): `/assets/concept-art/slot-machine/README.md`
 - **Project narrative**: `/docs/design/NARRATIVES.md` (Slot Machine section)
 - **Visual references**: `/docs/design/visual/SLOT_MACHINE_ITERATION_01.md` (36 reference sources)
 
 ### Where to Save Your Work
 ```
 /assets/concept-art/slot-machine/
+├── AI_IMAGE_GENERATION_PROMPTS.md  ← Read the creative prompts
 ├── celebration/     ← Save celebration concepts here
 ├── environment/     ← Save environment concepts here
 └── machine-details/ ← Save detail studies here
 ```
 
-## 📋 Three Art Briefs Explained
+## 🚀 Quick Start: Generate Your First Concepts
 
-### Brief 01: Jackpot Celebration Scene
-**What**: The slot machine at its most exciting moment - winning the jackpot!  
-**Mood**: Triumphant but cozy. Like opening the perfect gift.  
-**Key elements**:
-- Three reels showing JACKPOT symbols
-- Warm golden glow (not harsh flash)
-- Purple/cyan/magenta particle effects
-- Credit counter going up excitedly
-- Neon night market visible but blurred in background
+1. **Open** `/assets/concept-art/slot-machine/AI_IMAGE_GENERATION_PROMPTS.md`
+2. **Read** the philosophy section to understand the creative approach
+3. **Choose** a prompt that excites you (Environment prompts are good starting points)
+4. **Generate** with your preferred AI tool (DALL-E, Midjourney, Stable Diffusion)
+5. **Create variations** - run the same prompt multiple times
+6. **Curate** - save the most inspiring results
 
-**File**: `celebration-jackpot-burst-v01.png` (or your version number)  
-**Size**: 1920x1080 or 1200x1600 (mobile mockup)  
-**Priority**: Medium (do second, after environment)
+## 📋 Three Creative Directions
 
-### Brief 02: Neon Night Market Environment
-**What**: The atmospheric background world where the slot machine exists.  
-**Mood**: Cozy urban night warmth. Like a favorite late-night spot.  
-**Key elements**:
-- Asian-inspired night market with neon signs
-- Deep blue-purple night sky
-- Warm lanterns and string lights
-- Clear midground space (where machine sits)
-- Depth layers for parallax (foreground/mid/background)
+### Direction 01: Jackpot Celebration
+**Emotional goal**: "Triumphant but cozy" - like opening the perfect gift  
+**Creative prompts**: "The Moment of Triumph", "Particle Symphony", "The Jackpot Glow"  
+**What to explore**: How does celebration look as pure light and motion? How can gold glow feel both exciting and inviting?  
+**Priority**: Medium (do second, after environment sets the foundation)
 
-**File**: `environment-full-scene-v01.png` (or layered PSD)  
-**Size**: 2560x1440 or 1920x1080  
+### Direction 02: Neon Night Market Environment
+**Emotional goal**: "Cozy urban night warmth" - like finding your favorite late-night spot  
+**Creative prompts**: "The Living Night Market", "Neon Dreamscape Layers", "Midnight Market Mood Study", "Neon Sign Collection"  
+**What to explore**: How do layers create depth? How does neon light create warmth without harshness? What makes a place feel inviting?  
 **Priority**: HIGH (start here - sets foundation for everything else)
 
-### Brief 03: Machine Component Close-ups
-**What**: Technical detail studies of the slot machine's physical parts.  
-**Mood**: Precision meets personality. Premium quality.  
-**Key elements**:
-- Reel window with glass/acrylic material
-- Machine cabinet with purple gradient
-- Internal reel mechanism
-- Credit display panel
-- Decorative neon accents
-- Material swatches (metal, glass, plastic finishes)
+### Direction 03: Machine Component Studies
+**Emotional goal**: "Precision meets personality" - premium craftsmanship with character  
+**Creative prompts**: "The Reel Window - Portal to Possibility", "The Cabinet Study", "Material Essence", "The Exploded View"  
+**What to explore**: How do materials communicate quality? How can technical details feel beautiful? Where do function and art meet?  
+**Priority**: Lower (do third - builds on established visual language)
 
-**File**: `detail-reel-window-front-v01.png` (and others)  
-**Size**: Individual studies at 1200x1200, or sheet at 2400x3000  
-**Priority**: Lower (do third - needed for asset production)
+## 🎨 Creative Freedom Within Guidelines
 
-## 🎨 Style Guidelines
-
-### Color Palette
+### Color Palette (Inspirational, Not Rigid)
 **Primary colors**:
-- Purple gradient: `#667eea` → `#764ba2` (the Dopamine brand)
-- Deep night blue: `#1a1a2e` to `#16213e` (sky/background)
+- Purple gradient: `#667eea` → `#764ba2` (the Dopamine signature)
+- Deep night blue: `#1a1a2e` to `#16213e` (mysterious depths)
 
 **Neon accents**:
-- Bright cyan: `#06b6d4`
-- Magenta: `#ec4899`
-- Gold: `#ffd700`
+- Bright cyan: `#06b6d4` (electric energy)
+- Magenta: `#ec4899` (playful warmth)
+- Gold: `#ffd700` (celebration)
 
-**Symbol colors**:
-- Cherry red, lemon yellow, orange, silver-blue (for sevens)
+**Note**: These colors inform but don't constrain. Beautiful variations are welcome!
 
-### Visual Principles
-✅ **Do**:
-- High legibility and clear shapes
-- Warm, inviting glow (not harsh)
-- Controlled neon aesthetic
-- Smooth, polished look
-- Think "Vaporwave meets arcade nostalgia"
+### Visual Principles (What Makes It "Dopamine")
+✅ **Embrace**:
+- Evocative moods over technical accuracy
+- Happy accidents and unexpected beauty
+- Controlled glow and inviting warmth
+- "Vaporwave meets arcade nostalgia" aesthetic
+- Multiple interpretations of the same concept
 
-❌ **Don't**:
-- Aggressive flashing or harsh lights
-- Photorealistic textures
-- Visual chaos or overwhelming detail
-- Generic "Vegas casino" look
+❌ **Avoid**:
+- Harsh, aggressive visuals
+- Generic "Vegas casino" clichés
+- Photorealism when stylization serves better
+- Rigid adherence to specifications over creative vision
 
-### Reference Inspiration
-From the 36 sources in `SLOT_MACHINE_ITERATION_01.md`, focus on:
-- **Behance slot design** (Ref 24) - polished concept art quality
-- **City lights casino** (Refs 04, 10, 15) - night atmosphere and neon
-- **Synthwave aesthetics** (Refs 02, 08, 13) - retro-future vibe
-- **Vintage slot machines** (Ref 30) - mechanical charm and materials
+## 🚀 The AI-Assisted Creative Process
 
-## 🚀 Recommended Workflow
+### Quick Iteration Workflow (Recommended)
 
-### Week 1: Environment Foundation
-1. **Day 1-2**: Sketch 3-4 thumbnail compositions for environment
-2. **Day 3-4**: Refine best composition, establish color palette
-3. **Day 5**: Separate layers (sky, far background, mid, foreground)
-4. **Review**: Show to team, get feedback
+**Day 1-2: Creative Exploration**
+1. Choose a creative direction (Environment recommended first)
+2. Read the associated prompts in `AI_IMAGE_GENERATION_PROMPTS.md`
+3. Generate 10-15 variations using different AI tools or seeds
+4. Observe what works, what surprises, what inspires
 
-### Week 2: Celebration Hero Piece
-1. **Day 1**: Quick value study for celebration composition
-2. **Day 2-3**: Refine jackpot celebration with effects
-3. **Day 4**: Create small/medium win variations
-4. **Day 5**: Polish and timing studies
-5. **Review**: Show to team, get feedback
+**Day 3-4: Refinement**
+1. Select 3-5 favorite results
+2. Identify what makes them successful
+3. Refine prompts to emphasize successful elements
+4. Generate focused variations
+5. Begin combining elements from different results
 
-### Week 3: Technical Details
-1. **Day 1-2**: Reel window and cabinet frame studies
-2. **Day 3**: Reel mechanism and internal details
-3. **Day 4**: Display panels and decorative elements
-4. **Day 5**: Material swatches and multi-angle views
-5. **Review**: Final review, prepare for asset production
+**Day 5: Curation and Direction**
+1. Select the strongest 1-2 concepts
+2. Document what makes them work
+3. Share with team for feedback
+4. Identify next creative direction to explore
 
-## 💡 Pro Tips
+**Repeat for each of the three creative directions** (Environment → Celebration → Machine Details)
 
-### Layering is Key
-Always save work with layers:
-- Separate background, midground, foreground
-- Keep effects on their own layers
-- Maintain editable text/shapes
-- Save as PSD, XCF, or your tool's format
+### Traditional Workflow (If Preferred)
 
-### Think Implementation
-Ask yourself:
-- Can this be built with web technologies (CSS, Canvas, SVG)?
-- Are effects achievable at 60fps in a browser?
-- Can it scale down for mobile devices?
-- Does it work with reduced motion settings?
+If you prefer traditional concept art methods:
+1. Use prompts as creative briefs, not literal instructions
+2. Create hand-drawn or painted concepts inspired by prompt language
+3. Embrace the same philosophy: inspiration over specification
+4. Iterate based on emotional resonance, not technical checkboxes
 
-### Multiple States
-Show variations:
-- Different lighting intensities (idle, active, winning)
-- Time of day variants (deep night, late evening)
-- Detail levels (full quality, mobile-simplified)
+## 💡 Pro Tips for AI-Assisted Concept Art
 
-### Document Decisions
-Add notes to your files:
-- Why you chose this composition
-- How elements should animate
-- What colors/values are important
-- Technical considerations
+### Embrace the Process
+- **Run prompts multiple times** - Each generation is unique
+- **Try different AI tools** - They interpret prompts differently
+- **Save unexpected results** - "Failures" often spark new ideas
+- **Cross-pollinate** - Combine elements from different outputs
+- **Document your discoveries** - Note which prompts yield inspiring results
+
+### Think Creatively, Not Technically
+- Focus on **mood and feeling** over exact specifications
+- Let prompts **breathe** - don't add restrictive details
+- **Emotion first** - Capture the feeling, adjust details later
+- **Multiple interpretations** - There's no single "correct" output
+- **Happy accidents** - Sometimes AI shows you something better
+
+### Iterate with Purpose
+- Each generation **informs** the next
+- **Refine prompts** based on what works
+- **Combine successes** from different runs
+- **Push boundaries** - Try variations that might seem "wrong"
+- **Trust your eye** - You're curating, not following instructions
 
 ## 📞 Questions?
 
@@ -168,52 +161,53 @@ Add notes to your files:
 - See the complete process: `/docs/design/ASSET_WORKFLOW.md`
 - Check parent concept-art README: `/assets/concept-art/README.md`
 
-### About Technical Specs
-- Each brief has detailed technical specifications
-- File formats: PNG (with transparency), layered PSD/XCF, or SVG
-- Color mode: RGB, sRGB color space for web
-- Resolution: High (concepts), optimized later for production
-
-## ✅ Deliverables Checklist
-
-When you finish each concept:
-- [ ] Saved in correct directory with clear filename
-- [ ] Layered source file preserved (PSD, XCF, etc.)
-- [ ] Exported as high-res PNG or JPG for review
-- [ ] Created 2-3 variations if applicable
-- [ ] Updated README with status
-- [ ] Ready for team review
-
-## 🎯 Success Criteria
+## ✅ What Makes a Successful Concept
 
 Your concepts are successful if they:
-1. ✅ Capture the "cozy anticipation" emotional goal
-2. ✅ Work within the "Neon Night Market" theme
-3. ✅ Are technically feasible for web implementation
-4. ✅ Maintain high readability and legibility
-5. ✅ Feel cohesive with the Dopamine purple brand
-6. ✅ Inspire the team and guide asset production
+1. ✅ **Inspire and excite** - Make the team say "I want to see that in the game!"
+2. ✅ **Capture emotional goals** - "Cozy anticipation", "triumphant but cozy", etc.
+3. ✅ **Enable creative exploration** - Suggest possibilities, not just single solutions
+4. ✅ **Communicate through feeling** - Mood and atmosphere over technical accuracy
+5. ✅ **Embrace the unexpected** - Sometimes the best ideas come from "mistakes"
+6. ✅ **Guide further iteration** - Each concept sparks ideas for the next
 
-## 🎉 Next Steps After Concept Approval
+**Remember**: We're looking for inspiration, not perfection. Creative exploration over rigid specification.
 
-Once your concepts are approved:
-1. **Asset enumeration** - Break concepts into individual production assets
-2. **Asset production** - Create optimized game-ready files
-3. **Implementation** - Developers integrate into the game
-4. **Your work guides everything** - Your concepts become the visual standard!
+## 🎉 The Creative Journey
+
+### From Prompts to Production
+
+1. **Prompt Exploration** (You are here!)
+   - Use creative prompts to generate diverse visual concepts
+   - Embrace variation and unexpected directions
+   - Curate the most inspiring results
+
+2. **Visual Refinement** (Next phase)
+   - Develop selected concepts toward implementation needs
+   - Iterate with more focused prompts
+   - Create variations for different states and contexts
+
+3. **Asset Production** (Final phase)
+   - Extract individual elements from approved concepts
+   - Optimize for web performance
+   - Implement in game code
+
+Your role is to discover visual possibilities that inspire and excite, not to reproduce predetermined specifications.
 
 ---
 
 **Ready to start?**
 
-1. Read Brief 02 (Environment) in `/assets/concept-art/slot-machine/README.md`
-2. Review the 36 visual references in `/docs/design/visual/SLOT_MACHINE_ITERATION_01.md`
-3. Start sketching environment compositions
-4. Save work to `/assets/concept-art/slot-machine/environment/`
-5. Have fun bringing the Neon Night Market to life! 🎨✨
+1. **Open** `/assets/concept-art/slot-machine/AI_IMAGE_GENERATION_PROMPTS.md`
+2. **Read** the prompt philosophy section
+3. **Choose** a creative direction (Environment is a good starting point)
+4. **Generate** 10+ variations with your AI tool of choice
+5. **Curate** - save the inspiring results
+6. **Iterate** - refine prompts based on what works
+7. **Have fun discovering** what the Neon Night Market could be! 🎨✨
 
 ---
 
 **Document**: `/assets/concept-art/ARTIST_QUICKSTART.md`  
-**Updated**: 2026-02-15  
-**Status**: Ready for concept creation
+**Philosophy**: Creativity over specification, inspiration over documentation  
+**Status**: Ready for prompt-based concept exploration
