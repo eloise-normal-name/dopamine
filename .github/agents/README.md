@@ -23,6 +23,7 @@ Custom agents are specialized AI assistants that you can create to help with spe
 
 **Best Used For:**
 - Design reviews and critiques
+- **Pull request reviews** for design quality and UX
 - Visual appeal assessments
 - User experience evaluations
 - Reviewing the slot machine game (their favorite!)
@@ -38,9 +39,10 @@ Custom agents are specialized AI assistants that you can create to help with spe
 ## How to Use Custom Agents
 
 1. **In GitHub Copilot Chat:** Select the custom agent from the agent picker
-2. **For Code Reviews:** Ask the agent to review specific files or changes
-3. **For Design Feedback:** Share design concepts and ask for opinions
-4. **For General Consultation:** Ask questions related to their expertise
+2. **For Pull Request Reviews:** Mention `@copilot` and request "Boomer Casino Critic" to review the PR
+3. **For Code Reviews:** Ask the agent to review specific files or changes
+4. **For Design Feedback:** Share design concepts and ask for opinions
+5. **For General Consultation:** Ask questions related to their expertise
 
 ## Creating New Custom Agents
 
@@ -50,6 +52,8 @@ To create a new custom agent:
 2. Define the following fields:
    - `name`: The display name for your agent
    - `description`: A brief description of the agent's purpose
+   - `tools`: (Optional) List of tools the agent can use (e.g., `['review', 'search', 'readFile']` for PR reviews)
+   - `user-invokable`: (Optional) Set to `true` to make the agent available in the picker
    - `instructions`: Detailed instructions for the agent's personality, behavior, and expertise
 
 3. Follow GitHub's documentation: https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents
