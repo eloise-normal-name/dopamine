@@ -4,11 +4,11 @@ Auto-playing web games that are fun to watch! A collection of browser-based game
 
 ## 🎯 Project Goals
 
-- **Auto-play**: Games run automatically with minimal user interaction
-- **Web-based**: Pure HTML/CSS/JavaScript, no build step required
-- **Minimal dependencies**: Vanilla JavaScript, lightweight and fast
-- **Visual appeal**: Fun animations and effects to watch
-- **Modular**: Each game is self-contained with shared utilities
+Dopamine creates auto-playing web games that are fun to watch — simple, beautiful browser experiences with minimal interaction required. 
+
+**Core values**: Web-based with no build step, minimal dependencies, engaging auto-play, and modular architecture.
+
+👉 **See [DESIGN_PRINCIPLES.md](DESIGN_PRINCIPLES.md) for the complete design philosophy and principles.**
 
 ## 🎲 Games
 
@@ -169,12 +169,13 @@ dopamine/
 
 ## 📚 Documentation
 
+- **[Design Principles](DESIGN_PRINCIPLES.md)** - 🌟 **START HERE** - Core philosophy and design beliefs
 - **[Architecture Overview](ARCHITECTURE.md)** - System design and principles
 - **[Contributing Guide](CONTRIBUTING.md)** - How to add new games
 - **[Game Development](docs/GAME_DEVELOPMENT.md)** - Detailed development guide
 - **[API Reference](docs/API.md)** - Shared utilities documentation
 - **[Design Documentation](docs/design/)** - Visual and audio design concepts
-  - **[Game Narratives](docs/design/NARRATIVES.md)** - 🌟 Colorful descriptions and emotional goals for each game
+  - **[Game Narratives](docs/design/NARRATIVES.md)** - Colorful descriptions and emotional goals for each game
   - **[References & Inspirations](docs/design/REFERENCES.md)** - Similar games, design patterns, and their relevance
   - **[Visual Design](docs/design/visual/)** - UI mockups, color palettes, animations
     - **[Slot Machine Iteration 01](docs/design/visual/SLOT_MACHINE_ITERATION_01.md)** - Initial slot narrative/design decisions and sample art

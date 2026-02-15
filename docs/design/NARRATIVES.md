@@ -231,31 +231,13 @@ Narrative → Design → Development (in that order!)
 
 ## Maintaining Coherence
 
-### The Dopamine Feel
+All Dopamine games should embody shared design principles and qualities to feel like part of a cohesive collection.
 
-All games should share these qualities:
-- **Watchable** - Interesting to observe passively
-- **Satisfying** - Moments of resolution and completion
-- **Colorful** - Vibrant but not overwhelming
-- **Polished** - Smooth animations, good sound design
-- **Simple** - Complex enough to be interesting, simple enough to understand immediately
-
-### Visual Coherence
-- Purple gradient theme appears somewhere (UI, accents, or background)
-- Consistent animation timing (60fps, similar easing functions)
-- Similar levels of detail (not photo-realistic, not overly minimalist)
-
-### Audio Coherence
-- Similar quality/fidelity across games
-- Non-intrusive volume levels
-- Optional/mutable
-- Positive, pleasant tones (avoid harsh or alarming sounds)
-
-### Tonal Coherence
-- Playful but not childish
-- Calming but not boring
-- Rewarding but not manipulative
-- Fun but not chaotic
+👉 **See [../../DESIGN_PRINCIPLES.md](../../DESIGN_PRINCIPLES.md) for complete details on:**
+- **The Dopamine Feel** - The 5 essential qualities (watchable, satisfying, colorful, polished, simple)
+- **Visual Coherence** - Purple gradient theme, animation timing, level of detail
+- **Audio Coherence** - Quality, volume levels, optional/mutable, pleasant tones
+- **Tonal Coherence** - Playful but not childish, calming but not boring, rewarding but not manipulative, fun but not chaotic
 
 ---
 
