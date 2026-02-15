@@ -23,7 +23,7 @@ Before writing any game code, complete the visual design pipeline:
 
 1. **Narrative** → Describe the game experience in `/docs/design/NARRATIVES.md`
 2. **References** → Collect visual inspiration in `/docs/design/REFERENCES.md`
-3. **Art briefs** → Write concept directions in `/assets/concept-art/<game>/`
+3. **Art briefs** → Write concept directions in `/docs/design/concept-art/<game>/`
 4. **Concept art** → Generate and curate visual concepts via AI prompts
 5. **Asset list** → Break concepts into production-ready sprites and elements
 6. **Production** → Create optimized web assets

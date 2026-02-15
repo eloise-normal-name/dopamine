@@ -11,16 +11,16 @@ A complete concept art pipeline using AI-generated prompts for visual exploratio
 | File | Purpose |
 |------|---------|
 | `/docs/design/ASSET_WORKFLOW.md` | 7-phase design-to-implementation workflow |
-| `/assets/concept-art/README.md` | Concept art system overview and approach |
-| `/assets/concept-art/ARTIST_QUICKSTART.md` | Getting started guide for concept generation |
-| `/assets/concept-art/shared/README.md` | Cross-game shared elements planning |
+| `/docs/design/concept-art/README.md` | Concept art system overview and approach |
+| `/docs/design/concept-art/ARTIST_QUICKSTART.md` | Getting started guide for concept generation |
+| `/docs/design/concept-art/shared/README.md` | Cross-game shared elements planning |
 
 ### Slot Machine Art Briefs & Prompts
 
 | File | Purpose |
 |------|---------|
-| `/assets/concept-art/slot-machine/README.md` | 3 art briefs with emotional targets and specs |
-| `/assets/concept-art/slot-machine/AI_IMAGE_GENERATION_PROMPTS.md` | 13 creative prompts across 3 directions |
+| `/docs/design/concept-art/slot-machine/README.md` | 3 art briefs with emotional targets and specs |
+| `/docs/design/concept-art/slot-machine/AI_IMAGE_GENERATION_PROMPTS.md` | 13 creative prompts across 3 directions |
 
 ### Output Directories
 
@@ -42,7 +42,7 @@ The system uses evocative, narrative-style prompts instead of technical specific
 ## Integration Points
 
 - `CONTRIBUTING.md` updated with design-first workflow requirement
-- `assets/README.md` updated with concept-art directory reference
+- `assets/README.md` updated with concept-art directory reference (now at `/docs/design/concept-art/`)
 - `docs/design/README.md` updated with concept art links and status
 - Workflow connects to existing narratives (NARRATIVES.md) and references (SLOT_MACHINE_ITERATION_01.md)
 
