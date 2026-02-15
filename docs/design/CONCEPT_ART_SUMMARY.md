@@ -48,4 +48,4 @@ The system uses evocative, narrative-style prompts instead of technical specific
 
 ## Current Phase
 
-**Phase 4: Concepting** — Art briefs are written, prompts are ready. Next step is generating concept images using AI image tools and curating the results.
+**Phase 4: Concept Art** — Art briefs are written, prompts are ready. Next step is generating concept images using AI image tools and curating the results.

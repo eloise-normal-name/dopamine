@@ -110,8 +110,8 @@ Wire assets into the running game.
 | 1. Narrative | ✅ Complete | See NARRATIVES.md |
 | 2. References | ✅ Complete | 36 sources in SLOT_MACHINE_ITERATION_01.md |
 | 3. Art Briefs | ✅ Complete | 3 briefs in /assets/concept-art/slot-machine/ |
-| 4. Concepting | ⏳ Ready | Prompts written, awaiting generation |
-| 5. Enumeration | ⏳ Pending | Follows concepting |
+| 4. Concept Art | ⏳ Ready | Prompts written, awaiting generation |
+| 5. Enumeration | ⏳ Pending | Follows concept art |
 | 6. Production | ⏳ Pending | — |
 | 7. Integration | ⏳ Pending | — |
 

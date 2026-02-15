@@ -10,7 +10,7 @@ Creative prompts for generating "Neon Night Market Slots" concept art. These are
 
 ### Prompt: "The Moment of Triumph"
 
-Imagine the instant when three golden sevens lock into place and the whole world holds its breath before erupting in warmth. A slot machine reel window glows from within like a lantern, casting soft gold light outward. Particles of light — not confetti, but luminous motes — drift upward in lazy spirals. The scene is suffused with the color of a sunset trapped indoors: amber, gold, touches of rose. Everything is warm. Everything is earned. The celebration is powerful but gentle, like a standing ovation in a small theater.
+Imagine the instant when three matching symbols lock into place and the whole world holds its breath before erupting in warmth. A slot machine reel window glows from within like a lantern, casting soft gold light outward. Particles of light — not confetti, but luminous motes — drift upward in lazy spirals. The scene is suffused with the color of a sunset trapped indoors: amber, gold, touches of rose. Everything is warm. Everything is earned. The celebration is powerful but gentle, like a standing ovation in a small theater.
 
 **Mood**: Triumphant warmth, contained joy, golden radiance
 **Palette**: Gold, warm amber, soft white, purple shadows
