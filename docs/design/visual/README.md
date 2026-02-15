@@ -4,7 +4,8 @@ This directory contains visual design documentation, mockups, and concept art fo
 
 ## Start Here
 
-- **[Slot Machine Iteration 01](SLOT_MACHINE_ITERATION_01.md)** - Narrative refinement, opinionated design decisions, sample art, and inspiration mapping for slots development kickoff.
+- **[Slot Machine Iteration 01](SLOT_MACHINE_ITERATION_01.md)** - Complete design document with narrative, requirements, specifications, and review process
+  - **[Completion Summary](SLOT_MACHINE_DESIGN_COMPLETION_SUMMARY.md)** - Overview of what was added and how to use this document
 
 ## Contents
 
