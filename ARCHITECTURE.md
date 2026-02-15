@@ -4,10 +4,10 @@
 Dopamine is a collection of auto-playing web games (slot machines, gacha, etc.) that are fun to watch. Games run automatically in the browser with minimal user interaction required.
 
 ## Core Principles
-- **Web-based**: All games run in modern browsers without plugins
-- **Minimal dependencies**: Prefer vanilla JavaScript, minimal external libraries
-- **Auto-play**: Games execute automatically, creating engaging visual experiences
-- **Modular**: Each game is self-contained but shares common utilities
+
+Dopamine follows a set of core technical and design principles focused on web-based, auto-playing games with minimal dependencies and modular architecture.
+
+👉 **See [DESIGN_PRINCIPLES.md](DESIGN_PRINCIPLES.md) for the complete philosophy and all core principles.**
 
 ## Directory Structure
 
