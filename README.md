@@ -139,7 +139,10 @@ dopamine/
 │   └── styles/             # Global CSS
 ├── docs/                   # Documentation
 │   ├── GAME_DEVELOPMENT.md # Game development guide
-│   └── API.md              # API reference
+│   ├── API.md              # API reference
+│   └── design/             # Design documentation
+│       ├── visual/         # Visual design and mockups
+│       └── audio/          # Audio design and concepts
 ├── ARCHITECTURE.md         # Architecture overview
 └── CONTRIBUTING.md         # Contributing guidelines
 ```
@@ -150,6 +153,9 @@ dopamine/
 - **[Contributing Guide](CONTRIBUTING.md)** - How to add new games
 - **[Game Development](docs/GAME_DEVELOPMENT.md)** - Detailed development guide
 - **[API Reference](docs/API.md)** - Shared utilities documentation
+- **[Design Documentation](docs/design/)** - Visual and audio design concepts
+  - **[Visual Design](docs/design/visual/)** - UI mockups, color palettes, animations
+  - **[Audio Design](docs/design/audio/)** - Sound effects, music direction
 
 ## 🛠️ Technology Stack
 
