@@ -79,22 +79,40 @@ No build step, no dependencies to install!
 
 ### GitHub Pages (Recommended)
 
-The easiest way to deploy Dopamine is using GitHub Pages since it's a static site with no build step:
+The easiest way to deploy Dopamine is using GitHub Pages since it's a static site with no build step.
+
+#### Automatic Deployment with GitHub Actions
+
+This repository includes a GitHub Actions workflow (`.github/workflows/static.yml`) that automatically deploys to GitHub Pages:
 
 1. **Enable GitHub Pages**:
    - Go to your repository settings
    - Navigate to "Pages" section
-   - Under "Source", select the branch you want to deploy (e.g., `main`)
-   - Click "Save"
+   - Under "Source", select "GitHub Actions"
+   - The workflow will automatically deploy when you push to `main`
 
 2. **Access your site**:
    - Your site will be available at: `https://[username].github.io/dopamine/`
    - Games will work immediately with no additional configuration
+   - Deployments happen automatically on every push to `main`
 
-3. **Custom domain (optional)**:
-   - Add a `CNAME` file to the root with your domain
-   - Configure DNS settings with your domain provider
-   - Enable "Enforce HTTPS" in GitHub Pages settings
+3. **Manual Deployment**:
+   - You can also trigger deployments manually from the Actions tab
+   - Click "Run workflow" on the "Deploy static content to Pages" workflow
+
+#### Alternative: Manual GitHub Pages Setup
+
+If you prefer not to use GitHub Actions:
+
+1. Go to repository settings → Pages
+2. Under "Source", select the branch you want to deploy (e.g., `main`)
+3. Click "Save"
+
+#### Custom Domain (Optional)
+
+- Add a `CNAME` file to the root with your domain
+- Configure DNS settings with your domain provider
+- Enable "Enforce HTTPS" in GitHub Pages settings
 
 ### Alternative Deployment Options
 
