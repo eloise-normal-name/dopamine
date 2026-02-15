@@ -24,6 +24,8 @@ Each game narrative should include:
 
 ## 🎰 Slot Machine: "Lucky Sevens"
 
+> Iteration kickoff doc: [visual/SLOT_MACHINE_ITERATION_01.md](visual/SLOT_MACHINE_ITERATION_01.md)
+
 ### The Experience
 
 **Watch the reels dance.** Three gleaming slots spin in unison, a blur of bright fruits and lucky symbols. The anticipation builds as each reel slows—*click... click... click*—settling one by one into place. Cherry. Lemon. Seven. 

@@ -21,6 +21,7 @@ This directory contains design concepts, mockups, and guidelines for Dopamine's 
 - **[REFERENCES.md](REFERENCES.md)** - Inspirations, similar games, and their relevance to Dopamine
 - **[audio/](audio/)** - Audio design, sound effects concepts, and music direction
 - **[visual/](visual/)** - Visual design, UI mockups, color palettes, and animation concepts
+  - **[Slot Machine Iteration 01](visual/SLOT_MACHINE_ITERATION_01.md)** - Opinionated slot narrative/design decisions + sample art
 
 ## Purpose
 
