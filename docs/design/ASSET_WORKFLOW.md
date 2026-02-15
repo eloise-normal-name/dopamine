@@ -50,7 +50,7 @@ Each brief specifies:
 - Technical constraints (dimensions, format, performance)
 - Priority level and relationship to other briefs
 
-**Output**: Art brief documents in `/assets/concept-art/<game>/README.md`
+**Output**: Art brief documents in `/docs/design/concept-art/<game>/README.md`
 
 ### Phase 4 — Concept Art (Prompt-Based)
 
@@ -64,7 +64,7 @@ We use **AI-generated prompts** as the primary tool for visual exploration. Inst
 4. **Iterate rapidly** — Refine prompts based on discoveries, then generate again
 5. **Embrace surprises** — Unexpected results often reveal the best creative direction
 
-See `/assets/concept-art/slot-machine/AI_IMAGE_GENERATION_PROMPTS.md` for the prompt library.
+See `/docs/design/concept-art/slot-machine/AI_IMAGE_GENERATION_PROMPTS.md` for the prompt library.
 
 **Output**: Curated concept images saved in category subdirectories
 
@@ -109,7 +109,7 @@ Wire assets into the running game.
 |-------|--------|-------|
 | 1. Narrative | ✅ Complete | See NARRATIVES.md |
 | 2. References | ✅ Complete | 36 sources in SLOT_MACHINE_ITERATION_01.md |
-| 3. Art Briefs | ✅ Complete | 3 briefs in /assets/concept-art/slot-machine/ |
+| 3. Art Briefs | ✅ Complete | 3 briefs in /docs/design/concept-art/slot-machine/ |
 | 4. Concept Art | ⏳ Ready | Prompts written, awaiting generation |
 | 5. Enumeration | ⏳ Pending | Follows concept art |
 | 6. Production | ⏳ Pending | — |

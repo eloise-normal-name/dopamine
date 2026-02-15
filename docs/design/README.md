@@ -23,6 +23,7 @@ For the complete 7-phase pipeline, see **[ASSET_WORKFLOW.md](ASSET_WORKFLOW.md)*
 - **[REFERENCES.md](REFERENCES.md)** - Inspirations, similar games, and their relevance to Dopamine
 - **[ASSET_WORKFLOW.md](ASSET_WORKFLOW.md)** - 📋 7-phase workflow from narrative to implementation
 - **[CONCEPT_ART_SUMMARY.md](CONCEPT_ART_SUMMARY.md)** - Overview of concept art pipeline status
+- **[concept-art/](concept-art/)** - Prompt-based concept art pipeline and creative briefs
 - **[audio/](audio/)** - Audio design, sound effects concepts, and music direction
 - **[visual/](visual/)** - Visual design, UI mockups, color palettes, and animation concepts
   - **[Slot Machine Iteration 01](visual/SLOT_MACHINE_ITERATION_01.md)** - Opinionated slot narrative/design decisions + sample art
@@ -106,7 +107,7 @@ See subdirectories for examples:
 ### Slot Machine: "Neon Night Market"
 - [x] Narrative complete (see NARRATIVES.md)
 - [x] Visual references collected (36 sources in visual/SLOT_MACHINE_ITERATION_01.md)
-- [x] Art briefs and creative prompts written (see /assets/concept-art/slot-machine/)
+- [x] Art briefs and creative prompts written (see /docs/design/concept-art/slot-machine/)
 - [ ] Concept art generation (ready for AI image tools)
 - [ ] Asset enumeration and production
 - [ ] Implementation
