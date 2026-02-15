@@ -215,6 +215,9 @@ Unsubscribe from an event.
 
 **Example:**
 ```javascript
+// PLANNED UTILITY - See /shared/README.md for status
+// EventEmitter will be available in /shared/utils/events.js
+
 import { EventEmitter } from '../../shared/utils/events.js';
 
 class Game extends EventEmitter {

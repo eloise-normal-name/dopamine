@@ -84,8 +84,9 @@ Use CSS animations for simple effects, JavaScript for complex animations:
 // CSS approach (preferred for simple animations)
 element.classList.add('spinning');
 
-// JavaScript approach (for complex animations)
-import { animate } from '../../shared/utils/animation.js';
+// JavaScript approach (for complex animations) - PLANNED UTILITY
+// For now, use setTimeout/requestAnimationFrame directly
+// Future: import { animate } from '../../shared/utils/animation.js';
 
 animate({
   duration: 1000,
@@ -101,6 +102,9 @@ animate({
 Use shared random utilities for consistent behavior:
 
 ```javascript
+// Note: These utilities are planned for /shared/utils/random.js
+// Currently, implement these inline in your game (see slot-machine/game.js for example)
+
 import { randomInt, weightedRandom, shuffle } from '../../shared/utils/random.js';
 
 // Random integer between min and max (inclusive)
@@ -168,7 +172,9 @@ export const config = {
 ## Audio Integration
 
 ```javascript
-import { AudioManager } from '../../shared/utils/audio.js';
+// PLANNED UTILITY - Not yet implemented
+// For now, use HTML5 Audio API directly
+// Future: import { AudioManager } from '../../shared/utils/audio.js';
 
 const audio = new AudioManager();
 audio.loadSound('spin', '/assets/sounds/spin.mp3');
