@@ -187,6 +187,20 @@ dopamine/
 - **No build tools** - Direct browser execution
 - **No frameworks** - Lightweight and simple
 
+## 🎰 Custom GitHub Copilot Agent
+
+This repository includes a custom GitHub Copilot agent: **Boomer Casino Critic** 🎲
+
+A design critic with a boomer personality who's absolutely addicted to casinos and slot machines. Perfect for getting critical design opinions with a gambling twist! They find the slot machine game particularly relaxing and enticing.
+
+**How to use:**
+1. Open GitHub Copilot Chat in your IDE or on GitHub
+2. Select "Boomer Casino Critic" from the agent picker
+3. Ask for design reviews, feedback, or opinions on game features
+4. **Request PR reviews:** Mention `@copilot` in a PR comment and request the "Boomer Casino Critic" agent
+
+See [.github/agents/README.md](.github/agents/README.md) for more details.
+
 ## 🤝 Contributing
 
 We welcome contributions! Whether you want to:
