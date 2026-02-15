@@ -10,15 +10,18 @@ This directory contains design concepts, mockups, and guidelines for Dopamine's 
 
 1. **Narrative** → Write compelling game description ([NARRATIVES.md](NARRATIVES.md))
 2. **References** → Research inspirations and similar games ([REFERENCES.md](REFERENCES.md))
-3. **Concept** → Create visual and audio mood boards (in visual/ and audio/ subdirectories)
+3. **Concept** → Create art briefs and concept art ([ASSET_WORKFLOW.md](ASSET_WORKFLOW.md))
 4. **Design** → Produce detailed mockups and specifications
 5. **Iterate** → Refine for coherent experience across all games
 6. **Implement** → Only then begin coding
+
+For the complete workflow, see **[ASSET_WORKFLOW.md](ASSET_WORKFLOW.md)**.
 
 ## Structure
 
 - **[NARRATIVES.md](NARRATIVES.md)** - 🌟 **START HERE** - Colorful descriptions of each game's experience and emotional goals
 - **[REFERENCES.md](REFERENCES.md)** - Inspirations, similar games, and their relevance to Dopamine
+- **[ASSET_WORKFLOW.md](ASSET_WORKFLOW.md)** - 📋 Complete workflow from concept to implementation
 - **[audio/](audio/)** - Audio design, sound effects concepts, and music direction
 - **[visual/](visual/)** - Visual design, UI mockups, color palettes, and animation concepts
   - **[Slot Machine Iteration 01](visual/SLOT_MACHINE_ITERATION_01.md)** - Opinionated slot narrative/design decisions + sample art
@@ -99,9 +102,24 @@ See subdirectories for examples:
 
 ## Status
 
-🚧 This is a placeholder structure for future design work. As the project grows, this will be populated with:
-- Game-specific design documentation
-- Shared component designs
-- Audio direction and concepts
-- Animation specifications
-- Brand guidelines
+Current design progress:
+
+### Slot Machine: "Neon Night Market"
+- [x] Narrative complete (see NARRATIVES.md)
+- [x] Visual references collected (36 sources in visual/SLOT_MACHINE_ITERATION_01.md)
+- [x] Concept art briefs created (see /assets/concept-art/slot-machine/)
+  - [x] Art Brief 01: Jackpot Celebration Scene
+  - [x] Art Brief 02: Neon Night Market Environment
+  - [x] Art Brief 03: Machine Component Close-ups
+- [ ] Concept art creation (next phase - ready for artist assignment)
+- [ ] Asset enumeration and production
+- [ ] Implementation
+
+For full status and workflow, see [ASSET_WORKFLOW.md](ASSET_WORKFLOW.md).
+
+### Future Games
+- [ ] Gacha game design
+- [ ] Dice roll design
+- [ ] Card flip design
+
+🚧 This directory will continue to be populated with design work as the project grows.
