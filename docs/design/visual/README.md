@@ -2,6 +2,10 @@
 
 This directory contains visual design documentation, mockups, and concept art for Dopamine games.
 
+## Start Here
+
+- **[Slot Machine Iteration 01](SLOT_MACHINE_ITERATION_01.md)** - Narrative refinement, opinionated design decisions, sample art, and inspiration mapping for slots development kickoff.
+
 ## Contents
 
 ### Design Guidelines
