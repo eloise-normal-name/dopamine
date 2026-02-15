@@ -1,33 +1,35 @@
 # Gacha Game
 
-A capsule toy/loot box simulation that plays automatically.
+A treasure chest opening simulation that plays automatically.
+
+> Design kickoff doc: [../../docs/design/visual/GACHA_ITERATION_01.md](../../docs/design/visual/GACHA_ITERATION_01.md)
 
 ## Status
 🚧 Coming Soon
 
 ## Planned Features
 
-- Auto-pull every few seconds
+- Auto-open every few seconds
 - Multiple rarity tiers (Common, Rare, Epic, Legendary)
 - Collection tracking
 - Duplicate system
-- Visual capsule opening animation
+- Visual treasure chest opening animation
 - Particle effects
 - Sound effects
-- Pity system (guaranteed rare after X pulls)
+- Pity system (guaranteed legendary after 90 pulls)
 
 ## Concept
 
-Players watch as the game automatically opens virtual loot boxes, revealing items of varying rarity. The game maintains a collection and shows statistics about pulls.
+Viewers watch as the game automatically opens treasure chests in an endless loop. Each chest arrives center-stage, rattles with anticipation, cracks open, and reveals a prize with rarity-appropriate fanfare. The game maintains a collection and shows statistics about opens.
 
 ## Rarity Distribution (Planned)
 
 | Rarity | Probability | Visual |
 |--------|-------------|--------|
-| Common | 60% | Gray |
-| Rare | 30% | Blue |
-| Epic | 9% | Purple |
-| Legendary | 1% | Gold |
+| Common | 60% | Green glow |
+| Rare | 30% | Blue glow |
+| Epic | 9% | Purple glow |
+| Legendary | 1% | Gold glow |
 
 ## Implementation Notes
 
