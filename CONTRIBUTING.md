@@ -16,6 +16,20 @@ Dopamine is built on principles of simplicity, visual appeal, and accessibility 
 
 ## Adding a New Game
 
+### 0. Design First
+
+Before writing any game code, complete the visual design pipeline:
+
+1. **Narrative** → Describe the game experience in `/docs/design/NARRATIVES.md`
+2. **References** → Collect visual inspiration in `/docs/design/REFERENCES.md`
+3. **Art briefs** → Write concept directions in `/docs/design/concept-art/<game>/`
+4. **Concept art** → Generate and curate visual concepts via AI prompts
+5. **Enumeration** → Break concepts into production-ready asset lists
+6. **Production** → Create optimized web assets
+7. **Integration** → Wire assets into the running game
+
+See [`/docs/design/ASSET_WORKFLOW.md`](/docs/design/ASSET_WORKFLOW.md) for the complete 7-phase workflow.
+
 ### 1. Create Game Directory
 ```bash
 mkdir -p games/your-game-name

@@ -10,15 +10,20 @@ This directory contains design concepts, mockups, and guidelines for Dopamine's 
 
 1. **Narrative** → Write compelling game description ([NARRATIVES.md](NARRATIVES.md))
 2. **References** → Research inspirations and similar games ([REFERENCES.md](REFERENCES.md))
-3. **Concept** → Create visual and audio mood boards (in visual/ and audio/ subdirectories)
+3. **Concept** → Write art briefs and generate concept art via AI prompts
 4. **Design** → Produce detailed mockups and specifications
 5. **Iterate** → Refine for coherent experience across all games
 6. **Implement** → Only then begin coding
+
+For the complete 7-phase pipeline, see **[ASSET_WORKFLOW.md](ASSET_WORKFLOW.md)**.
 
 ## Structure
 
 - **[NARRATIVES.md](NARRATIVES.md)** - 🌟 **START HERE** - Colorful descriptions of each game's experience and emotional goals
 - **[REFERENCES.md](REFERENCES.md)** - Inspirations, similar games, and their relevance to Dopamine
+- **[ASSET_WORKFLOW.md](ASSET_WORKFLOW.md)** - 📋 7-phase workflow from narrative to implementation
+- **[CONCEPT_ART_SUMMARY.md](CONCEPT_ART_SUMMARY.md)** - Overview of concept art pipeline status
+- **[concept-art/](concept-art/)** - Prompt-based concept art pipeline and creative briefs
 - **[audio/](audio/)** - Audio design, sound effects concepts, and music direction
 - **[visual/](visual/)** - Visual design, UI mockups, color palettes, and animation concepts
   - **[Slot Machine Iteration 01](visual/SLOT_MACHINE_ITERATION_01.md)** - Opinionated slot narrative/design decisions + sample art
@@ -90,9 +95,17 @@ See subdirectories for examples:
 
 ## Status
 
-🚧 This is a placeholder structure for future design work. As the project grows, this will be populated with:
-- Game-specific design documentation
-- Shared component designs
-- Audio direction and concepts
-- Animation specifications
-- Brand guidelines
+### Slot Machine: "Neon Night Market"
+- [x] Narrative complete (see NARRATIVES.md)
+- [x] Visual references collected (36 sources in visual/SLOT_MACHINE_ITERATION_01.md)
+- [x] Art briefs and creative prompts written (see /docs/design/concept-art/slot-machine/)
+- [ ] Concept art generation (ready for AI image tools)
+- [ ] Asset enumeration and production
+- [ ] Implementation
+
+### Future Games
+- [ ] Gacha game design
+- [ ] Dice roll design
+- [ ] Card flip design
+
+🚧 Design work continues as the project grows.

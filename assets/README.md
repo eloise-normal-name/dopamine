@@ -4,11 +4,16 @@ This directory contains static assets used by the games.
 
 ## Structure
 
-- `images/` - Images, sprites, icons
-- `sounds/` - Sound effects and music
+- `images/` (planned) - Production-ready images, sprites, icons
+- `sounds/` (planned) - Sound effects and music
 - `styles/` - Global CSS and styling
 
 ## Guidelines
+
+### Concept Art
+- See [`/docs/design/concept-art/README.md`](/docs/design/concept-art/README.md) for the prompt-based visual development workflow
+- Art briefs define creative direction before asset production begins
+- Follow design-first pipeline: Narrative → References → Briefs → Concepts → Assets
 
 ### Images
 - Use web-optimized formats (WebP, PNG, SVG)
@@ -41,5 +46,6 @@ Include proper attribution in comments where required.
 
 🚧 Asset library to be populated as games are developed
 
-Current assets:
+Current status:
 - ✅ `styles/common.css` - Common stylesheet
+- ⏳ Production asset creation (concept art docs in `/docs/design/concept-art/`)
