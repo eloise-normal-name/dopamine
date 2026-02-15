@@ -62,6 +62,10 @@ See also: [../REFERENCES.md](../REFERENCES.md)
 - **Casino demo/review sites** (in-game screenshot galleries + symbol/paytable panels)
 - **Slot theme aggregators** (theme-tagged slot lists and thumbnails)
 - **Design portfolio/mockup sites** (high-fidelity concept shots and key art)
+- **Photo/media archives** (real machine photography and historical visuals)
+- **Reference/encyclopedia sources** (terminology and historical image context)
+- **Manufacturer product galleries** (cabinet form factors and control-panel patterns)
+- **Asset marketplaces / curation boards** (style exploration and motif diversity)
 
 ### Copy/paste search queries (vibe-focused)
 
@@ -94,7 +98,7 @@ See also: [../REFERENCES.md](../REFERENCES.md)
 
 ```md
 ### [Ref ##] Source name
-- Source category: Steam | iOS App Store | Google Play | Casino demo/review | Slot theme aggregator | Design portfolio/mockup
+- Source category: Steam | iOS App Store | Google Play | Casino demo/review | Slot theme aggregator | Design portfolio/mockup | Photo/media archive | Reference/encyclopedia | Manufacturer gallery | Asset marketplace | Visual curation board
 - Page link: <url>
 - Query used: "<exact query>"
 - What to copy: palette | UI layout | symbol style | background mood | animation cues
@@ -301,13 +305,13 @@ See also: [../REFERENCES.md](../REFERENCES.md)
 ### [Ref 25] Steam broad slot machine search (feature + style spread)
 - Source category: Steam
 - Page link: https://store.steampowered.com/search/?term=slot%20machine
-- Query used: "slot machine screenshots promo"
+- Query used: "slot machine"
 - What to copy: UI density range, genre blending (horror/comedy/arcade), title-card readability patterns
 - Where images are on the page: result capsule grid with thumbnail art and linked store-page screenshot strips
 - Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
 
 ### [Ref 26] Wikimedia Commons slot machine category
-- Source category: Design portfolio/mockup
+- Source category: Photo/media archive
 - Page link: https://commons.wikimedia.org/wiki/Category:Slot_machines
 - Query used: "slot machine cabinet photos"
 - What to copy: physical cabinet forms, reel-window proportions, bezel and panel materials
@@ -315,7 +319,7 @@ See also: [../REFERENCES.md](../REFERENCES.md)
 - Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
 
 ### [Ref 27] Wikipedia slot machine article
-- Source category: Design portfolio/mockup
+- Source category: Reference/encyclopedia
 - Page link: https://en.wikipedia.org/wiki/Slot_machine
 - Query used: "slot machine history visuals"
 - What to copy: historic-to-modern visual evolution, reel conventions, terminology to label design studies
@@ -323,7 +327,7 @@ See also: [../REFERENCES.md](../REFERENCES.md)
 - Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
 
 ### [Ref 28] Flickr slot machine photo search
-- Source category: Design portfolio/mockup
+- Source category: Photo/media archive
 - Page link: https://www.flickr.com/search/?text=slot%20machine
 - Query used: "slot machine casino floor photos"
 - What to copy: real-world lighting contrast, casino floor color temperatures, reflections/glare behavior
@@ -339,7 +343,7 @@ See also: [../REFERENCES.md](../REFERENCES.md)
 - Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
 
 ### [Ref 30] Getty vintage slot machine photos
-- Source category: Design portfolio/mockup
+- Source category: Photo/media archive
 - Page link: https://www.gettyimages.com/photos/vintage-slot-machine
 - Query used: "vintage slot machine reference photos"
 - What to copy: mechanical details, chrome + enamel palette accents, retro typography and icon framing
@@ -347,7 +351,7 @@ See also: [../REFERENCES.md](../REFERENCES.md)
 - Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
 
 ### [Ref 31] IGT gaming cabinets
-- Source category: Design portfolio/mockup
+- Source category: Manufacturer gallery
 - Page link: https://www.igt.com/products-and-services/gaming/cabinets
 - Query used: "IGT slot cabinet visuals"
 - What to copy: cabinet silhouettes, multi-screen stack patterns, ergonomic button/touch zones
@@ -355,7 +359,7 @@ See also: [../REFERENCES.md](../REFERENCES.md)
 - Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
 
 ### [Ref 32] Aristocrat gaming cabinets
-- Source category: Design portfolio/mockup
+- Source category: Manufacturer gallery
 - Page link: https://www.aristocratgaming.com/us/casino-operator/cabinets/
 - Query used: "Aristocrat slot cabinet reference"
 - What to copy: premium cabinet lighting, curved display framing, branded machine posture
@@ -379,7 +383,7 @@ See also: [../REFERENCES.md](../REFERENCES.md)
 - Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
 
 ### [Ref 35] Pinterest slot animation references board
-- Source category: Design portfolio/mockup
+- Source category: Visual curation board
 - Page link: https://www.pinterest.com/higashi1264/slot-games-animation-references/
 - Query used: "slot games animation references"
 - What to copy: animation poses, win-celebration motion motifs, particle treatment ideas
@@ -387,7 +391,7 @@ See also: [../REFERENCES.md](../REFERENCES.md)
 - Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
 
 ### [Ref 36] itch.io slot-tagged game assets
-- Source category: Design portfolio/mockup
+- Source category: Asset marketplace
 - Page link: https://itch.io/game-assets/tag-slot
 - Query used: "slot game assets icon reels UI"
 - What to copy: reusable visual motifs, symbol readability at different scales, indie art-style variation
