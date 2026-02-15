@@ -101,6 +101,15 @@ Future visual design documentation will include:
 - [ ] Dark mode considerations
 - [ ] Accessibility guidelines (contrast ratios, etc.)
 
+## Key References
+
+See [../REFERENCES.md](../REFERENCES.md) for detailed inspirations. Key visual references:
+- **Vaporwave aesthetic** - Purple gradients and neon colors
+- **Kurzgesagt** - Clean flat design with smooth animations
+- **Disney animation principles** - Natural, weighted movement
+- **Candy Crush** - Satisfying visual feedback and particle effects
+- **Monument Valley** - Simple mechanics, beautiful execution
+
 ## Contributing
 
 To add visual designs:

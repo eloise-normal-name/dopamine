@@ -159,6 +159,8 @@ dopamine/
 │   ├── GAME_DEVELOPMENT.md # Game development guide
 │   ├── API.md              # API reference
 │   └── design/             # Design documentation
+│       ├── NARRATIVES.md   # Game narratives and descriptions
+│       ├── REFERENCES.md   # Inspirations and similar games
 │       ├── visual/         # Visual design and mockups
 │       └── audio/          # Audio design and concepts
 ├── ARCHITECTURE.md         # Architecture overview
@@ -172,6 +174,8 @@ dopamine/
 - **[Game Development](docs/GAME_DEVELOPMENT.md)** - Detailed development guide
 - **[API Reference](docs/API.md)** - Shared utilities documentation
 - **[Design Documentation](docs/design/)** - Visual and audio design concepts
+  - **[Game Narratives](docs/design/NARRATIVES.md)** - 🌟 Colorful descriptions and emotional goals for each game
+  - **[References & Inspirations](docs/design/REFERENCES.md)** - Similar games, design patterns, and their relevance
   - **[Visual Design](docs/design/visual/)** - UI mockups, color palettes, animations
   - **[Audio Design](docs/design/audio/)** - Sound effects, music direction
 

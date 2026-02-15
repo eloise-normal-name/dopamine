@@ -2,8 +2,23 @@
 
 This directory contains design concepts, mockups, and guidelines for Dopamine's visual and audio elements.
 
+## 🎨 Design-First Approach
+
+> **Priority**: Colorful narrative descriptions and design concepts come BEFORE implementation. We establish the experience first, then build it.
+
+### Workflow
+
+1. **Narrative** → Write compelling game description ([NARRATIVES.md](NARRATIVES.md))
+2. **References** → Research inspirations and similar games ([REFERENCES.md](REFERENCES.md))
+3. **Concept** → Create visual and audio mood boards (in visual/ and audio/ subdirectories)
+4. **Design** → Produce detailed mockups and specifications
+5. **Iterate** → Refine for coherent experience across all games
+6. **Implement** → Only then begin coding
+
 ## Structure
 
+- **[NARRATIVES.md](NARRATIVES.md)** - 🌟 **START HERE** - Colorful descriptions of each game's experience and emotional goals
+- **[REFERENCES.md](REFERENCES.md)** - Inspirations, similar games, and their relevance to Dopamine
 - **[audio/](audio/)** - Audio design, sound effects concepts, and music direction
 - **[visual/](visual/)** - Visual design, UI mockups, color palettes, and animation concepts
 

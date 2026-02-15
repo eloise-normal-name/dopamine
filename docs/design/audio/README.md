@@ -174,6 +174,15 @@ Future audio design documentation will include:
 - [ ] Mixing and mastering standards
 - [ ] Accessibility considerations (visual alternatives)
 
+## Key References
+
+See [../REFERENCES.md](../REFERENCES.md) for detailed inspirations. Key audio references:
+- **Arcade classics** (Pac-Man) - Simple, iconic, recognizable sounds
+- **iOS/Material Design** - Subtle, professional UI sounds
+- **Slot machines** - Mechanical authenticity meets digital polish
+- **Lofi hip hop** - Calming, non-intrusive background music
+- **Juice It or Lose It** - Satisfying audio feedback principles
+
 ## Contributing
 
 To add audio designs:
