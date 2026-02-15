@@ -52,7 +52,7 @@ To create a new custom agent:
 2. Define the following fields:
    - `name`: The display name for your agent
    - `description`: A brief description of the agent's purpose
-   - `tools`: (Optional) List of tools the agent can use (e.g., `['review', 'search', 'readFile']` for PR reviews)
+   - `tools`: (Optional) List of tools the agent can use (e.g., `[review, search, readFile]` for PR reviews)
    - `user-invokable`: (Optional) Set to `true` to make the agent available in the picker
    - `instructions`: Detailed instructions for the agent's personality, behavior, and expertise
 
