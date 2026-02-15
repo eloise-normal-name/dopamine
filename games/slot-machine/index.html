@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slot Machine - Dopamine</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../../assets/styles/common.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎰 Slot Machine</h1>
+      <a href="../../index.html" class="back-link">← Back to Games</a>
+    </header>
+    
+    <main>
+      <div id="game-container" class="game-container">
+        <div class="slot-machine">
+          <div class="display">
+            <div class="credits">Credits: <span id="credits">100</span></div>
+            <div class="last-win">Last Win: <span id="last-win">0</span></div>
+          </div>
+          
+          <div class="reels">
+            <div class="reel" id="reel-0"></div>
+            <div class="reel" id="reel-1"></div>
+            <div class="reel" id="reel-2"></div>
+          </div>
+          
+          <div class="controls">
+            <button id="start-btn" class="btn btn-primary">Start Auto-Play</button>
+            <button id="stop-btn" class="btn btn-secondary" disabled>Stop</button>
+            <button id="reset-btn" class="btn btn-tertiary">Reset</button>
+          </div>
+          
+          <div class="status" id="status">Press Start to begin</div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script type="module" src="game.js"></script>
+</body>
+</html>
