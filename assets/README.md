@@ -4,18 +4,17 @@ This directory contains static assets used by the games.
 
 ## Structure
 
-- `concept-art/` - Visual development and concept art for asset creation
-- `images/` - Images, sprites, icons (production-ready assets)
+- `concept-art/` - Visual development and AI-generated concept art
+- `images/` - Production-ready images, sprites, icons
 - `sounds/` - Sound effects and music
 - `styles/` - Global CSS and styling
 
 ## Guidelines
 
 ### Concept Art
-- See `concept-art/README.md` for visual development workflow
-- Art briefs define requirements before asset creation
-- Concepts guide production assets (images, sprites, animations)
-- Follow design-first workflow: Narrative → Concept → Asset → Implementation
+- See [`concept-art/README.md`](concept-art/README.md) for the prompt-based visual development workflow
+- Art briefs define creative direction before asset production begins
+- Follow design-first pipeline: Narrative → References → Briefs → Concepts → Assets
 
 ### Images
 - Use web-optimized formats (WebP, PNG, SVG)
@@ -50,8 +49,8 @@ Include proper attribution in comments where required.
 
 Current status:
 - ✅ `styles/common.css` - Common stylesheet
-- ✅ `concept-art/` - Structure and art briefs created
-  - ✅ Slot machine art briefs (celebration, environment, machine details)
-  - ✅ Shared components planning
-- ⏳ Concept art creation - Ready for artist assignment
-- ⏳ Production assets - Awaiting concept approval
+- ✅ `concept-art/` - Visual development pipeline established
+  - ✅ Slot machine art briefs and creative prompts
+  - ✅ Directory structure for concept generation output
+- ⏳ Concept art generation (ready for AI image tools)
+- ⏳ Production asset creation
