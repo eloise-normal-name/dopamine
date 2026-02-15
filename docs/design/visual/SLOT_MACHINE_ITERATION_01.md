@@ -296,6 +296,104 @@ See also: [../REFERENCES.md](../REFERENCES.md)
 - Where images are on the page: project cover thumbnails and multi-image project pages
 - Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
 
+## External Visual References (Batch 02 - expanded design space)
+
+### [Ref 25] Steam broad slot machine search (feature + style spread)
+- Source category: Steam
+- Page link: https://store.steampowered.com/search/?term=slot%20machine
+- Query used: "slot machine screenshots promo"
+- What to copy: UI density range, genre blending (horror/comedy/arcade), title-card readability patterns
+- Where images are on the page: result capsule grid with thumbnail art and linked store-page screenshot strips
+- Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
+
+### [Ref 26] Wikimedia Commons slot machine category
+- Source category: Design portfolio/mockup
+- Page link: https://commons.wikimedia.org/wiki/Category:Slot_machines
+- Query used: "slot machine cabinet photos"
+- What to copy: physical cabinet forms, reel-window proportions, bezel and panel materials
+- Where images are on the page: category thumbnail gallery with linked full-resolution images
+- Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
+
+### [Ref 27] Wikipedia slot machine article
+- Source category: Design portfolio/mockup
+- Page link: https://en.wikipedia.org/wiki/Slot_machine
+- Query used: "slot machine history visuals"
+- What to copy: historic-to-modern visual evolution, reel conventions, terminology to label design studies
+- Where images are on the page: article infobox and inline media illustrations
+- Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
+
+### [Ref 28] Flickr slot machine photo search
+- Source category: Design portfolio/mockup
+- Page link: https://www.flickr.com/search/?text=slot%20machine
+- Query used: "slot machine casino floor photos"
+- What to copy: real-world lighting contrast, casino floor color temperatures, reflections/glare behavior
+- Where images are on the page: photo grid thumbnails with photographer pages and multiple image sets
+- Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
+
+### [Ref 29] URComped slot machine finder
+- Source category: Casino demo/review
+- Page link: https://urcomped.com/game/slotmachinefinder
+- Query used: "slot machine finder images videos"
+- What to copy: jackpot presentation framing, camera-friendly symbol layouts, machine variety by venue
+- Where images are on the page: user-submitted photo/video listings and machine-specific entries
+- Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
+
+### [Ref 30] Getty vintage slot machine photos
+- Source category: Design portfolio/mockup
+- Page link: https://www.gettyimages.com/photos/vintage-slot-machine
+- Query used: "vintage slot machine reference photos"
+- What to copy: mechanical details, chrome + enamel palette accents, retro typography and icon framing
+- Where images are on the page: stock photo gallery thumbnails with linked high-detail previews
+- Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
+
+### [Ref 31] IGT gaming cabinets
+- Source category: Design portfolio/mockup
+- Page link: https://www.igt.com/products-and-services/gaming/cabinets
+- Query used: "IGT slot cabinet visuals"
+- What to copy: cabinet silhouettes, multi-screen stack patterns, ergonomic button/touch zones
+- Where images are on the page: product hero images and cabinet showcases on the listing page
+- Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
+
+### [Ref 32] Aristocrat gaming cabinets
+- Source category: Design portfolio/mockup
+- Page link: https://www.aristocratgaming.com/us/casino-operator/cabinets/
+- Query used: "Aristocrat slot cabinet reference"
+- What to copy: premium cabinet lighting, curved display framing, branded machine posture
+- Where images are on the page: cabinet product imagery and promotional hero visuals
+- Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
+
+### [Ref 33] GamblingSites slot features guide
+- Source category: Casino demo/review
+- Page link: https://www.gamblingsites.com/slots/features/
+- Query used: "slot features with examples visuals"
+- What to copy: feature taxonomy for gameplay hooks (wilds, bonuses, modifiers), terminology for design docs
+- Where images are on the page: feature explainer sections with illustrative graphics/examples
+- Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
+
+### [Ref 34] SlotsHawk Megaways overview
+- Source category: Casino demo/review
+- Page link: https://www.slotshawk.com/slot-games/megaways-slots/
+- Query used: "megaways slot visuals and mechanics"
+- What to copy: dynamic reel-height presentation, cascade feedback language, bonus reveal pacing
+- Where images are on the page: game-list blocks and linked slot review visuals
+- Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
+
+### [Ref 35] Pinterest slot animation references board
+- Source category: Design portfolio/mockup
+- Page link: https://www.pinterest.com/higashi1264/slot-games-animation-references/
+- Query used: "slot games animation references"
+- What to copy: animation poses, win-celebration motion motifs, particle treatment ideas
+- Where images are on the page: board pin grid and linked image detail overlays
+- Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
+
+### [Ref 36] itch.io slot-tagged game assets
+- Source category: Design portfolio/mockup
+- Page link: https://itch.io/game-assets/tag-slot
+- Query used: "slot game assets icon reels UI"
+- What to copy: reusable visual motifs, symbol readability at different scales, indie art-style variation
+- Where images are on the page: asset-card thumbnails and multi-image asset detail pages
+- Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
+
 ## Ready-for-Implementation Checklist
 
 - [x] Narrative angle chosen
@@ -304,5 +402,6 @@ See also: [../REFERENCES.md](../REFERENCES.md)
 - [x] Initial sample art provided
 - [x] Add image-first reference collection process for contributors
 - [x] Collect first external reference batch (24 entries)
+- [x] Expand design-space references with cross-domain batch (12 more entries)
 - [ ] Convert sample art into visual mockup PNG/SVG
 - [ ] Add motion timing table for CSS implementation
