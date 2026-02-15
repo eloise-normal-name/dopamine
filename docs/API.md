@@ -1,6 +1,8 @@
 # API Reference
 
-## Shared Utilities
+> **Note**: This API reference describes the planned shared utilities. Many are not yet implemented. See `/shared/README.md` for current status. The slot machine game currently implements its own utilities inline.
+
+## Shared Utilities (🚧 Planned)
 
 ### Random (`/shared/utils/random.js`)
 

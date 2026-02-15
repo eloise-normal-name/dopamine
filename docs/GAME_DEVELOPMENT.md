@@ -197,9 +197,11 @@ if (prefersReducedMotion) {
 
 ## Examples
 
-See existing games for reference:
+See existing game for reference:
 - `/games/slot-machine` - Classic slot machine with spinning reels
-- `/games/gacha` - Loot box/capsule toy simulation
+
+Planned examples:
+- `/games/gacha` - Loot box/capsule toy simulation (coming soon)
 
 ## Common Patterns
 

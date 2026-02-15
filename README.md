@@ -113,6 +113,7 @@ Want to contribute? Here are some ideas:
 - ✅ Minimal dependencies
 - ✅ Modular architecture
 - ✅ Well-documented
+- ✅ Accessibility features (reduced motion, focus styles, ARIA)
 - ⏳ PWA support (planned)
-- ⏳ Mobile-optimized (planned)
-- ⏳ Accessibility features (planned)
+- ⏳ Sound effects (planned)
+- ⏳ Advanced animations (planned)
