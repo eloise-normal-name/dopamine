@@ -67,6 +67,17 @@ See also: [../REFERENCES.md](../REFERENCES.md)
 - **Manufacturer product galleries** (cabinet form factors and control-panel patterns)
 - **Asset marketplaces / curation boards** (style exploration and motif diversity)
 
+### Agent-usable source priority (for mockup production)
+
+Prioritize sources that agents can reliably inspect and reuse as **visual design tooling inputs**:
+
+1. **Web-accessible image galleries** (Wikimedia Commons, Flickr, Behance, Pinterest)
+2. **Structured slot libraries** (SlotCatalog/AskGamblers/SlotsUp-type indexes with repeatable page patterns)
+3. **Manufacturer/product pages** (IGT/Aristocrat cabinet pages for layout and hardware framing)
+4. **Asset marketplaces** (itch.io-style icon/UI packs for motif and asset-list planning)
+
+De-prioritize sources that are hard to parse or gated for agents (native-only storefront views, login-only pages) unless no equivalent open-web visual reference exists.
+
 ### Copy/paste search queries (vibe-focused)
 
 - `neon night market slot screenshots promo`
@@ -93,6 +104,10 @@ See also: [../REFERENCES.md](../REFERENCES.md)
    - symbol contrast
    - reel legibility
    - controlled glow
+5. Favor sources that are **agent-usable for mockup workflows**:
+   - stable public URLs
+   - visible image grids/carousels in browser
+   - enough visual detail to derive asset lists and layout specs
 
 ### Logging template (use for every new source)
 
