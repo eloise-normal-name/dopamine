@@ -25,10 +25,11 @@ Before writing any game code, complete the visual design pipeline:
 2. **References** → Collect visual inspiration in `/docs/design/REFERENCES.md`
 3. **Art briefs** → Write concept directions in `/docs/design/concept-art/<game>/`
 4. **Concept art** → Generate and curate visual concepts via AI prompts
-5. **Asset list** → Break concepts into production-ready sprites and elements
+5. **Enumeration** → Break concepts into production-ready asset lists
 6. **Production** → Create optimized web assets
+7. **Integration** → Wire assets into the running game
 
-See [`/docs/design/ASSET_WORKFLOW.md`](/docs/design/ASSET_WORKFLOW.md) for the full 7-phase workflow.
+See [`/docs/design/ASSET_WORKFLOW.md`](/docs/design/ASSET_WORKFLOW.md) for the complete 7-phase workflow.
 
 ### 1. Create Game Directory
 ```bash

@@ -4,8 +4,8 @@ This directory contains static assets used by the games.
 
 ## Structure
 
-- `images/` - Production-ready images, sprites, icons
-- `sounds/` - Sound effects and music
+- `images/` (planned) - Production-ready images, sprites, icons
+- `sounds/` (planned) - Sound effects and music
 - `styles/` - Global CSS and styling
 
 ## Guidelines

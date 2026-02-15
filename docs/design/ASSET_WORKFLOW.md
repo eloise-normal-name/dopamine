@@ -88,7 +88,7 @@ Create optimized, game-ready files from the approved concepts.
 - Multiple resolution variants if needed
 - Performance testing (target: 60fps with all assets loaded)
 
-**Output**: Production files in `/assets/images/<game>/`
+**Output**: Production-ready image files added to `/assets/` (structure TBD based on asset types)
 
 ### Phase 7 — Integration
 
