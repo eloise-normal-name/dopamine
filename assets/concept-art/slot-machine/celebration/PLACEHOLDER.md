@@ -1,76 +1,26 @@
-# Placeholder: Celebration Concept Images
+# Placeholder — Celebration Concepts
 
-This directory will contain concept art images for slot machine celebration states.
+No concept art has been generated yet.
 
-## Expected Images
+## Expected Contents
 
-Based on Art Brief 01, this directory should contain:
+After concept generation, this directory will contain AI-generated images exploring:
 
-### Primary Concepts
-- `celebration-jackpot-burst-v01.png` - Main jackpot celebration moment (1920x1080)
-- `celebration-jackpot-sustain-v01.png` - Sustained celebration state
-- `celebration-jackpot-fade-v01.png` - Celebration fade-out state
+- **Win glow studies** — How golden light fills the scene during a win
+- **Particle choreography** — Patterns and behaviors of celebration particles
+- **Reward intensity tiers** — Visual escalation from small win to jackpot
+- **Color and light studies** — Abstract explorations of the celebration palette
 
-### Variations
-- `celebration-small-win-v01.png` - Small win celebration (scaled down)
-- `celebration-medium-win-v01.png` - Medium win celebration
-- `celebration-particles-study-v01.png` - Particle effect reference
+## Technical Reference
 
-### Supporting Elements
-- `celebration-glow-progression-v01.png` - Glow intensity progression study
-- `celebration-color-study-v01.png` - Color variations for different symbol types
+- Target resolution: 1920×1080
+- Primary palette: Gold `#ffd700`, amber, warm white, purple shadows
+- Must composite cleanly over the base game layer
+- Animation reference: 1.5-3 second celebration sequences
 
-## How to Generate Images
+## How to Contribute
 
-### Option 1: AI Image Generation
-Use prompts from `../AI_IMAGE_GENERATION_PROMPTS.md` with tools like:
-- DALL-E 3
-- Midjourney
-- Stable Diffusion
-
-### Option 2: Commission Artist
-Provide artist with:
-- Art Brief 01 from `../README.md`
-- Color palette and style guidelines
-- Reference images from `/docs/design/visual/SLOT_MACHINE_ITERATION_01.md`
-
-### Option 3: Create Yourself
-If you have digital art skills:
-- Follow specifications in Art Brief 01
-- Use recommended dimensions (1920x1080)
-- Export as PNG with transparency where needed
-- Save layered source files (PSD, XCF) separately
-
-## File Naming Convention
-
-```
-celebration-[state]-[variant]-v[##].[ext]
-
-Examples:
-celebration-jackpot-burst-v01.png
-celebration-jackpot-burst-v02.png (iteration)
-celebration-small-win-v01.png
-celebration-particles-gold-v01.png
-```
-
-## Technical Requirements
-
-- **Format**: PNG (with alpha channel for effects) or JPG
-- **Resolution**: 1920x1080 minimum for main concepts
-- **Color mode**: RGB, sRGB color space
-- **File size**: Optimize for web (aim for < 500KB per image)
-- **Layers**: Save layered source files separately in `source-files/` subdirectory
-
-## Status
-
-- [ ] Primary celebration concepts created
-- [ ] Variation studies completed  
-- [ ] Particle effect references done
-- [ ] All images reviewed and approved
-- [ ] Ready for asset extraction
-
----
-
-**Current**: Empty - awaiting image generation  
-**Next**: Generate or commission concept art using art briefs  
-**See**: `../AI_IMAGE_GENERATION_PROMPTS.md` for ready-to-use prompts
+1. Read the prompts in `../AI_IMAGE_GENERATION_PROMPTS.md` (Direction 01)
+2. Generate concepts using DALL-E, Midjourney, or Stable Diffusion
+3. Save results here using the naming convention: `slot-celebration-<desc>-v<##>.png`
+4. Delete this PLACEHOLDER file once real concepts exist
