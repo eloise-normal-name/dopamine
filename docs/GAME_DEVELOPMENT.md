@@ -84,9 +84,12 @@ Use CSS animations for simple effects, JavaScript for complex animations:
 // CSS approach (preferred for simple animations)
 element.classList.add('spinning');
 
-// JavaScript approach (for complex animations) - PLANNED UTILITY
-// For now, use setTimeout/requestAnimationFrame directly
-// Future: import { animate } from '../../shared/utils/animation.js';
+// JavaScript approach (for complex animations)
+// NOTE: The animate utility below is PLANNED - not yet implemented
+// For now, use setTimeout/requestAnimationFrame directly (see slot-machine/game.js)
+
+/* FUTURE API:
+import { animate } from '../../shared/utils/animation.js';
 
 animate({
   duration: 1000,
@@ -95,6 +98,7 @@ animate({
     element.style.transform = `translateY(${progress * 100}px)`;
   }
 });
+*/
 ```
 
 ### Randomization
@@ -171,17 +175,22 @@ export const config = {
 
 ## Audio Integration
 
+> **Note**: AudioManager is planned but not yet implemented. For now, use the HTML5 Audio API directly.
+
 ```javascript
-// PLANNED UTILITY - Not yet implemented
-// For now, use HTML5 Audio API directly
-// Future: import { AudioManager } from '../../shared/utils/audio.js';
+/* FUTURE API:
+import { AudioManager } from '../../shared/utils/audio.js';
 
 const audio = new AudioManager();
-audio.loadSound('spin', '/assets/sounds/spin.mp3');
-audio.loadSound('win', '/assets/sounds/win.mp3');
+await audio.loadSound('spin', '/assets/sounds/spin.mp3');
+await audio.loadSound('win', '/assets/sounds/win.mp3');
 
-// Later
 audio.playSound('spin');
+*/
+
+// Current approach - use HTML5 Audio directly:
+const spinSound = new Audio('/assets/sounds/spin.mp3');
+spinSound.play();
 ```
 
 ## Accessibility
