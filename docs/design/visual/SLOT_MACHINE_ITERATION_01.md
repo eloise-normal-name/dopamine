@@ -106,6 +106,12 @@ See also: [../REFERENCES.md](../REFERENCES.md)
 - Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
 ```
 
+## Future agent handoff note
+
+- Use the reference images in this document to produce **specific slot mockups** (layout states, reel frames, symbol sets, win states), not just mood boards.
+- As mockups are created, maintain an **asset enumeration list** (UI parts, symbols, backgrounds, FX, typography treatments, audio triggers) so implementation scope is explicit.
+- The next design task will add **detailed user scenarios**. Prepare for that by tagging references/mockups to scenario moments (idle attract, spin start, reel stop, win tier reveal, reset loop).
+
 ## External Visual References (Batch 01)
 
 ### [Ref 01] Steam search: neon slot machine
