@@ -419,8 +419,556 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - Where images are on the page: asset-card thumbnails and multi-image asset detail pages
 - Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
 
+## Requirements Specification
+
+### 1. Functional Requirements
+
+#### FR-1: Core Game Mechanics
+- **FR-1.1** System shall support 3-reel slot machine with independent reel control
+- **FR-1.2** Each reel shall display 5 distinct symbols (Cherry, Lemon, Orange, Seven, Jackpot)
+- **FR-1.3** Reels shall spin and stop sequentially left → right with visible delay
+- **FR-1.4** System shall detect and display winning combinations across single payline
+- **FR-1.5** Credit balance shall update accurately after each spin result
+
+#### FR-2: User Interaction
+- **FR-2.1** System shall auto-spin at configurable interval (default: 3-5 seconds)
+- **FR-2.2** Game shall support manual start/stop controls
+- **FR-2.3** Sound effects shall be toggle-able via user control
+- **FR-2.4** Game state shall be resettable to initial conditions
+
+#### FR-3: Visual Feedback
+- **FR-3.1** Winning combinations shall trigger visual celebration (pulse, glow, sparkle)
+- **FR-3.2** Credit counter shall animate smoothly on value changes
+- **FR-3.3** Reel symbols shall be clearly readable during idle state
+- **FR-3.4** Spin animation shall show motion blur or scroll effect
+- **FR-3.5** Each reel stop shall have distinct visual feedback
+
+### 2. Visual Requirements
+
+#### VR-1: Color Palette
+- **VR-1.1** Base UI shall use Dopamine purple gradient (#8B5CF6 to #6366F1 range)
+- **VR-1.2** Reel window shall feature warm neon-glow accent (#FF6B9D or #FFB84D)
+- **VR-1.3** Symbols shall use high-saturation colors for instant differentiation:
+  - Cherry: #FF3366 (red) with glossy highlight
+  - Lemon: #FFD700 (yellow) with center bright spot
+  - Orange: #FF8C42 (orange) with segment details
+  - Seven: #4ECDC4 to #45B7D1 (cyan gradient) with metallic finish
+  - Jackpot: #FFD700 (gold) + #FF6B9D (magenta) sparkle accents
+- **VR-1.4** Background shall use dark purple/navy (#1A1A2E to #16213E) for high contrast
+
+#### VR-2: Typography
+- **VR-2.1** Title text "NEON NIGHT MARKET" shall use bold, wide display font (min 24px)
+- **VR-2.2** Credit/win counters shall use monospace font for stable layout
+- **VR-2.3** All text shall maintain 4.5:1 contrast ratio minimum (WCAG AA)
+- **VR-2.4** Text shall have subtle glow/shadow for readability on dark backgrounds
+
+#### VR-3: Symbol Design
+- **VR-3.1** Each symbol shall have thick dark outline (3-5px) for high legibility
+- **VR-3.2** Symbols shall be recognizable at minimum 64×64px size
+- **VR-3.3** Symbol artwork shall be vector-based (SVG) or high-DPI raster (2x scale)
+- **VR-3.4** Symbols shall include highlight/shadow for depth perception
+- **VR-3.5** Symbol designs shall avoid fine details that blur during spin
+
+#### VR-4: Layout Specifications
+- **VR-4.1** Reel window aspect ratio shall be approximately 3:1 (width:height)
+- **VR-4.2** Each reel cell shall be square or near-square (1:1 to 1.1:1 ratio)
+- **VR-4.3** Reel spacing shall provide clear visual separation (min 8px gaps)
+- **VR-4.4** Credit/win displays shall be positioned below reel window
+- **VR-4.5** Layout shall be responsive and centered in container
+
+#### VR-5: Animation Quality
+- **VR-5.1** All animations shall target 60fps performance
+- **VR-5.2** Animations shall use CSS transforms (translate, scale) over position changes
+- **VR-5.3** Easing functions shall follow Disney animation principles (anticipation, ease-out)
+- **VR-5.4** No animation shall cause content layout shift
+
+### 3. Animation & Timing Requirements
+
+#### TR-1: Motion Timing Table
+
+| Animation Event | Duration | Easing Function | Delay Pattern |
+|----------------|----------|-----------------|---------------|
+| **Spin Start** | 200ms | ease-in | All reels simultaneous |
+| **Reel Spinning** | 1500-2000ms | linear | Continuous during spin |
+| **Reel 1 Stop** | 400ms | cubic-bezier(0.25, 0.1, 0.25, 1) | 0ms (immediate) |
+| **Reel 2 Stop** | 400ms | cubic-bezier(0.25, 0.1, 0.25, 1) | +300ms after Reel 1 |
+| **Reel 3 Stop** | 400ms | cubic-bezier(0.25, 0.1, 0.25, 1) | +300ms after Reel 2 |
+| **Symbol Settle** | 100ms | ease-out | On each reel stop |
+| **Win Pulse** | 600ms | ease-in-out | After all reels stopped |
+| **Win Glow** | 800ms | ease-out | Simultaneous with pulse |
+| **Win Sparkle** | 1000ms | ease-out | Staggered 100ms intervals |
+| **Credit Update** | 300ms | ease-out | After win animations |
+| **Idle Reset** | 500ms | ease-in-out | 2000ms after credit update |
+
+#### TR-2: Interaction Timing
+- **TR-2.1** Auto-spin interval: 3000ms minimum between spin cycles
+- **TR-2.2** Button press response: <100ms feedback latency
+- **TR-2.3** State transition: max 200ms for any state change
+- **TR-2.4** Total spin cycle: 2500-3500ms from start to credits settled
+
+#### TR-3: Performance Budgets
+- **TR-3.1** Frame drops during animation: <5% of frames
+- **TR-3.2** Paint operations per frame: <5ms
+- **TR-3.3** JavaScript execution per spin: <50ms total
+- **TR-3.4** DOM manipulations: batch/minimize during animations
+
+### 4. Audio Requirements
+
+#### AR-1: Sound Effects
+- **AR-1.1** Spin start: mechanical whir (250ms, fade-in)
+- **AR-1.2** Reel stop: distinct click per reel (50ms each, pitch variation)
+  - Reel 1: 440 Hz base
+  - Reel 2: 494 Hz base
+  - Reel 3: 523 Hz base
+- **AR-1.3** Win sounds (tiered):
+  - Small win (2-match): pleasant chime (200ms)
+  - Medium win (3-match standard): cascade notes (500ms)
+  - Big win (3 sevens): triumphant fanfare (1000ms)
+  - Jackpot: extended celebration (2000ms)
+- **AR-1.4** All sound files: <50KB each, OGG/MP3 format
+- **AR-1.5** Default volume: 60%, user-adjustable or mutable
+
+#### AR-2: Audio UX
+- **AR-2.1** Sounds shall not overlap in jarring way (mix or queue)
+- **AR-2.2** Mute state shall persist across page reloads
+- **AR-2.3** Audio feedback shall be optional, not required for gameplay
+- **AR-2.4** No background music in initial iteration (future consideration)
+
+### 5. Accessibility Requirements
+
+#### AC-1: Visual Accessibility
+- **AC-1.1** Color shall not be sole differentiator (symbols have distinct shapes)
+- **AC-1.2** All text contrast ratio: minimum 4.5:1 (WCAG AA)
+- **AC-1.3** Animation shall respect `prefers-reduced-motion` media query
+- **AC-1.4** Focus indicators shall be clearly visible (3px outline minimum)
+
+#### AC-2: Semantic Accessibility
+- **AC-2.1** Game container shall have appropriate ARIA landmarks
+- **AC-2.2** Dynamic content updates shall use ARIA live regions
+- **AC-2.3** Control buttons shall have descriptive labels
+- **AC-2.4** Game state shall be announced to screen readers
+
+#### AC-3: Interaction Accessibility
+- **AC-3.1** All controls shall be keyboard-accessible (Tab navigation)
+- **AC-3.2** Keyboard shortcuts shall not conflict with browser defaults
+- **AC-3.3** Game shall function without requiring precise timing
+- **AC-3.4** Auto-play shall be pausable
+
+### 6. Performance Requirements
+
+#### PR-1: Load Performance
+- **PR-1.1** Initial page load: <2 seconds on 3G connection
+- **PR-1.2** Total asset size (HTML/CSS/JS/images): <500KB
+- **PR-1.3** Symbol images: <20KB each (optimized SVG or compressed PNG)
+- **PR-1.4** First Contentful Paint: <1.5 seconds
+
+#### PR-2: Runtime Performance
+- **PR-2.1** Memory usage: <50MB heap size during active gameplay
+- **PR-2.2** No memory leaks over 100+ spin cycles
+- **PR-2.3** Smooth 60fps during all animations
+- **PR-2.4** CPU usage: <30% on mid-tier devices
+
+#### PR-3: Browser Compatibility
+- **PR-3.1** Support: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
+- **PR-3.2** Graceful degradation for older browsers
+- **PR-3.3** Mobile support: iOS 14+, Android 10+
+- **PR-3.4** Responsive: 320px to 2560px viewport width
+
+### 7. Technical Requirements
+
+#### TC-1: Code Structure
+- **TC-1.1** Game logic in ES6+ class structure (see existing game.js pattern)
+- **TC-1.2** Configuration separated in config.js
+- **TC-1.3** Styles in modular CSS (game-specific + common.css)
+- **TC-1.4** No inline styles (use classes)
+
+#### TC-2: Data Management
+- **TC-2.1** Game state shall be encapsulated in class instance
+- **TC-2.2** No global state pollution
+- **TC-2.3** State changes via documented methods only
+- **TC-2.4** Configuration must be overridable via constructor options
+
+#### TC-3: Asset Management
+- **TC-3.1** Symbols loaded from /assets/images/slot-machine/
+- **TC-3.2** Sounds loaded from /assets/sounds/slot-machine/
+- **TC-3.3** Shared styles from /assets/styles/common.css
+- **TC-3.4** Lazy-load audio files (don't block initial render)
+
+## Design Review Process
+
+### Stage 1: Concept Review (Complete ✓)
+
+**Participants:** Design lead, product owner  
+**Deliverables:**
+- [x] Narrative description (see NARRATIVES.md)
+- [x] Opinionated design decisions (see sections above)
+- [x] Visual mood and theme definition
+- [x] Reference collection (36 external sources)
+- [x] Sample wireframe/low-fi art
+
+**Acceptance Criteria:**
+- [x] Narrative aligns with Dopamine brand (playful, watchable, satisfying)
+- [x] Theme is unique enough to differentiate from generic slots
+- [x] Design decisions are documented and justified
+- [x] References demonstrate visual direction feasibility
+
+**Status:** ✅ Approved - proceed to mockup stage
+
+---
+
+### Stage 2: Mockup Review (In Progress)
+
+**Participants:** Design lead, development lead, stakeholders  
+**Deliverables Required:**
+- [ ] High-fidelity mockups (PNG/SVG) showing:
+  - [ ] Idle state (reels stopped, waiting)
+  - [ ] Spin state (reels blurred/moving)
+  - [ ] Stop sequence states (1 reel, 2 reels, 3 reels stopped)
+  - [ ] Win state (celebration visuals)
+  - [ ] UI controls and information displays
+- [ ] Symbol artwork finalized (5 symbols in spec-compliant style)
+- [ ] Color palette swatches with hex codes
+- [ ] Typography specimens (font families, sizes, weights)
+- [ ] Responsive layout variations (mobile, tablet, desktop)
+
+**Review Checklist:**
+- [ ] Visual hierarchy: Can viewer instantly see reel outcome?
+- [ ] Symbol legibility: Each symbol distinct at intended size?
+- [ ] Color contrast: All text meets WCAG AA (4.5:1)?
+- [ ] Neon aesthetic: Glow effects controlled, not overwhelming?
+- [ ] Dopamine brand: Purple gradient integrated cohesively?
+- [ ] Anticipation pacing: Stop sequence feels satisfying?
+- [ ] Win celebration: Appropriate intensity for reward tier?
+- [ ] Responsive design: Works at 320px and 2560px width?
+- [ ] Animation notes: Timing/easing documented for dev?
+
+**Acceptance Criteria:**
+- All deliverables provided and meet requirements
+- Design team consensus on visual direction
+- Development team confirms technical feasibility
+- Mockups demonstrate all game states clearly
+- Style guide elements extractable for implementation
+
+**Exit Gate:** Design lead + development lead sign-off required
+
+---
+
+### Stage 3: Specification Review (Current Stage)
+
+**Participants:** Development team, QA lead, design lead  
+**Deliverables Required:**
+- [x] Functional requirements (FR-1 through FR-3)
+- [x] Visual requirements (VR-1 through VR-5)
+- [x] Animation timing table (TR-1)
+- [x] Audio requirements (AR-1 through AR-2)
+- [x] Accessibility requirements (AC-1 through AC-3)
+- [x] Performance requirements (PR-1 through PR-3)
+- [x] Technical requirements (TC-1 through TC-3)
+- [ ] Asset inventory list (all symbols, sounds, images cataloged)
+- [ ] State diagram (game states and transitions)
+- [ ] Edge case documentation (errors, loading states, etc.)
+
+**Review Checklist:**
+- [x] Requirements complete and unambiguous?
+- [x] All requirements testable/measurable?
+- [x] Animation timings specified for developers?
+- [x] Accessibility considerations addressed?
+- [x] Performance budgets realistic and measurable?
+- [ ] Asset list complete with file names/formats?
+- [ ] Technical requirements match project patterns?
+- [ ] Edge cases and error states documented?
+- [ ] Dependencies on shared components identified?
+
+**Acceptance Criteria:**
+- Development team can estimate implementation effort
+- QA can derive test cases from requirements
+- No major requirement gaps or contradictions
+- Requirements align with technical constraints
+- Asset needs clearly defined
+
+**Exit Gate:** Development lead + QA lead sign-off required
+
+---
+
+### Stage 4: Implementation Review (Pending)
+
+**Participants:** Developer(s), code reviewer, design lead  
+**Activities:**
+- [ ] Code review against technical requirements (TC-*)
+- [ ] Visual QA against mockups (pixel-perfect check)
+- [ ] Animation timing verification (match TR-1 spec)
+- [ ] Accessibility audit (AC-* requirements)
+- [ ] Performance profiling (PR-* budgets)
+- [ ] Cross-browser testing (PR-3.1)
+- [ ] Responsive testing (320px-2560px)
+
+**Review Checklist:**
+- [ ] Code follows project patterns (class structure, file organization)
+- [ ] Visual output matches approved mockups
+- [ ] Animation timing matches specification table
+- [ ] All symbols render correctly at target sizes
+- [ ] Win states trigger appropriate celebrations
+- [ ] Keyboard navigation functional
+- [ ] Screen reader announces state changes
+- [ ] Reduced motion preference respected
+- [ ] 60fps maintained during animations
+- [ ] No console errors or warnings
+- [ ] Mobile touch interactions work smoothly
+
+**Acceptance Criteria:**
+- All functional requirements (FR-*) implemented
+- Visual fidelity matches approved mockups (±5% tolerance)
+- Performance budgets met on target devices
+- Accessibility requirements pass automated + manual testing
+- Code review approved by senior developer
+- QA sign-off on test cases
+
+**Exit Gate:** Code reviewer + design lead + QA lead sign-off
+
+---
+
+### Stage 5: User Acceptance (Pending)
+
+**Participants:** Product owner, stakeholders, design team  
+**Activities:**
+- [ ] Demo to stakeholders
+- [ ] Collect feedback on "feel" and pacing
+- [ ] Verify emotional goals met (anticipation, satisfaction)
+- [ ] Check brand cohesion with other Dopamine games
+- [ ] Validate "watchability" (passive viewing appeal)
+
+**Review Checklist:**
+- [ ] Game feels satisfying to watch for 60+ seconds?
+- [ ] Win celebrations feel appropriately rewarding?
+- [ ] Pacing neither too fast nor too slow?
+- [ ] Audio enhances experience without annoyance?
+- [ ] Fits Dopamine brand (matches other games' quality)?
+- [ ] Theme ("Neon Night Market") comes through clearly?
+- [ ] No unexpected bugs or visual glitches?
+
+**Acceptance Criteria:**
+- Product owner approves final implementation
+- Emotional goals from narrative achieved
+- Stakeholder consensus on quality
+- No critical bugs or polish issues
+- Ready for production deployment
+
+**Exit Gate:** Product owner sign-off
+
+---
+
+### Stage 6: Post-Launch Review (Future)
+
+**Timing:** 2 weeks after deployment  
+**Participants:** Full team  
+**Activities:**
+- [ ] Review analytics (if available): engagement metrics
+- [ ] Collect user feedback
+- [ ] Identify improvement opportunities
+- [ ] Document lessons learned
+- [ ] Plan iteration 02 (if needed)
+
+**Retrospective Questions:**
+- What worked well in design process?
+- What could be improved in next iteration?
+- Did requirements capture everything needed?
+- Were time estimates accurate?
+- What surprised us during development?
+
+---
+
+## Review Sign-Off Template
+
+```markdown
+### [Stage Name] - Sign-Off
+
+**Date:** YYYY-MM-DD  
+**Reviewer:** [Name, Role]  
+**Status:** ✅ Approved / ⚠️ Approved with conditions / ❌ Needs revision
+
+**Comments:**
+[Feedback, concerns, or conditions]
+
+**Conditions (if any):**
+- [ ] [Condition 1]
+- [ ] [Condition 2]
+
+**Signature:** _[Initials]_
+```
+
+---
+
+## Asset Inventory & Implementation Checklist
+
+### Visual Assets Required
+
+#### Symbol Artwork (5 symbols)
+- [ ] `cherry.svg` or `cherry@2x.png` - Red cherry with glossy highlight, thick outline
+- [ ] `lemon.svg` or `lemon@2x.png` - Yellow lemon with bright center, thick outline  
+- [ ] `orange.svg` or `orange@2x.png` - Orange with segment details, thick outline
+- [ ] `seven.svg` or `seven@2x.png` - Cyan gradient seven with metallic finish, thick outline
+- [ ] `jackpot.svg` or `jackpot@2x.png` - Gold star coin with magenta sparkles, thick outline
+
+**Spec per symbol:**
+- Base size: 128×128px (renders at 64×64px on screen for 2x DPI)
+- File size: <20KB each
+- Format: SVG preferred (scalable), PNG @2x fallback
+- Outline: 3-5px thick, dark (#1A1A2E or black)
+- Background: transparent
+
+#### UI Graphics
+- [ ] `reel-frame.svg` - Decorative border around reel window
+- [ ] `glow-overlay.png` - Neon glow effect (multiply/screen blend)
+- [ ] `sparkle-particle.svg` - For win celebrations (reusable sprite)
+- [ ] `title-graphic.svg` - "NEON NIGHT MARKET" stylized text
+
+#### Background Elements
+- [ ] `background-gradient.svg` - Dark purple base gradient
+- [ ] `neon-lights-texture.png` - Optional atmospheric overlay (subtle)
+
+### Audio Assets Required
+
+#### Sound Effects
+- [ ] `spin-start.ogg` - Mechanical whir, 250ms, <25KB
+- [ ] `reel-stop-1.ogg` - Click sound, 440 Hz base, 50ms, <10KB
+- [ ] `reel-stop-2.ogg` - Click sound, 494 Hz base, 50ms, <10KB
+- [ ] `reel-stop-3.ogg` - Click sound, 523 Hz base, 50ms, <10KB
+- [ ] `win-small.ogg` - Pleasant chime, 200ms, <15KB
+- [ ] `win-medium.ogg` - Cascade notes, 500ms, <30KB
+- [ ] `win-big.ogg` - Triumphant fanfare, 1000ms, <50KB
+- [ ] `win-jackpot.ogg` - Extended celebration, 2000ms, <80KB
+
+**Format:** OGG Vorbis (primary), MP3 (fallback)
+
+### Code Implementation Checklist
+
+#### File Structure
+- [ ] `/games/slot-machine/game.js` - Updated with all game logic
+- [ ] `/games/slot-machine/config.js` - Symbol config, timing values, paytable
+- [ ] `/games/slot-machine/styles.css` - Game-specific styles + animations
+- [ ] `/games/slot-machine/index.html` - Game container markup
+- [ ] `/games/slot-machine/README.md` - Game-specific documentation
+
+#### Class Implementation (game.js)
+- [ ] Constructor: accept containerId + options, initialize state
+- [ ] `start()` method: begin auto-spin loop
+- [ ] `stop()` method: pause auto-spin
+- [ ] `spin()` method: execute single spin cycle
+- [ ] `reset()` method: reset credits and state
+- [ ] `destroy()` method: cleanup listeners and timers
+- [ ] `_updateReel(reelIndex, symbolIndex)` - private helper
+- [ ] `_checkWin()` - detect winning combinations
+- [ ] `_animateWin()` - trigger celebration animations
+- [ ] `_updateCredits(amount)` - animate credit counter
+
+#### CSS Animations
+- [ ] `@keyframes spin` - reel spinning effect
+- [ ] `@keyframes stop` - reel stop with settle
+- [ ] `@keyframes pulse` - winning symbol pulse
+- [ ] `@keyframes glow` - neon glow effect
+- [ ] `@keyframes sparkle` - particle effects
+- [ ] `@keyframes countUp` - credit counter animation
+- [ ] Responsive media queries (320px, 768px, 1024px breakpoints)
+- [ ] `prefers-reduced-motion` alternative animations
+
+#### Configuration (config.js)
+- [ ] Symbol array: `['cherry', 'lemon', 'orange', 'seven', 'jackpot']`
+- [ ] Symbol weights/probabilities for randomization
+- [ ] Paytable: define winning combinations and payouts
+- [ ] Timing constants: spin duration, stop delays, celebration length
+- [ ] Credit settings: starting balance, bet amount
+- [ ] Animation easing functions (from TR-1 table)
+
+#### Accessibility Implementation
+- [ ] ARIA labels on all controls
+- [ ] ARIA live region for credit/win announcements
+- [ ] Keyboard event listeners (Space = spin, Escape = stop)
+- [ ] Focus management (tab order logical)
+- [ ] `prefers-reduced-motion` detection and handling
+- [ ] Screen reader state announcements
+
+#### Testing Requirements
+- [ ] Unit tests for game logic (win detection, credit math)
+- [ ] Visual regression tests (screenshot comparisons)
+- [ ] Accessibility audit with axe or WAVE
+- [ ] Performance profiling in Chrome DevTools
+- [ ] Cross-browser manual testing (Chrome, Firefox, Safari, Edge)
+- [ ] Mobile device testing (iOS, Android)
+- [ ] Reduced motion testing
+- [ ] Keyboard-only navigation testing
+
+### Documentation Checklist
+- [ ] Update `/games/slot-machine/README.md` with usage instructions
+- [ ] Add JSDoc comments to all public methods
+- [ ] Document configuration options in config.js
+- [ ] Add inline comments for complex animation logic
+- [ ] Update main `/docs/GAME_DEVELOPMENT.md` with slot-specific patterns (if applicable)
+- [ ] Create or update `/docs/API.md` with slot machine API reference
+
+---
+
+## Completion Criteria
+
+### Definition of Done
+
+The slot machine design is considered **complete** when:
+
+✅ **Design Phase:**
+- [x] All requirements documented (FR, VR, TR, AR, AC, PR, TC)
+- [x] Review process defined with clear stages and gates
+- [ ] High-fidelity mockups created and approved
+- [ ] Asset inventory complete with specifications
+- [ ] All Stage 1-3 reviews passed with sign-offs
+
+✅ **Implementation Phase:**
+- [ ] All code implementation checklist items complete
+- [ ] Visual output matches approved mockups
+- [ ] Animation timing matches TR-1 specification table
+- [ ] All functional requirements (FR-*) implemented and tested
+- [ ] Accessibility requirements (AC-*) pass audits
+- [ ] Performance requirements (PR-*) met on target devices
+- [ ] All Stage 4-5 reviews passed with sign-offs
+
+✅ **Quality Assurance:**
+- [ ] Zero critical bugs
+- [ ] All test cases passing
+- [ ] Cross-browser compatibility verified
+- [ ] Mobile responsiveness verified
+- [ ] Accessibility audit passed
+- [ ] Performance budgets met
+
+✅ **Documentation:**
+- [ ] All documentation checklist items complete
+- [ ] Code commented and JSDoc complete
+- [ ] README.md updated with usage instructions
+- [ ] API documentation current
+
+✅ **Deployment:**
+- [ ] Game integrated into main Dopamine index
+- [ ] Assets deployed to correct directories
+- [ ] No build errors or console warnings
+- [ ] Smoke testing passed in production
+
+### Success Metrics (Post-Launch)
+
+**Qualitative:**
+- Players/viewers report game is "satisfying to watch"
+- Win celebrations feel appropriately rewarding
+- Theme ("Neon Night Market") comes through clearly
+- Fits cohesively with other Dopamine games
+
+**Quantitative (if analytics available):**
+- Average viewing session: >60 seconds
+- 60fps maintained in >95% of measurements
+- Zero accessibility violations (automated tools)
+- Page load time: <2 seconds on 3G
+- Zero critical bugs reported in first 2 weeks
+
+---
+
 ## Ready-for-Implementation Checklist
 
+### Design Phase (Current Focus)
 - [x] Narrative angle chosen
 - [x] Visual hierarchy and readability priorities defined
 - [x] Symbol style constraints defined
@@ -428,5 +976,126 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - [x] Add image-first reference collection process for contributors
 - [x] Collect first external reference batch (24 entries)
 - [x] Expand design-space references with cross-domain batch (12 more entries)
-- [ ] Convert sample art into visual mockup PNG/SVG
-- [ ] Add motion timing table for CSS implementation
+- [x] Define comprehensive requirements (FR, VR, TR, AR, AC, PR, TC)
+- [x] Create motion timing table for CSS implementation (TR-1)
+- [x] Document review process with stages and acceptance criteria
+- [x] Create asset inventory and implementation checklist
+- [ ] Convert sample art into high-fidelity mockups (PNG/SVG)
+- [ ] Finalize symbol artwork (5 symbols to spec)
+- [ ] Create responsive layout mockups (mobile, tablet, desktop)
+- [ ] Document state diagram (idle, spinning, stopped, win, etc.)
+- [ ] Get Stage 2 (Mockup Review) sign-off
+
+### Implementation Phase (Blocked on mockups)
+- [ ] Implement core game class with methods (start, stop, spin, reset, destroy)
+- [ ] Implement reel rendering and animation system
+- [ ] Implement win detection and celebration logic
+- [ ] Create CSS animations per TR-1 timing table
+- [ ] Implement audio system with user controls
+- [ ] Add keyboard accessibility
+- [ ] Add ARIA labels and live regions
+- [ ] Implement responsive layout
+- [ ] Add prefers-reduced-motion handling
+- [ ] Create configuration file (symbols, timing, paytable)
+- [ ] Write unit tests for game logic
+- [ ] Performance profiling and optimization
+- [ ] Cross-browser testing
+- [ ] Accessibility audit
+- [ ] Get Stage 4 (Implementation Review) sign-off
+
+### Polish & Launch Phase
+- [ ] Final visual QA (pixel-perfect check)
+- [ ] Sound mixing and volume balancing
+- [ ] Animation fine-tuning based on feel
+- [ ] Documentation completion
+- [ ] Stakeholder demo and feedback
+- [ ] Get Stage 5 (User Acceptance) sign-off
+- [ ] Integration into main Dopamine site
+- [ ] Production deployment
+- [ ] Post-launch monitoring
+- [ ] Schedule Stage 6 (Post-Launch Review) in 2 weeks
+
+---
+
+## Next Steps
+
+**Immediate (Week 1):**
+1. Create high-fidelity mockups using reference images as inspiration
+2. Design and export 5 symbol graphics per specification
+3. Document game state diagram (state machine for transitions)
+4. Schedule Stage 2 (Mockup Review) meeting with stakeholders
+
+**Short-term (Week 2-3):**
+1. Address mockup review feedback and get sign-off
+2. Begin code implementation (game.js class structure)
+3. Implement reel animation system
+4. Create CSS animations matching TR-1 timing table
+
+**Mid-term (Week 4-5):**
+1. Complete all functional requirements
+2. Implement accessibility features
+3. Performance optimization
+4. Cross-browser and device testing
+5. Schedule Stage 4 (Implementation Review)
+
+**Pre-launch (Week 6):**
+1. Address implementation review feedback
+2. Final polish and QA
+3. Stakeholder demo (Stage 5)
+4. Documentation finalization
+5. Production deployment
+
+**Post-launch (Week 8):**
+1. Monitor for issues
+2. Collect user feedback
+3. Conduct Stage 6 (Post-Launch Review)
+4. Plan iteration 02 improvements if needed
+
+---
+
+## Appendix: Open Questions & Decisions Log
+
+### Open Questions
+1. **Audio mixing:** Should win sounds interrupt spin sounds, or queue/overlap?
+   - **Decision needed by:** Stage 2 review
+   - **Impact:** Audio implementation approach
+
+2. **Credit system:** Should credits have a maximum cap, or grow indefinitely?
+   - **Decision needed by:** Stage 3 review  
+   - **Impact:** UI layout (number display width)
+
+3. **Mobile interactions:** Tap to spin, or auto-only on mobile?
+   - **Decision needed by:** Stage 2 review
+   - **Impact:** Mobile UI design
+
+4. **Background animation:** Static or animated night-market scene?
+   - **Decision needed by:** Stage 2 review
+   - **Impact:** Performance budget, visual complexity
+
+### Decisions Made
+1. **Q:** How many symbols in initial version?  
+   **A:** 5 symbols (Cherry, Lemon, Orange, Seven, Jackpot) - simple first, expand later
+   **Date:** [Original document creation]
+   **Rationale:** Focus on polish over variety in iteration 01
+
+2. **Q:** Auto-spin or manual only?  
+   **A:** Auto-spin primary (3-5s interval), manual controls optional
+   **Date:** [Original document creation]
+   **Rationale:** "Watchability" goal - passive viewing experience
+
+3. **Q:** Reels stop together or sequentially?  
+   **A:** Sequential left→right with 300ms delays
+   **Date:** [Original document creation]  
+   **Rationale:** Builds anticipation, readable even when passively watching
+
+4. **Q:** What easing functions for animations?  
+   **A:** See TR-1 timing table - varies by animation type
+   **Date:** [This document]
+   **Rationale:** Disney animation principles (anticipation, ease-out)
+
+---
+
+**Document Version:** 2.0  
+**Last Updated:** 2026-02-15  
+**Status:** ✅ Requirements Complete - Mockup Phase In Progress  
+**Next Review:** Stage 2 (Mockup Review) - TBD
