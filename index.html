@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dopamine - Auto-Playing Web Games</title>
+  <link rel="stylesheet" href="assets/styles/common.css">
+  <style>
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    
+    .hero h1 {
+      font-size: 3em;
+      margin: 0 0 20px 0;
+    }
+    
+    .hero p {
+      font-size: 1.3em;
+      opacity: 0.9;
+    }
+    
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .game-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    
+    .game-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+    
+    .game-card .icon {
+      font-size: 4em;
+      margin-bottom: 15px;
+    }
+    
+    .game-card h2 {
+      margin: 0 0 10px 0;
+      color: #333;
+    }
+    
+    .game-card p {
+      color: #666;
+      line-height: 1.6;
+    }
+    
+    .game-card .status {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 0.85em;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    
+    .status.available {
+      background: #d1fae5;
+      color: #065f46;
+    }
+    
+    .status.coming-soon {
+      background: #fef3c7;
+      color: #92400e;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #f9fafb;
+      color: #6b7280;
+    }
+    
+    footer a {
+      color: #667eea;
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>🎮 Dopamine</h1>
+    <p>Auto-playing web games that are fun to watch</p>
+  </div>
+  
+  <main>
+    <div class="games-grid">
+      <a href="games/slot-machine/index.html" class="game-card">
+        <div class="icon">🎰</div>
+        <h2>Slot Machine</h2>
+        <p>Classic 3-reel slot machine with auto-spin. Watch the reels spin and see if you hit the jackpot!</p>
+        <span class="status available">Available</span>
+      </a>
+      
+      <div class="game-card" style="opacity: 0.6; cursor: not-allowed;">
+        <div class="icon">🎁</div>
+        <h2>Gacha</h2>
+        <p>Capsule toy machine simulation with rare collectibles. Open virtual loot boxes automatically!</p>
+        <span class="status coming-soon">Coming Soon</span>
+      </div>
+      
+      <div class="game-card" style="opacity: 0.6; cursor: not-allowed;">
+        <div class="icon">🎲</div>
+        <h2>Dice Roll</h2>
+        <p>Animated dice rolling with probability visualization. Watch endless dice rolls and see patterns emerge!</p>
+        <span class="status coming-soon">Coming Soon</span>
+      </div>
+      
+      <div class="game-card" style="opacity: 0.6; cursor: not-allowed;">
+        <div class="icon">🃏</div>
+        <h2>Card Flip</h2>
+        <p>Memory card game that plays itself. Mesmerizing card flipping animations!</p>
+        <span class="status coming-soon">Coming Soon</span>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <p>
+      <a href="ARCHITECTURE.md">Architecture</a> • 
+      <a href="CONTRIBUTING.md">Contributing</a> • 
+      <a href="docs/GAME_DEVELOPMENT.md">Game Development</a> • 
+      <a href="docs/API.md">API Reference</a>
+    </p>
+    <p style="margin-top: 10px;">Built with vanilla JavaScript • No build step required</p>
+  </footer>
+</body>
+</html>
