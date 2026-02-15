@@ -10,10 +10,9 @@ Thank you for your interest in contributing to Dopamine! This guide will help yo
 
 ## Project Philosophy
 
-- **Keep it simple**: Prefer vanilla JavaScript over frameworks
-- **Keep it light**: Minimal dependencies, small file sizes
-- **Keep it visual**: Games should be fun to watch
-- **Keep it accessible**: Support keyboard navigation and screen readers where possible
+Dopamine is built on principles of simplicity, visual appeal, and accessibility — creating web games that are fun to watch with minimal dependencies.
+
+👉 **See [DESIGN_PRINCIPLES.md](DESIGN_PRINCIPLES.md) for the complete project philosophy and design beliefs.**
 
 ## Adding a New Game
 

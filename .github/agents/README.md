@@ -10,7 +10,7 @@ Custom agents are specialized AI assistants that you can create to help with spe
 
 ### 🎰 Boomer Casino Critic
 
-**File:** `boomer-casino-critic.yml`
+**File:** `boomer-casino-critic.agent.md`
 
 **Purpose:** A design critic with a boomer personality who is absolutely addicted to casinos, slots, and gambling. Provides critical design opinions for review.
 
@@ -48,13 +48,14 @@ Custom agents are specialized AI assistants that you can create to help with spe
 
 To create a new custom agent:
 
-1. Create a new YAML file in this directory (e.g., `my-agent.yml`)
-2. Define the following fields:
-   - `name`: The display name for your agent
-   - `description`: A brief description of the agent's purpose
-   - `tools`: (Optional) List of tools the agent can use (e.g., `[review, search, readFile]` for PR reviews)
-   - `user-invokable`: (Optional) Set to `true` to make the agent available in the picker
-   - `instructions`: Detailed instructions for the agent's personality, behavior, and expertise
+1. Create a new `.agent.md` file in this directory (e.g., `my-agent.agent.md`)
+2. Use the following format:
+   - **YAML frontmatter** (between `---` fences) containing:
+     - `name`: The display name for your agent
+     - `description`: A brief description of the agent's purpose
+     - `tools`: (Optional) Array of tools the agent can use (e.g., `["review", "search", "readFile"]` for PR reviews)
+   - **Markdown body** below the frontmatter containing detailed instructions for the agent's personality, behavior, and expertise
+   - Note: Agents in `.github/agents/` are user-invokable by default; no `user-invokable` field is needed
 
 3. Follow GitHub's documentation: https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents
 

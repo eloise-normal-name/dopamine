@@ -22,6 +22,7 @@ This directory contains design concepts, mockups, and guidelines for Dopamine's 
 - **[audio/](audio/)** - Audio design, sound effects concepts, and music direction
 - **[visual/](visual/)** - Visual design, UI mockups, color palettes, and animation concepts
   - **[Slot Machine Iteration 01](visual/SLOT_MACHINE_ITERATION_01.md)** - Opinionated slot narrative/design decisions + sample art
+  - **[Gacha Iteration 01](visual/GACHA_ITERATION_01.md)** - Treasure chest opening loop: narrative, rarity system, and animation pacing
 
 ## Purpose
 
@@ -33,19 +34,9 @@ The design documentation helps maintain consistency across all games and provide
 
 ## Design Philosophy
 
-### Visual Design
-- **Playful and engaging** - Fun, colorful aesthetics that are enjoyable to watch
-- **Clear and readable** - High contrast, legible text, obvious visual feedback
-- **Consistent theme** - Purple gradient base with complementary accent colors
-- **Smooth animations** - 60fps target, CSS animations preferred
-- **Responsive** - Works on all screen sizes
+Dopamine's visual and audio design follows core principles of being playful, clear, consistent, smooth, and satisfying.
 
-### Audio Design
-- **Non-intrusive** - Sounds enhance without being annoying
-- **Satisfying feedback** - Clear audio cues for wins and events
-- **Optional** - Can be muted without affecting gameplay
-- **High quality** - Clean, professional sound effects
-- **Compressed** - Small file sizes (< 100KB per sound)
+👉 **See [../../DESIGN_PRINCIPLES.md](../../DESIGN_PRINCIPLES.md) for complete visual design principles, audio design principles, color system, typography, and animation guidelines.**
 
 ## Contributing Designs
 
