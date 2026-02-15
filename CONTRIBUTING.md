@@ -17,6 +17,20 @@ Thank you for your interest in contributing to Dopamine! This guide will help yo
 
 ## Adding a New Game
 
+**IMPORTANT**: Follow the design-first workflow before writing any code!
+
+### 0. Design First (Required)
+Before creating any game files, complete the design phase:
+
+1. **Write narrative** → Add game description to `/docs/design/NARRATIVES.md`
+2. **Collect references** → Research and log visual references
+3. **Create art briefs** → Write concept art specifications
+4. **Get concept art** → Create or commission visual concepts
+5. **Enumerate assets** → Break concepts into production assets
+6. **Produce assets** → Create optimized game-ready files
+
+📋 **See `/docs/design/ASSET_WORKFLOW.md` for complete workflow**
+
 ### 1. Create Game Directory
 ```bash
 mkdir -p games/your-game-name
