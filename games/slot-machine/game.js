@@ -39,10 +39,15 @@ class SlotMachine {
       this.populateReel(i);
     }
     
+    // Bind event handlers
+    this.handleStart = () => this.start();
+    this.handleStop = () => this.stop();
+    this.handleReset = () => this.reset();
+    
     // Set up event listeners
-    this.elements.startBtn.addEventListener('click', () => this.start());
-    this.elements.stopBtn.addEventListener('click', () => this.stop());
-    this.elements.resetBtn.addEventListener('click', () => this.reset());
+    this.elements.startBtn.addEventListener('click', this.handleStart);
+    this.elements.stopBtn.addEventListener('click', this.handleStop);
+    this.elements.resetBtn.addEventListener('click', this.handleReset);
     
     this.render();
   }
@@ -200,9 +205,9 @@ class SlotMachine {
   destroy() {
     this.stop();
     // Clean up event listeners
-    this.elements.startBtn.removeEventListener('click', () => this.start());
-    this.elements.stopBtn.removeEventListener('click', () => this.stop());
-    this.elements.resetBtn.removeEventListener('click', () => this.reset());
+    this.elements.startBtn.removeEventListener('click', this.handleStart);
+    this.elements.stopBtn.removeEventListener('click', this.handleStop);
+    this.elements.resetBtn.removeEventListener('click', this.handleReset);
   }
 }
 

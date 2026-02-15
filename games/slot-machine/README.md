@@ -8,7 +8,6 @@ A classic 3-reel slot machine that plays automatically.
 - Weighted random symbols
 - Win detection and payout calculation
 - Smooth spinning animations
-- Sound effects
 - Credit system
 
 ## Symbols and Payouts
@@ -63,9 +62,9 @@ game.start();
 
 ## Future Enhancements
 
+- [ ] Sound effects
+- [ ] Particle effects on wins
 - [ ] Multiple paylines
 - [ ] Bonus rounds
 - [ ] Progressive jackpot
-- [ ] Sound effects
-- [ ] Particle effects on wins
 - [ ] Mobile touch controls
