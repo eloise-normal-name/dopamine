@@ -75,6 +75,53 @@ Auto-playing web games that are fun to watch! A collection of browser-based game
 
 No build step, no dependencies to install!
 
+## 🚀 Deployment
+
+### GitHub Pages (Recommended)
+
+The easiest way to deploy Dopamine is using GitHub Pages since it's a static site with no build step:
+
+1. **Enable GitHub Pages**:
+   - Go to your repository settings
+   - Navigate to "Pages" section
+   - Under "Source", select the branch you want to deploy (e.g., `main`)
+   - Click "Save"
+
+2. **Access your site**:
+   - Your site will be available at: `https://[username].github.io/dopamine/`
+   - Games will work immediately with no additional configuration
+
+3. **Custom domain (optional)**:
+   - Add a `CNAME` file to the root with your domain
+   - Configure DNS settings with your domain provider
+   - Enable "Enforce HTTPS" in GitHub Pages settings
+
+### Alternative Deployment Options
+
+Since Dopamine is a static site with no dependencies, it can be deployed anywhere:
+
+- **Netlify**: Drag and drop the folder or connect your GitHub repo
+- **Vercel**: Connect your repository for automatic deployments
+- **GitHub Codespaces**: Open and run instantly in the browser
+- **Any static host**: Upload files via FTP/SFTP to any web server
+
+### Local Development Server
+
+For local testing, use any static file server:
+
+```bash
+# Python (built-in)
+python -m http.server 8000
+
+# Node.js (if you have it)
+npx serve
+
+# PHP (built-in)
+php -S localhost:8000
+```
+
+No build, bundling, or transpilation needed! 🎉
+
 ## 📁 Project Structure
 
 ```
