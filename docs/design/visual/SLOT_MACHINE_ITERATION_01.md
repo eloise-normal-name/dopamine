@@ -5,7 +5,7 @@ This document starts slot-machine iteration with narrative refinement, opinionat
 ## Narrative Focus (Iteration Goal)
 
 **Theme:** *"Neon Night Market Slots"*  
-Keep the familiar 3-reel loop, but shift tone from casino realism to playful arcade nostalgia. The viewer should feel *cozy anticipation* rather than high-stakes tension.
+A configurable multi-reel slot machine (1-6 reels) that evolves from simple patterns to complex reward systems. Viewers gradually discover and understand the reward mechanics through passive observation, creating a satisfying learning curve. The tone shifts from casino realism to playful arcade nostalgia with an element of pattern discovery. The viewer should feel *curious anticipation* and *gradual mastery* rather than high-stakes tension.
 
 ## Opinionated Design Decisions
 
@@ -17,15 +17,167 @@ Keep the familiar 3-reel loop, but shift tone from casino realism to playful arc
    Keep the purple Dopamine gradient UI shell, but make the reel window feel like a glowing marquee.
 4. **Layered visual depth**  
    Move beyond flat simplicity with parallax background layers, atmospheric particles, and animated environmental elements that create a living, breathing night market scene.
-5. **Animation pacing**  
-   Reels should stop left -> right with clear delay so anticipation is readable even when passively watching.
+5. **Configurable complexity**  
+   Support 1-6 reels with adaptive layout. Start viewers with simpler patterns (3 reels, basic paylines) and allow progression to complex patterns (5-6 reels, multi-dimensional matching).
+6. **Discoverable reward patterns**  
+   Reward system reveals itself through observation. Visual cues highlight pattern types without explicit tutorials. Viewers learn by watching, building mental models of how wins work.
+7. **Animation pacing**  
+   Reels should stop left → right with clear delay so anticipation is readable even when passively watching. Delay scales with reel count for dramatic effect.
+
+## Multi-Reel System & Pattern Discovery
+
+### Configurable Reel Architecture (1-6 Reels)
+
+**Core Concept:** The slot machine adapts from simple to complex configurations, allowing viewers to gradually build understanding of reward patterns through observation.
+
+#### Reel Configuration Tiers
+
+**Tier 1: Foundation (1-2 Reels)**
+- Single or double reel matching
+- Simple direct matches (symbol A = symbol A)
+- Learning outcome: Basic symbol recognition
+- Use case: Quick demo mode, initial viewer onboarding
+
+**Tier 2: Classic (3 Reels)**
+- Traditional three-reel paylines (left-to-right)
+- Introduction to sequential matching
+- Learning outcome: Understanding of payline concept
+- Use case: Familiar entry point for casual viewers
+
+**Tier 3: Intermediate (4 Reels)**
+- Multiple paylines (horizontal, diagonal)
+- Introduction to pattern variety
+- Learning outcome: Discovery that wins can form different shapes
+- Use case: Building complexity without overwhelming
+
+**Tier 4: Advanced (5 Reels)**
+- Cluster pays (adjacent symbols)
+- Scatter wins (position-independent)
+- Multiplier symbols affect nearby wins
+- Learning outcome: Position relationships matter in multiple ways
+- Use case: Engaged viewers seeking depth
+
+**Tier 5: Expert (6 Reels)**
+- Multi-dimensional patterns (L-shapes, T-shapes, boxes)
+- Cascading reels (winning symbols disappear, new ones fall)
+- Symbol transformations (wilds expand, symbols morph)
+- Learning outcome: Complex pattern recognition, emergent strategies
+- Use case: Long-term viewers building mastery
+
+### Progressive Complexity Reward Patterns
+
+#### Pattern Categories (Viewers Discover Through Observation)
+
+**1. Linear Patterns** (Easiest to learn)
+- Horizontal lines: `[A][A][A]` across reels 1-2-3
+- Vertical lines: Matching symbols in same reel position across spins (streak tracking)
+- Diagonal lines: `[A]` reel1-pos1, `[A]` reel2-pos2, `[A]` reel3-pos3
+- **Visual cue:** Connecting line animates from left→right showing the match path
+
+**2. Cluster Patterns** (Medium difficulty)
+- Adjacent matches: Any 3+ matching symbols touching horizontally or vertically
+- Mega clusters: 6+ symbols form massive wins
+- **Visual cue:** Matched symbols glow and pulse together, showing they're a "group"
+
+**3. Scatter Patterns** (Medium-high difficulty)
+- Position-independent: 3+ of same symbol anywhere on reels = win
+- Bonus triggers: Special scatter symbols unlock bonus events
+- **Visual cue:** Scatter symbols shoot light beams to each other, forming constellation-like connections
+
+**4. Shape Patterns** (High difficulty)
+- L-shapes: Corners and edges form specific geometric patterns
+- T-shapes, Plus-signs, Boxes (2×2, 3×3)
+- **Visual cue:** Pattern outline traces itself in neon, highlighting the discovered shape
+
+**5. Transformation Patterns** (Expert difficulty)
+- Wild expansions: Wild symbol expands vertically/horizontally to complete patterns
+- Symbol morphs: Adjacent symbols transform into matching set
+- Cascades: Winning symbols removed, new symbols fall creating chain reactions
+- **Visual cue:** Transformation animations show the before→after change explicitly
+
+### Gradual Learning Through Visual Storytelling
+
+**Discovery Mechanisms** (How viewers learn without tutorials):
+
+#### Progressive Revelation System
+1. **First 10 spins:** Only linear patterns possible (3-reel mode), clear line animations
+2. **Spins 11-30:** Introduce one scatter pattern, light beam visual shows position-independence
+3. **Spins 31-60:** Unlock cluster patterns, glowing groups teach adjacency concept
+4. **Spins 61-100:** Enable shape patterns, neon tracing reveals geometric matching
+5. **Spins 100+:** Full complexity available, cascades and transformations create "aha!" moments
+
+#### Visual Learning Aids (No Text Tutorials)
+- **Pattern History Display:** Last 5 wins shown as small icons above reels (viewers see pattern variety)
+- **Highlight Hints:** On no-win spins, briefly highlight almost-patterns (near-misses teach what to look for)
+- **Celebration Intensity:** Bigger patterns = bigger particle explosions (implicitly teaching value hierarchy)
+- **Symbol Relationships:** Symbols that frequently appear together develop subtle visual affinity (shared color accents)
+
+#### Passive Observation Learning Curve
+**Minute 1-2:** "Symbols match, lights happen"
+**Minute 3-5:** "Lines make wins, different symbols have different celebrations"
+**Minute 6-10:** "Wait, that diagonal counted too? Interesting..."
+**Minute 11-20:** "Those three anywhere triggered something special"
+**Minute 21-40:** "I'm starting to predict what will win before the celebration fires"
+**Minute 41+:** "I understand the patterns now, and I'm curious what new ones might appear"
+
+### Multi-Reel Layout Adaptation
+
+#### Responsive Reel Grid Design
+
+**1-Reel Mode:** Vertical emphasis, single column, large symbols (128px)
+```
+┌────────┐
+│ CHERRY │
+└────────┘
+```
+
+**2-Reel Mode:** Balanced pair, medium symbols (96px)
+```
+┌────────┬────────┐
+│ CHERRY │ CHERRY │
+└────────┴────────┘
+```
+
+**3-Reel Mode:** Classic slot proportions (80px)
+```
+┌────────┬────────┬────────┐
+│ CHERRY │  SEVEN │ CHERRY │
+└────────┴────────┴────────┘
+```
+
+**4-Reel Mode:** Widescreen, symbols 64px
+```
+┌──────┬──────┬──────┬──────┐
+│CHERRY│ SEVEN│CHERRY│LEMON │
+└──────┴──────┴──────┴──────┘
+```
+
+**5-Reel Mode:** Premium slot standard, 56px symbols
+```
+┌────┬────┬────┬────┬────┐
+│ CH │ 7  │ CH │ LE │ OR │
+└────┴────┴────┴────┴────┘
+```
+
+**6-Reel Mode:** Maximum complexity, 48px symbols with tighter spacing
+```
+┌───┬───┬───┬───┬───┬───┐
+│CH │ 7 │CH │LE │OR │JP │
+└───┴───┴───┴───┴───┴───┘
+```
+
+**Responsive Breakpoints:**
+- Mobile (320-767px): Max 4 reels (space constraint)
+- Tablet (768-1023px): Max 5 reels
+- Desktop (1024px+): Full 6-reel support
 
 ## Attention-Grabbing & Differentiating Features
 
-### Core Philosophy: Dual-Mode Entertainment
+### Core Philosophy: Dual-Mode Entertainment + Progressive Discovery
 This slot machine serves two viewing modes simultaneously:
 - **Passive Background Mode**: Mesmerizing ambient animation that works as desk/stream companion
 - **Active Hypnotic Mode**: Engaging visual hooks and micro-events that reward sustained attention
+- **Discovery Mode**: Viewers build understanding of complex patterns through observation, creating satisfying "eureka" moments
 
 ### Key Differentiating Features
 
@@ -590,11 +742,18 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 ### 1. Functional Requirements
 
 #### FR-1: Core Game Mechanics
-- **FR-1.1** System shall support 3-reel slot machine with independent reel control
-- **FR-1.2** Each reel shall display 5 distinct symbols (Cherry, Lemon, Orange, Seven, Jackpot)
-- **FR-1.3** Reels shall spin and stop sequentially left → right with visible delay
-- **FR-1.4** System shall detect and display winning combinations across single payline
-- **FR-1.5** Credit balance shall update accurately after each spin result
+- **FR-1.1** System shall support configurable reel count from 1 to 6 reels with independent reel control
+- **FR-1.2** Each reel shall display 5 distinct symbols (Cherry, Lemon, Orange, Seven, Jackpot) with potential for expanded symbol sets in 5-6 reel modes
+- **FR-1.3** Reels shall spin and stop sequentially left → right with visible delay that scales with reel count
+- **FR-1.4** System shall detect and display winning combinations across multiple pattern types:
+  - Linear patterns (horizontal, diagonal)
+  - Cluster patterns (adjacent matching)
+  - Scatter patterns (position-independent)
+  - Shape patterns (L, T, plus, box formations)
+  - Transformation patterns (wilds, morphs, cascades)
+- **FR-1.5** Pattern complexity shall unlock progressively based on spin count (simple→complex)
+- **FR-1.6** Credit balance shall update accurately after each spin result and pattern evaluation
+- **FR-1.7** System shall track and display pattern history (last 5-10 wins) for viewer learning
 
 #### FR-2: User Interaction
 - **FR-2.1** System shall auto-spin at configurable interval (default: 3-5 seconds)
@@ -603,17 +762,26 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - **FR-2.4** Game state shall be resettable to initial conditions
 
 #### FR-3: Visual Feedback
-- **FR-3.1** Winning combinations shall trigger visual celebration (pulse, glow, sparkle)
-- **FR-3.2** Credit counter shall animate smoothly on value changes
-- **FR-3.3** Reel symbols shall be clearly readable during idle state
-- **FR-3.4** Spin animation shall show motion blur or scroll effect
-- **FR-3.5** Each reel stop shall have distinct visual feedback
+- **FR-3.1** Winning combinations shall trigger visual celebration (pulse, glow, sparkle) with intensity scaled to pattern complexity
+- **FR-3.2** Pattern visualization shall show win formation:
+  - Lines: Animated connecting path from left→right
+  - Clusters: Unified glow showing grouped symbols
+  - Scatters: Light beams connecting scattered symbols
+  - Shapes: Neon outline tracing the geometric pattern
+  - Transformations: Before→after animation showing symbol changes
+- **FR-3.3** Credit counter shall animate smoothly on value changes
+- **FR-3.4** Reel symbols shall be clearly readable during idle state across all reel counts
+- **FR-3.5** Spin animation shall show motion blur or scroll effect
+- **FR-3.6** Each reel stop shall have distinct visual feedback
+- **FR-3.7** Near-miss hints shall briefly highlight almost-patterns (teaching mechanism)
+- **FR-3.8** Pattern history display shall show last 5-10 winning patterns as visual icons
 
 #### FR-4: Attention-Pulse System
 - **FR-4.1** System shall provide escalating attention cues for noteworthy events:
-  - Near-miss (2/3 symbols matched): Frame pulse + third reel spotlight
+  - Near-miss patterns: Frame pulse + highlighting of missing symbols
   - Win streak (3+ consecutive): Background color-shift animation
   - Jackpot symbol visible: Glow ray from symbol to jackpot meter
+  - New pattern discovered: Brief "discovery glow" celebration
   - Long idle (60s+): Random element "attention grab" animation
 - **FR-4.2** Attention cues shall start subtle and build in intensity
 - **FR-4.3** No attention cue shall be intrusive or anxiety-inducing
@@ -625,8 +793,27 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
   - Win streaks: Background music tempo increases subtly
   - Market vendors: Silhouettes occasionally "notice" big wins
   - Night cycle: Environment mood shifts based on credit balance
+  - Pattern complexity: Environment adapts to current reel configuration
 - **FR-5.2** Environmental reactions shall be optional and configurable
 - **FR-5.3** All environmental effects shall enhance, not distract from core gameplay
+
+#### FR-6: Progressive Complexity & Discovery System
+- **FR-6.1** System shall unlock pattern types progressively based on spin count:
+  - Spins 1-10: Linear patterns only (horizontal, diagonal)
+  - Spins 11-30: Add scatter patterns (position-independent)
+  - Spins 31-60: Add cluster patterns (adjacent matching)
+  - Spins 61-100: Add shape patterns (L, T, plus, box)
+  - Spins 100+: Add transformation patterns (wilds, cascades, morphs)
+- **FR-6.2** Pattern unlocks shall be celebrated with discovery animations
+- **FR-6.3** System shall track viewer learning progress (patterns encountered, understood)
+- **FR-6.4** Visual learning aids shall be provided without text tutorials:
+  - Pattern history display (last 5-10 wins)
+  - Near-miss highlighting (teaching what to look for)
+  - Celebration intensity scaling (teaching value hierarchy)
+  - Pattern visualization animations (showing how wins form)
+- **FR-6.5** Reel count shall be configurable (1-6 reels) with UI adapting to count
+- **FR-6.6** Symbol size and spacing shall adapt to reel count (fewer reels = larger symbols)
+- **FR-6.7** Animation timing shall scale with reel count (more reels = longer anticipation build)
 
 ### 2. Visual Requirements
 
@@ -722,6 +909,44 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
   - Stop impact with subtle screen shake
   - Sound synchronization with ratchet positions
 
+#### VR-11: Adaptive Multi-Reel Layout
+- **VR-11.1** Layout shall support 1-6 reels with responsive symbol sizing:
+  - 1-2 reels: 96-128px symbols (large, emphasis on detail)
+  - 3 reels: 80px symbols (classic slot proportions)
+  - 4 reels: 64px symbols (widescreen format)
+  - 5 reels: 56px symbols (premium slot standard)
+  - 6 reels: 48px symbols (maximum complexity)
+- **VR-11.2** Reel spacing shall adapt to reel count:
+  - Fewer reels (1-3): 16px gaps for breathing room
+  - More reels (4-6): 8px gaps for compact efficiency
+- **VR-11.3** Viewport shall resize to accommodate reel count while maintaining 16:9 aspect ratio target
+- **VR-11.4** Responsive breakpoints:
+  - Mobile (320-767px): Max 4 reels
+  - Tablet (768-1023px): Max 5 reels
+  - Desktop (1024px+): Full 6-reel support
+- **VR-11.5** Symbol legibility shall be maintained across all reel counts (minimum 48px)
+
+#### VR-12: Pattern Visualization System
+- **VR-12.1** Winning patterns shall be visually highlighted with type-specific animations:
+  - **Linear patterns:** Animated connecting line traces from first to last symbol (300ms)
+  - **Cluster patterns:** Unified glow boundary around grouped symbols (400ms pulse)
+  - **Scatter patterns:** Light beams shoot between scattered symbols forming constellation (500ms)
+  - **Shape patterns:** Neon outline traces the geometric shape (L/T/plus/box) in 600ms
+  - **Transformation patterns:** Morph animation shows before→after state (800ms)
+- **VR-12.2** Pattern colors shall differentiate pattern types:
+  - Linear: Electric blue (#00D9FF)
+  - Cluster: Warm gold (#FFD700)
+  - Scatter: Magenta (#FF6B9D)
+  - Shape: Cyan-green (#00FFAA)
+  - Transformation: Rainbow gradient shimmer
+- **VR-12.3** Multiple simultaneous patterns shall layer visualizations with slight timing offsets
+- **VR-12.4** Pattern history display shall show last 5-10 wins as compact icons:
+  - Icons use simplified pattern visualization (16×16px)
+  - Icons fade in sequence (newest on left, oldest fades out on right)
+  - Clicking icon replays that pattern's visualization (educational)
+- **VR-12.5** Near-miss hints shall use subtle ghost outlines (30% opacity, 1s duration)
+- **VR-12.6** Discovery celebrations (new pattern type) shall use special particle burst + frame flash
+
 ### 3. Animation & Timing Requirements
 
 #### TR-1: Motion Timing Table
@@ -733,16 +958,28 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 | **Reel 1 Stop** | 400ms | cubic-bezier(0.25, 0.1, 0.25, 1) | 0ms (immediate) |
 | **Reel 2 Stop** | 400ms | cubic-bezier(0.25, 0.1, 0.25, 1) | +300ms after Reel 1 |
 | **Reel 3 Stop** | 400ms | cubic-bezier(0.25, 0.1, 0.25, 1) | +300ms after Reel 2 |
+| **Reel 4 Stop** | 400ms | cubic-bezier(0.25, 0.1, 0.25, 1) | +300ms after Reel 3 |
+| **Reel 5 Stop** | 400ms | cubic-bezier(0.25, 0.1, 0.25, 1) | +300ms after Reel 4 |
+| **Reel 6 Stop** | 400ms | cubic-bezier(0.25, 0.1, 0.25, 1) | +300ms after Reel 5 |
 | **Deceleration Bounce** | 150ms | cubic-bezier(0.68, -0.55, 0.265, 1.55) | On each reel stop |
 | **Symbol Settle** | 100ms | ease-out | After bounce |
-| **Win Pulse** | 600ms | ease-in-out | After all reels stopped |
+| **Pattern Detection** | 200ms | linear | After all reels stopped |
+| **Pattern Visualization (Line)** | 300ms | ease-out | After detection |
+| **Pattern Visualization (Cluster)** | 400ms | ease-in-out | After detection |
+| **Pattern Visualization (Scatter)** | 500ms | ease-out | After detection |
+| **Pattern Visualization (Shape)** | 600ms | cubic-bezier(0.34, 1.56, 0.64, 1) | After detection |
+| **Pattern Visualization (Transform)** | 800ms | ease-in-out | After detection |
+| **Win Pulse** | 600ms | ease-in-out | Simultaneous with pattern |
 | **Win Glow** | 800ms | ease-out | Simultaneous with pulse |
 | **Win Sparkle** | 1000ms | ease-out | Staggered 100ms intervals |
 | **Particle Burst (Small)** | 1000ms | ease-out | On win detected |
 | **Particle Cascade (Medium)** | 1500ms | ease-out | On win detected |
 | **Particle Storm (Big)** | 2000ms | ease-out | On win detected |
 | **Particle Explosion (Jackpot)** | 3500ms | ease-out | On jackpot |
+| **Discovery Celebration** | 2000ms | cubic-bezier(0.34, 1.56, 0.64, 1) | On new pattern type |
 | **Credit Update** | 300ms | ease-out | After win animations |
+| **Pattern History Update** | 400ms | ease-in-out | New icon slides in |
+| **Near-Miss Hint** | 1000ms | ease-in-out | 30% opacity ghost |
 | **Idle Reset** | 500ms | ease-in-out | 2000ms after credit update |
 | **Symbol Idle Bob** | 2000ms | ease-in-out | Continuous loop |
 | **Symbol Glow Pulse** | 4000ms | ease-in-out | Continuous loop |
@@ -753,12 +990,21 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 | **Near-Miss Pulse** | 500ms | cubic-bezier(0.4, 0, 0.2, 1) | On near-miss detected |
 | **Attention Grab** | 1200ms | cubic-bezier(0.34, 1.56, 0.64, 1) | On 60s idle |
 | **Environmental Event** | 2000-4000ms | ease-in-out | Random 30-90s intervals |
+| **Reel Count Transition** | 800ms | ease-in-out | On configuration change |
 
 #### TR-2: Interaction Timing
-- **TR-2.1** Auto-spin interval: 3000ms minimum between spin cycles
-- **TR-2.2** Button press response: <100ms feedback latency
-- **TR-2.3** State transition: max 200ms for any state change
-- **TR-2.4** Total spin cycle: 2500-3500ms from start to credits settled
+- **TR-2.1** Auto-spin interval: 3000ms minimum between spin cycles (base 3-reel)
+- **TR-2.2** Auto-spin scaling: +200ms per additional reel (6-reel = 3600ms)
+- **TR-2.3** Button press response: <100ms feedback latency
+- **TR-2.4** State transition: max 200ms for any state change
+- **TR-2.5** Total spin cycle: Scales with reel count
+  - 1-2 reels: 1500-2000ms
+  - 3 reels: 2500-3000ms
+  - 4 reels: 3000-3500ms
+  - 5 reels: 3500-4000ms
+  - 6 reels: 4000-4500ms
+- **TR-2.6** Pattern evaluation time: 200-500ms depending on complexity
+- **TR-2.7** Progressive unlock reveal: 2000ms discovery celebration
 
 #### TR-3: Performance Budgets
 - **TR-3.1** Frame drops during animation: <5% of frames
@@ -1172,6 +1418,13 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - [ ] `_startAmbientAnimations()` - initialize continuous background loops
 - [ ] `_handleIdleTimeout()` - attention grab after 60s idle
 - [ ] `_updateParallaxLayers()` - parallax scrolling effects (optional)
+- [ ] `_detectPatterns()` - evaluate all pattern types (linear, cluster, scatter, shape, transform)
+- [ ] `_visualizePattern(type, coordinates)` - render pattern visualization overlay
+- [ ] `_updatePatternHistory(pattern)` - add pattern to history display
+- [ ] `_checkProgressiveUnlock()` - determine if new pattern types should unlock
+- [ ] `_celebrateDiscovery(patternType)` - special animation for new pattern discovery
+- [ ] `_adaptLayoutToReelCount(count)` - resize symbols and spacing for 1-6 reels
+- [ ] `_highlightNearMiss(almostPattern)` - show ghost outline for teaching
 
 #### CSS Animations
 - [ ] `@keyframes spin` - reel spinning effect
@@ -1194,16 +1447,44 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - [ ] `@keyframes attentionGrab` - idle timeout attention animation
 - [ ] `@keyframes fireworkBurst` - environmental firework effect
 - [ ] `@keyframes pedestrianWalk` - passing silhouette animation
+- [ ] `@keyframes patternTraceLine` - animated line connecting matched symbols
+- [ ] `@keyframes patternGlowCluster` - unified glow for clustered symbols
+- [ ] `@keyframes patternBeamScatter` - light beams between scattered symbols
+- [ ] `@keyframes patternShapeOutline` - neon shape tracing (L/T/plus/box)
+- [ ] `@keyframes patternMorph` - symbol transformation animation
+- [ ] `@keyframes patternHistorySlide` - new pattern icon slides into history
+- [ ] `@keyframes nearMissGhost` - 30% opacity ghost outline hint
+- [ ] `@keyframes discoveryBurst` - special celebration for pattern unlock
+- [ ] `@keyframes reelCountTransition` - layout adaptation when changing reel count
 - [ ] Responsive media queries (320px, 768px, 1024px breakpoints)
 - [ ] `prefers-reduced-motion` alternative animations (disable ambient loops, reduce particles)
 
 #### Configuration (config.js)
 - [ ] Symbol array: `['cherry', 'lemon', 'orange', 'seven', 'jackpot']`
-- [ ] Symbol weights/probabilities for randomization
-- [ ] Paytable: define winning combinations and payouts
+- [ ] Symbol weights/probabilities for randomization (varies by reel count)
+- [ ] Reel configuration:
+  - Default reel count (3)
+  - Min/max reel count (1-6)
+  - Responsive breakpoint limits (mobile: 4, tablet: 5, desktop: 6)
+  - Symbol size mapping per reel count (128px→48px)
+  - Reel spacing mapping per reel count (16px→8px)
+- [ ] Pattern definitions and detection rules:
+  - Linear patterns (horizontal, diagonal) - available from spin 1
+  - Scatter patterns (position-independent) - unlocks at spin 11
+  - Cluster patterns (adjacent matching) - unlocks at spin 31
+  - Shape patterns (L, T, plus, box) - unlocks at spin 61
+  - Transformation patterns (wilds, morphs, cascades) - unlocks at spin 100
+- [ ] Progressive unlock thresholds (spin counts for pattern reveals)
+- [ ] Paytable: define winning combinations and payouts per pattern type
 - [ ] Timing constants: spin duration, stop delays, celebration length
+- [ ] Timing scaling factors for multi-reel (base + 200ms per reel)
 - [ ] Credit settings: starting balance, bet amount
 - [ ] Animation easing functions (from TR-1 table)
+- [ ] Pattern visualization configuration:
+  - Pattern colors (linear: blue, cluster: gold, scatter: magenta, shape: cyan, transform: rainbow)
+  - Animation durations per pattern type (300ms→800ms)
+  - Pattern history display settings (max 10 icons, fade timing)
+  - Near-miss hint opacity and duration (30%, 1s)
 - [ ] Particle system configuration:
   - Particle counts per tier (200/400/800/2000)
   - Particle physics constants (gravity, wind, fade rate)
@@ -1213,8 +1494,13 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
   - Event type weights (pedestrian/vendor/firework/flicker)
   - Ambient animation timing (2s/4s/8s harmonic loops)
 - [ ] Parallax layer speeds (depth-based scaling)
-- [ ] Attention pulse thresholds (near-miss, streak, idle timeout)
+- [ ] Attention pulse thresholds (near-miss, streak, discovery, idle timeout)
 - [ ] Frame reactivity states and color shifts
+- [ ] Learning progression tracking:
+  - Spin count
+  - Patterns encountered
+  - Patterns discovered (first occurrence of each type)
+  - Win history for pattern distribution analysis
 
 #### Accessibility Implementation
 - [ ] ARIA labels on all controls
