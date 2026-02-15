@@ -61,6 +61,7 @@ See also: [../REFERENCES.md](../REFERENCES.md)
 - **Google Play** (feature graphics + screenshot carousels)
 - **Casino demo/review sites** (in-game screenshot galleries + symbol/paytable panels)
 - **Slot theme aggregators** (theme-tagged slot lists and thumbnails)
+- **Design portfolio/mockup sites** (high-fidelity concept shots and key art)
 
 ### Copy/paste search queries (vibe-focused)
 
@@ -93,7 +94,7 @@ See also: [../REFERENCES.md](../REFERENCES.md)
 
 ```md
 ### [Ref ##] Source name
-- Source category: Steam | iOS App Store | Google Play | Casino demo/review | Slot theme aggregator
+- Source category: Steam | iOS App Store | Google Play | Casino demo/review | Slot theme aggregator | Design portfolio/mockup
 - Page link: <url>
 - Query used: "<exact query>"
 - What to copy: palette | UI layout | symbol style | background mood | animation cues
@@ -288,7 +289,7 @@ See also: [../REFERENCES.md](../REFERENCES.md)
 - Quick usage note: inspiration only; don't reuse assets; check source licensing before production use.
 
 ### [Ref 24] Behance slot game design gallery
-- Source category: Slot theme aggregator
+- Source category: Design portfolio/mockup
 - Page link: https://www.behance.net/search/projects/slot%20game%20design
 - Query used: "slot game design neon city lights mockup"
 - What to copy: polished key art composition and UI-over-art integration ideas
