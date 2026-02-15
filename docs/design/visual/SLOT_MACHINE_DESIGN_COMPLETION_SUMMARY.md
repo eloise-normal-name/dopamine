@@ -75,23 +75,33 @@
 
 This summary documents the completion of the slot machine design document per the project requirement to "complete the design document for the slots game, define requirements, and suggest a review process."
 
-### Major Additions (671 new lines)
+### Major Additions (~1,300 new lines)
 
 #### 1. Requirements Specification (~350 lines)
 
 Comprehensive, testable requirements organized into 7 categories:
 
-**Functional Requirements (FR-1 to FR-3)**
-- Core game mechanics (3-reel operation, symbol handling, sequential stops)
+**Functional Requirements (FR-1 to FR-6)**
+- Core game mechanics (configurable 1-6 reel operation, symbol handling, sequential stops)
 - User interaction (auto-spin, manual controls, sound toggles)
 - Visual feedback (win celebrations, counter animations)
+- Attention-pulse system (escalating engagement cues)
+- Environmental reactivity (background responds to gameplay)
+- Progressive complexity & discovery system (pattern unlocks by spin count)
 
-**Visual Requirements (VR-1 to VR-5)**
+**Visual Requirements (VR-1 to VR-12)**
 - Color palette with exact hex codes
 - Typography specifications (WCAG AA compliance)
 - Symbol design standards (size, style, legibility)
 - Layout specifications (aspect ratios, spacing, responsive design)
 - Animation quality standards (60fps, CSS transforms)
+- Environmental depth & layers (parallax system)
+- Ambient animation system (continuous motion)
+- Particle system specifications (200-2000 particles)
+- Reactive machine frame (state-based reactions)
+- 3D reel presentation (cylinder illusion, physics)
+- Adaptive multi-reel layout (1-6 reels, responsive sizing)
+- Pattern visualization system (type-specific animations)
 
 **Animation & Timing Requirements (TR-1 to TR-3)**
 - **Motion timing table** - Detailed specification of every animation with exact durations, easing functions, and delay patterns
@@ -109,8 +119,8 @@ Comprehensive, testable requirements organized into 7 categories:
 - Interaction accessibility (keyboard navigation, timing flexibility)
 
 **Performance Requirements (PR-1 to PR-3)**
-- Load performance (2s max on 3G, <500KB total assets)
-- Runtime performance (60fps, <50MB memory, <30% CPU)
+- Load performance (3s max on 3G, <1.2MB initial bundle)
+- Runtime performance (60fps, <80MB memory, <40% CPU)
 - Browser compatibility matrix
 
 **Technical Requirements (TC-1 to TC-3)**
@@ -246,7 +256,7 @@ Each stage includes:
 ## How to Use This Document
 
 ### If You're Creating Mockups
-1. Review Visual Requirements (VR-1 to VR-5)
+1. Review Visual Requirements (VR-1 to VR-12)
 2. Check Asset Inventory for exact specifications
 3. Reference Motion Timing Table (TR-1) for animation notes
 4. Use Stage 2 review checklist to self-check before submitting
@@ -312,16 +322,20 @@ This completion follows established patterns:
 - ❌ No asset inventory
 - ❌ Incomplete implementation checklist (9 items)
 
-### After (1,101 lines - 2.5x larger)
+### After (1,724 lines - 4x larger)
 - ✅ Everything from "Before"
-- ✅ 7 categories of formal requirements
-- ✅ Complete motion timing table
+- ✅ 7 categories of formal requirements (FR-1 to FR-6, VR-1 to VR-12, TR, AR, AC, PR, TC)
+- ✅ Complete motion timing table (40+ animation events)
 - ✅ 6-stage review process
-- ✅ Complete asset inventory
-- ✅ Comprehensive implementation checklist (40+ items)
+- ✅ Complete asset inventory (60+ visual, 18+ audio)
+- ✅ Comprehensive implementation checklist (70+ items)
 - ✅ Completion criteria and success metrics
-- ✅ Timeline and next steps
+- ✅ Timeline and next steps (8-12 weeks)
 - ✅ Decisions log
+- ✅ Multi-reel system (1-6 configurable reels)
+- ✅ Progressive pattern discovery (5 pattern categories)
+- ✅ Attention-grabbing & differentiating features (7 systems)
+- ✅ Dual-mode entertainment philosophy
 
 ---
 
@@ -343,7 +357,7 @@ This completion follows established patterns:
    - Success metrics defined
 
 4. **Timeline is realistic**
-   - Phased approach (6 weeks to launch)
+   - Phased approach (8-12 weeks to launch)
    - Dependencies identified
    - Review points scheduled
 
@@ -371,7 +385,7 @@ This completion follows established patterns:
 **For Project Manager:**
 1. Schedule Stage 2 review meeting
 2. Assign designers to mockup creation
-3. Update project timeline with 6-week phases
+3. Update project timeline with 8-12 week phases
 4. Track progress via implementation checklist
 
 ---
@@ -390,6 +404,6 @@ For changes or clarifications, update the main document and increment the versio
 ---
 
 **Document Status:** ✅ Complete and Ready for Mockup Phase  
-**Main Document Version:** 2.0  
+**Main Document Version:** 3.0  
 **Summary Author:** GitHub Copilot Agent  
 **Review Recommended:** Design Lead, Development Lead, Product Owner
