@@ -22,6 +22,7 @@ This directory contains design concepts, mockups, and guidelines for Dopamine's 
 - **[audio/](audio/)** - Audio design, sound effects concepts, and music direction
 - **[visual/](visual/)** - Visual design, UI mockups, color palettes, and animation concepts
   - **[Slot Machine Iteration 01](visual/SLOT_MACHINE_ITERATION_01.md)** - Opinionated slot narrative/design decisions + sample art
+  - **[Gacha Iteration 01](visual/GACHA_ITERATION_01.md)** - Treasure chest opening loop: narrative, rarity system, and animation pacing
 
 ## Purpose
 

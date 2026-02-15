@@ -178,6 +178,7 @@ dopamine/
   - **[References & Inspirations](docs/design/REFERENCES.md)** - Similar games, design patterns, and their relevance
   - **[Visual Design](docs/design/visual/)** - UI mockups, color palettes, animations
     - **[Slot Machine Iteration 01](docs/design/visual/SLOT_MACHINE_ITERATION_01.md)** - Initial slot narrative/design decisions and sample art
+    - **[Gacha Iteration 01](docs/design/visual/GACHA_ITERATION_01.md)** - Treasure chest opening loop: narrative, rarity system, and animation pacing
   - **[Audio Design](docs/design/audio/)** - Sound effects, music direction
 
 ## 🛠️ Technology Stack

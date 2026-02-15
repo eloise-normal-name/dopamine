@@ -5,6 +5,7 @@ This directory contains visual design documentation, mockups, and concept art fo
 ## Start Here
 
 - **[Slot Machine Iteration 01](SLOT_MACHINE_ITERATION_01.md)** - Narrative refinement, opinionated design decisions, sample art, and inspiration mapping for slots development kickoff.
+- **[Gacha Iteration 01](GACHA_ITERATION_01.md)** - Treasure chest opening loop: narrative, rarity system, animation pacing, and reference collection for gacha development kickoff.
 
 ## Contents
 
