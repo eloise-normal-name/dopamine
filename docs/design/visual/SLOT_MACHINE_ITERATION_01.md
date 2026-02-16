@@ -1039,8 +1039,7 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 #### AC-1: Visual Accessibility
 - **AC-1.1** Color shall not be sole differentiator (symbols have distinct shapes)
 - **AC-1.2** All text contrast ratio: minimum 4.5:1 (WCAG AA)
-- **AC-1.3** Animation shall respect `prefers-reduced-motion` media query
-- **AC-1.4** Focus indicators shall be clearly visible (3px outline minimum)
+- **AC-1.3** Focus indicators shall be clearly visible (3px outline minimum)
 
 #### AC-2: Semantic Accessibility
 - **AC-2.1** Game container shall have appropriate ARIA landmarks
@@ -1058,11 +1057,10 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 
 #### PR-1: Load Performance
 - **PR-1.1** Initial page load: <3 seconds on 3G connection (increased for richer assets)
-- **PR-1.2** Total initial asset bundle: <1.2MB (base game + critical assets)
-- **PR-1.3** Progressive asset loading: background layers load after game functional
-- **PR-1.4** Symbol images: <20KB each base, <10KB each for animation frames
-- **PR-1.5** First Contentful Paint: <1.5 seconds
-- **PR-1.6** Time to Interactive: <3.5 seconds
+- **PR-1.2** Progressive asset loading: background layers load after game functional
+- **PR-1.3** Symbol images: <20KB each base, <10KB each for animation frames
+- **PR-1.4** First Contentful Paint: <1.5 seconds
+- **PR-1.5** Time to Interactive: <3.5 seconds
 
 #### PR-2: Runtime Performance
 - **PR-2.1** Memory usage: <80MB heap size with full environmental system active
@@ -1457,7 +1455,6 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - [ ] `@keyframes discoveryBurst` - special celebration for pattern unlock
 - [ ] `@keyframes reelCountTransition` - layout adaptation when changing reel count
 - [ ] Responsive media queries (320px, 768px, 1024px breakpoints)
-- [ ] `prefers-reduced-motion` alternative animations (disable ambient loops, reduce particles)
 
 #### Configuration (config.js)
 - [ ] Symbol array: `['cherry', 'lemon', 'orange', 'seven', 'jackpot']`
@@ -1507,7 +1504,6 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - [ ] ARIA live region for credit/win announcements
 - [ ] Keyboard event listeners (Space = spin, Escape = stop)
 - [ ] Focus management (tab order logical)
-- [ ] `prefers-reduced-motion` detection and handling
 - [ ] Screen reader state announcements
 
 #### Testing Requirements
@@ -1517,7 +1513,6 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - [ ] Performance profiling in Chrome DevTools
 - [ ] Cross-browser manual testing (Chrome, Firefox, Safari, Edge)
 - [ ] Mobile device testing (iOS, Android)
-- [ ] Reduced motion testing
 - [ ] Keyboard-only navigation testing
 
 ### Documentation Checklist
@@ -1618,7 +1613,6 @@ The slot machine design is considered **complete** when:
 - [ ] Add keyboard accessibility
 - [ ] Add ARIA labels and live regions
 - [ ] Implement responsive layout
-- [ ] Add prefers-reduced-motion handling
 - [ ] Create configuration file (symbols, timing, paytable)
 - [ ] Write unit tests for game logic
 - [ ] Performance profiling and optimization

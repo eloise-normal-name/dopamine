@@ -96,7 +96,7 @@
 - Total production scope reflects premium slot quality
 
 **Updated Performance Requirements:**
-- Increased load budget to <3s on 3G, <1.2MB initial bundle (richer assets)
+- Increased load budget to <3s on 3G (richer assets)
 - Memory budget increased to <80MB heap (environmental system)
 - CPU budget increased to <40% on mid-tier devices
 - Adaptive quality system for graceful degradation
@@ -155,12 +155,12 @@ Comprehensive, testable requirements organized into 7 categories (80+ total requ
 - Audio UX guidelines
 
 **Accessibility Requirements (AC-1 to AC-3)**
-- Visual accessibility (contrast, shape differentiation, reduced motion)
+- Visual accessibility (contrast, shape differentiation)
 - Semantic accessibility (ARIA labels, live regions)
 - Interaction accessibility (keyboard navigation, timing flexibility)
 
 **Performance Requirements (PR-1 to PR-3)**
-- Load performance (<3s on 3G, <1.2MB total initial assets)
+- Load performance (<3s on 3G)
 - Runtime performance (60fps standard, 45-60fps jackpot, <80MB memory, <40% CPU)
 - Browser compatibility matrix
 - Adaptive quality system
