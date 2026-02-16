@@ -71,7 +71,7 @@ The MCP server requires a GitHub Personal Access Token with appropriate permissi
    - **Repository access**: Select "Only select repositories" and choose this repository
    - **Permissions**:
      - **Repository permissions**:
-       - `Contents`: Read and write (for issue management)
+       - `Contents`: Read and write (for repository file access)
        - `Issues`: Read and write
        - `Metadata`: Read-only (automatically included)
      - **Organization permissions** (if using organization projects):
@@ -142,7 +142,7 @@ await add_project_item({
 // 3. Set custom fields
 await edit_project_item({
   project_node_id: "PVT_kwDOABcD1M4AaBcD",
-  item_id: project_item.id,
+  item_id: project_item.id, // Numeric item ID
   fields: {
     "Priority": "High",
     "Size": "L",
@@ -151,7 +151,7 @@ await edit_project_item({
 });
 ```
 
-> **Note**: GitHub Projects use node IDs (strings starting with 'PVT_' for projects, 'PVTI_' for project items) rather than numeric IDs. Use `view_project` to discover the correct node ID for Project #2.
+> **Note**: GitHub Projects use node IDs (strings starting with 'PVT_') for project identification. Project items have numeric IDs. Use `view_project` to discover the correct node ID for Project #2.
 
 ## Troubleshooting
 
