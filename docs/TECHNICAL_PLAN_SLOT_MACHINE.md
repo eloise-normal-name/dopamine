@@ -19,8 +19,6 @@ This document translates the slot machine design specification (80+ requirements
 | Zero build step — open `index.html` and run | CONTRIBUTING.md |
 | 60 fps animation target | DESIGN_PRINCIPLES.md, PR-2.3 |
 | Auto-play first, minimal interaction | DESIGN_PRINCIPLES.md |
-| Respect `prefers-reduced-motion` | AC-1.3 |
-| < 1.2 MB initial bundle | PR-1.2 |
 | ES6 module imports (`type="module"`) | Existing game.js pattern |
 
 ---
@@ -368,7 +366,6 @@ Each phase produces a shippable increment. Phases are ordered to maximize playab
 | Update `styles.css` — reel layout, keyframes for bounce/settle | UPDATE | VR-4, VR-5 |
 | Update `index.html` — add canvas overlay, ARIA landmarks | UPDATE | AC-2.1 |
 | Add keyboard controls (Space=spin, Escape=stop) | UPDATE game.js | AC-3.1–3.2 |
-| Add `prefers-reduced-motion` handling | UPDATE styles.css, game.js | AC-1.3 |
 
 **Deliverable:** 3-reel slot with physics-based reels, state machine, keyboard accessibility, and event bus.
 
@@ -377,7 +374,6 @@ Each phase produces a shippable increment. Phases are ordered to maximize playab
 - State transitions logged to console for verification
 - Keyboard navigation functional
 - 60 fps on Chrome/Firefox desktop
-- `prefers-reduced-motion` disables spin animation, shows instant result
 
 ---
 
@@ -651,7 +647,7 @@ function getQualityTier() {
 |---|---|
 | AC-1.1 (shapes, not just color) | Symbols use distinct emoji shapes + thick outlines |
 | AC-1.2 (4.5:1 contrast) | Verified via computed style checks in Phase 4 audit |
-| AC-1.3 (reduced motion) | `matchMedia('(prefers-reduced-motion: reduce)')` → disable reel spin animation, show instant results, disable particles and ambient loops |
+| AC-1.3 (focus indicators) | 3px outline minimum on all focusable elements |
 | AC-2.1 (ARIA landmarks) | `role="application"` on game container, `role="status"` on credit/win displays |
 | AC-2.2 (live regions) | `aria-live="polite"` on status bar, `aria-live="assertive"` on jackpot win |
 | AC-2.3 (button labels) | `aria-label` on Start/Stop/Reset/Mute buttons |
@@ -682,7 +678,6 @@ The project currently has no test runner. Testing follows the manual approach do
 | **Audio** | Reel stop sounds | Distinct pitch per reel |
 | **Accessibility** | Keyboard only | Full game cycle without mouse |
 | **Accessibility** | Screen reader | VoiceOver/NVDA announces state changes |
-| **Accessibility** | Reduced motion | No spin animation, instant results |
 | **Performance** | 60 fps | Chrome DevTools Performance panel, no jank during spin |
 | **Performance** | Load time | Lighthouse throttled 3G < 3 s |
 | **Cross-browser** | Chrome, Firefox, Safari, Edge | Spin, win, celebrate cycle works |
@@ -704,7 +699,7 @@ If test infrastructure is added later, prioritize:
 | Particle system drops below 60 fps on mobile | Medium | High | Adaptive quality tiers, object pooling, canvas batch rendering |
 | Audio autoplay blocked by browser policy | High | Low | Lazy-load on first user gesture; game fully functional without audio |
 | Pattern detection has edge-case bugs in complex grids | Medium | Medium | Exhaustive test cases for each pattern type; start with simple patterns |
-| Asset bundle exceeds 1.2 MB | Medium | Medium | SVG for symbols and UI; progressive loading of environment layers |
+| Asset bundle exceeds size budget | Medium | Medium | SVG for symbols and UI; progressive loading of environment layers |
 | 6-reel layout too cramped on small screens | Low | Medium | Responsive breakpoints cap reels at 4 (mobile), 5 (tablet) |
 
 ---
