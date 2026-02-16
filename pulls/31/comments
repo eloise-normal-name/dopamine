@@ -1,0 +1,1 @@
+@copilot The secret name in `docs/MCP_SETUP.md` is wrong — it references `COPILOT_MCP_GH_TOKEN` but the actual secret I created is `COPILOT_MCP_GITHUB_TOKEN`. Please update all references in both files to use `COPILOT_MCP_GITHUB_TOKEN`.
