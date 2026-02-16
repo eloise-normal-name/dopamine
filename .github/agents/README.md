@@ -12,7 +12,7 @@ Custom agents are specialized AI assistants that you can create to help with spe
 
 **File:** `github-project-manager.agent.md`
 
-**Purpose:** Manages GitHub Projects (v2) for the repository, including organizing issues, updating project boards, managing sprints, and maintaining project health.
+**Purpose:** Manages GitHub Projects (v2) directly, organizing issues, updating project boards, managing sprints, and maintaining project health. Uses MCP (Model Context Protocol) integration to perform actions directly.
 
 **Core Responsibilities:**
 - Add issues and PRs to projects with proper metadata
@@ -20,23 +20,23 @@ Custom agents are specialized AI assistants that you can create to help with spe
 - Organize and plan sprint iterations
 - Track project health and identify bottlenecks
 - Link related issues and manage dependencies
-- Automate workflow updates and status changes
+- Create and manage project items directly
 
 **Best Used For:**
-- Adding new issues to the project board
-- Planning and organizing sprints
+- Adding new issues to the project board automatically
+- Planning and organizing sprints with direct action
 - Updating item statuses and priorities
 - Project board cleanup and maintenance
-- Identifying stale or blocked items
+- Identifying and updating stale or blocked items
 - Generating sprint summaries and reports
 - Backlog grooming and prioritization
 
 **Communication Style:**
 - Professional and organized
-- Proactive with improvement suggestions
+- Proactive with automatic improvements
 - Data-driven with project metrics
-- Clear action items and reasoning
-- Collaborative and transparent
+- Transparent about actions taken
+- Takes direct action via MCP tools
 
 ### 🎰 Boomer Casino Critic
 
