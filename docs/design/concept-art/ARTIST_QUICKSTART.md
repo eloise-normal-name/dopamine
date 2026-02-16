@@ -107,3 +107,4 @@ Use the naming convention: `slot-<category>-<description>-v<##>.png`
 | [Game Narrative](/docs/design/NARRATIVES.md) | The emotional story of the game |
 | [Visual References](/docs/design/visual/SLOT_MACHINE_ITERATION_01.md) | 36 curated reference sources |
 | [Full Workflow](/docs/design/ASSET_WORKFLOW.md) | The 7-phase design pipeline |
+| [Blender Workflows](/docs/design/BLENDER_ASSET_CREATION.md) | Step-by-step Blender asset creation (for production phase) |
