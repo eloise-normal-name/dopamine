@@ -20,13 +20,13 @@
         "list_issues",
         "close_issue",
         "edit_issue",
-        "create_project_field",
-        "list_project_fields",
         "add_project_item",
+        "create_project_item",
         "edit_project_item",
         "list_project_items",
+        "list_project_fields",
         "view_project",
-        "create_project_item"
+        "create_project_field"
       ]
     }
   }
