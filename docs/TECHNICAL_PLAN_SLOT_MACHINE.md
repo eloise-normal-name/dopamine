@@ -263,14 +263,14 @@ Rendered on a transparent `<canvas>` overlay. Particle counts per tier (VR-8.1):
 
 | Tier | Particles | Duration |
 |---|---|---|
-| Small | 200 | 1 000 ms |
-| Medium | 400 | 1 500 ms |
-| Big | 800 | 2 000 ms |
-| Jackpot | 2 000 | 3 500 ms |
+| Small | 200 | 1000ms |
+| Medium | 400 | 1500ms |
+| Big | 800 | 2000ms |
+| Jackpot | 2000 | 3500ms |
 
 Each particle stores: `x, y, vx, vy, life, maxLife, color, size`. Physics: gravity (0.15 px/frame²), wind drift (±0.05 px/frame), opacity fade as `life/maxLife`.
 
-Graceful degradation (PR-2.6): if `navigator.hardwareConcurrency < 4` or `deviceMemory < 4`, cap particles at 50 % of budget.
+Graceful degradation (PR-2.6): if `navigator.hardwareConcurrency < 4` or `deviceMemory < 4`, cap particles at 50% of budget.
 
 ### 5.5 `audio.js` — AudioManager
 
@@ -404,7 +404,7 @@ Each phase produces a shippable increment. Phases are ordered to maximize playab
 - Pattern detection correct for all 5 types (verify with known grids)
 - Layout adapts cleanly at 320 px, 768 px, 1024 px widths
 - Discovery celebration fires on first new pattern
-- Near-miss hints appear at 30 % opacity
+- Near-miss hints appear at 30% opacity
 - Screen reader announces pattern type on win
 
 ---
@@ -432,11 +432,11 @@ Each phase produces a shippable increment. Phases are ordered to maximize playab
 **Deliverable:** Full audio-visual experience with particles, environment, and ambient animation.
 
 **Quality gate:**
-- Particle counts match spec per tier (±10 %)
+- Particle counts match spec per tier (±10%)
 - Audio plays without overlap artifacts
 - Mute persists across page reload (localStorage)
 - Environment micro-events fire at 30-90 s intervals
-- CPU < 40 % on mid-tier device with all systems active
+- CPU < 40% on mid-tier device with all systems active
 - Particles degrade on `navigator.hardwareConcurrency < 4`
 
 ---
@@ -639,9 +639,9 @@ function getQualityTier() {
 
 | Tier | Particle Scale | Parallax Layers | Ambient Events | Symbol Animations |
 |---|---|---|---|---|
-| High | 100 % | 5 | All | All |
-| Medium | 50 % | 3 | Reduced | Simplified |
-| Low | 25 % | 1 (static) | None | None |
+| High | 100% | 5 | All | All |
+| Medium | 50% | 3 | Reduced | Simplified |
+| Low | 25% | 1 (static) | None | None |
 
 ---
 
@@ -692,7 +692,7 @@ The project currently has no test runner. Testing follows the manual approach do
 
 If test infrastructure is added later, prioritize:
 1. `PatternEngine.evaluate()` unit tests — deterministic grid inputs → expected pattern outputs.
-2. `weightedRandom` distribution verification — run 10 000 iterations, check symbol frequencies within ±5 % of expected weights.
+2. `weightedRandom` distribution verification — run 10000 iterations, check symbol frequencies within ±5% of expected weights.
 3. State machine transition tests — verify all valid transitions and rejection of invalid ones.
 
 ---
@@ -716,7 +716,7 @@ These decisions from the design doc Appendix should be resolved before implement
 | # | Question | Phase Impact | Proposed Answer |
 |---|---|---|---|
 | 1 | Audio mixing: interrupt or queue? | Phase 3 | Queue with priority — spin sounds fade out when win sound plays |
-| 2 | Credit cap or infinite growth? | Phase 1 | Soft cap at 99 999 (display width constraint); overflow resets to initial |
+| 2 | Credit cap or infinite growth? | Phase 1 | Soft cap at 99999 (display width constraint); overflow resets to initial |
 | 3 | Mobile: tap-to-spin or auto-only? | Phase 1 | Auto-only by default; tap anywhere to toggle start/stop |
 
 ---
