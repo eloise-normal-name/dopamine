@@ -215,6 +215,157 @@ for (const item of backlogItems) {
 }
 ```
 
+### Example 3: Add Items to Current Sprint
+
+```javascript
+// Step 1: Get current iteration/sprint information
+// First, query the iteration field to see available sprints
+const iterations = await gh_api_query(`
+  query {
+    user(login: "eloise-normal-name") {
+      projectV2(number: 2) {
+        field(name: "Iteration") {
+          ... on ProjectV2IterationField {
+            configuration {
+              iterations {
+                id
+                title
+                startDate
+                duration
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`)
+
+// Current sprint: "Iteration 1" (started Feb 15, 2026)
+const currentSprintId = "381c7c80"
+
+// Step 2: Create an issue and add to current sprint
+const issue = await create_issue({
+  title: "Implement audio mixing for slot machine",
+  body: "Add background music with fade controls and volume settings",
+  labels: ["enhancement", "audio"]
+})
+
+// Step 3: Add issue to Project #2
+const projectItem = await add_project_item({
+  url: issue.html_url,
+  project_id: "2",
+  owner: "eloise-normal-name"
+})
+
+// Step 4: Assign to current sprint (Iteration 1)
+await edit_project_item({
+  item_id: projectItem.id,
+  field_id: "PVTIF_lAHOCG6UpM4BPTH7zg9v05A",  // Iteration field ID
+  project_node_id: "PVT_kwHOCG6UpM4BPTH7",
+  iteration_id: currentSprintId                 // Current sprint ID
+})
+
+// Step 5: Set other fields for sprint planning
+await edit_project_item({
+  item_id: projectItem.id,
+  field_id: "PVTSSF_lAHOCG6UpM4BPTH7zg9v040",  // Priority field
+  project_node_id: "PVT_kwHOCG6UpM4BPTH7",
+  single_select_option_id: "79628723"          // P0 (highest priority)
+})
+
+await edit_project_item({
+  item_id: projectItem.id,
+  field_id: "PVTSSF_lAHOCG6UpM4BPTH7zg9v044",  // Size field
+  project_node_id: "PVT_kwHOCG6UpM4BPTH7",
+  single_select_option_id: "853c8207"          // L (Large)
+})
+
+await edit_project_item({
+  item_id: projectItem.id,
+  field_id: "PVTSSF_lAHOCG6UpM4BPTH7zg9v01w",  // Status field
+  project_node_id: "PVT_kwHOCG6UpM4BPTH7",
+  single_select_option_id: "e18bf179"          // "Ready" status
+})
+```
+
+**Using GitHub CLI to add items to current sprint:**
+
+```bash
+# Get current iteration ID
+gh api graphql -f query='
+query {
+  user(login: "eloise-normal-name") {
+    projectV2(number: 2) {
+      field(name: "Iteration") {
+        ... on ProjectV2IterationField {
+          configuration {
+            iterations {
+              id
+              title
+              startDate
+            }
+          }
+        }
+      }
+    }
+  }
+}' --jq '.data.user.projectV2.field.configuration.iterations[] | select(.title == "Iteration 1")'
+
+# Add an existing issue to Project #2
+gh project item-add 2 --owner @me --url https://github.com/eloise-normal-name/dopamine/issues/24
+
+# Set the iteration field (requires the item ID from previous command)
+gh project item-edit \
+  --id <ITEM_ID> \
+  --project-id 2 \
+  --owner @me \
+  --field-id PVTIF_lAHOCG6UpM4BPTH7zg9v05A \
+  --iteration-id 381c7c80
+```
+
+**Batch add multiple issues to current sprint:**
+
+```bash
+#!/bin/bash
+# Script to add multiple issues to current sprint
+
+PROJECT_ID="2"
+SPRINT_ID="381c7c80"  # Iteration 1
+ITERATION_FIELD="PVTIF_lAHOCG6UpM4BPTH7zg9v05A"
+PROJECT_NODE_ID="PVT_kwHOCG6UpM4BPTH7"
+
+# List of issue numbers to add to sprint
+ISSUES=(23 24 25 26 27)
+
+for ISSUE_NUM in "${ISSUES[@]}"; do
+  echo "Adding issue #$ISSUE_NUM to current sprint..."
+  
+  # Add to project (if not already added)
+  ITEM_ID=$(gh project item-add $PROJECT_ID \
+    --owner @me \
+    --url "https://github.com/eloise-normal-name/dopamine/issues/$ISSUE_NUM" \
+    --format json 2>/dev/null | jq -r '.id')
+  
+  # If already in project, get the item ID
+  if [ -z "$ITEM_ID" ]; then
+    ITEM_ID=$(gh project item-list $PROJECT_ID --owner @me --format json \
+      | jq -r ".items[] | select(.content.number == $ISSUE_NUM) | .id")
+  fi
+  
+  # Set iteration
+  if [ -n "$ITEM_ID" ]; then
+    gh project item-edit \
+      --id "$ITEM_ID" \
+      --project-id $PROJECT_ID \
+      --owner @me \
+      --field-id $ITERATION_FIELD \
+      --iteration-id $SPRINT_ID
+    echo "✓ Issue #$ISSUE_NUM added to sprint"
+  fi
+done
+```
+
 ## Cloud Environment Benefits
 
 ### 1. **Automation**
@@ -282,6 +433,14 @@ const PROJECT_2_IDS = {
     m: "86db8eb3",
     l: "853c8207",
     xl: "2d0801e2"
+  },
+  
+  iterationOptions: {
+    iteration1: "381c7c80",  // Feb 15 - Feb 28, 2026 (CURRENT)
+    iteration2: "54cf5c95",  // Mar 01 - Mar 14, 2026
+    iteration3: "d2c335bc",  // Mar 15 - Mar 28, 2026
+    iteration4: "b6a8f1bb",  // Mar 29 - Apr 11, 2026
+    iteration5: "955c1297"   // Apr 12 - Apr 25, 2026
   }
 }
 ```
