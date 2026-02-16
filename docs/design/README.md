@@ -28,6 +28,7 @@ For the complete 7-phase pipeline, see **[ASSET_WORKFLOW.md](ASSET_WORKFLOW.md)*
 - **[visual/](visual/)** - Visual design, UI mockups, color palettes, and animation concepts
   - **[Slot Machine Iteration 01](visual/SLOT_MACHINE_ITERATION_01.md)** - Opinionated slot narrative/design decisions + sample art
   - **[Gacha Iteration 01](visual/GACHA_ITERATION_01.md)** - Treasure chest opening loop: narrative, rarity system, and animation pacing
+- **[Technical Plan — Slot Machine](../TECHNICAL_PLAN_SLOT_MACHINE.md)** - Module architecture, state machine, data structures, and phased implementation plan
 
 ## Purpose
 
