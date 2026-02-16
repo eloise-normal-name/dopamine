@@ -12,31 +12,31 @@ Custom agents are specialized AI assistants that you can create to help with spe
 
 **File:** `github-project-manager.agent.md`
 
-**Purpose:** Provides expert advice on managing GitHub Projects (v2), including recommendations for organizing issues, updating project boards, managing sprints, and maintaining project health.
+**Purpose:** Manages GitHub Projects (v2) directly, organizing issues, updating project boards, managing sprints, and maintaining project health. Uses MCP (Model Context Protocol) integration to perform actions directly.
 
 **Core Responsibilities:**
-- Recommend which issues and PRs should be added to projects with proper metadata
-- Suggest item status updates, priorities, and size estimates
-- Advise on organizing and planning sprint iterations
-- Analyze project health and identify bottlenecks
-- Identify related issues and dependencies that should be linked
-- Provide GitHub CLI commands to execute recommended workflow updates
+- Add issues and PRs to projects with proper metadata
+- Update item statuses, priorities, and size estimates
+- Organize and plan sprint iterations
+- Track project health and identify bottlenecks
+- Link related issues and manage dependencies
+- Create and manage project items directly
 
 **Best Used For:**
-- Getting recommendations for adding new issues to the project board
-- Planning and organizing sprints with expert guidance
-- Obtaining commands to update item statuses and priorities
-- Project board cleanup and maintenance suggestions
-- Identifying stale or blocked items
+- Adding new issues to the project board automatically
+- Planning and organizing sprints with direct action
+- Updating item statuses and priorities
+- Project board cleanup and maintenance
+- Identifying and updating stale or blocked items
 - Generating sprint summaries and reports
-- Backlog grooming and prioritization advice
+- Backlog grooming and prioritization
 
 **Communication Style:**
 - Professional and organized
-- Proactive with improvement suggestions
+- Proactive with automatic improvements
 - Data-driven with project metrics
-- Clear action items with ready-to-run commands
-- Collaborative and transparent
+- Transparent about actions taken
+- Takes direct action via MCP tools
 
 ### 🎰 Boomer Casino Critic
 
