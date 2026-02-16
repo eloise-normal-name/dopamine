@@ -22,6 +22,7 @@ For the complete 7-phase pipeline, see **[ASSET_WORKFLOW.md](ASSET_WORKFLOW.md)*
 - **[NARRATIVES.md](NARRATIVES.md)** - 🌟 **START HERE** - Colorful descriptions of each game's experience and emotional goals
 - **[REFERENCES.md](REFERENCES.md)** - Inspirations, similar games, and their relevance to Dopamine
 - **[ASSET_WORKFLOW.md](ASSET_WORKFLOW.md)** - 📋 7-phase workflow from narrative to implementation
+- **[ART_ASSET_REQUIREMENTS.md](ART_ASSET_REQUIREMENTS.md)** - 🎯 Required assets, specs, delivery process, and validation checklist
 - **[CONCEPT_ART_SUMMARY.md](CONCEPT_ART_SUMMARY.md)** - Overview of concept art pipeline status
 - **[concept-art/](concept-art/)** - Prompt-based concept art pipeline and creative briefs
 - **[audio/](audio/)** - Audio design, sound effects concepts, and music direction
