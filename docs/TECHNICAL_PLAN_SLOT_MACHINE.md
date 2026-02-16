@@ -699,7 +699,7 @@ If test infrastructure is added later, prioritize:
 | Particle system drops below 60 fps on mobile | Medium | High | Adaptive quality tiers, object pooling, canvas batch rendering |
 | Audio autoplay blocked by browser policy | High | Low | Lazy-load on first user gesture; game fully functional without audio |
 | Pattern detection has edge-case bugs in complex grids | Medium | Medium | Exhaustive test cases for each pattern type; start with simple patterns |
-| Asset bundle exceeds size budget | Medium | Medium | SVG for symbols and UI; progressive loading of environment layers |
+| Asset bundle exceeds 3s load budget on 3G | Medium | Medium | SVG for symbols and UI; progressive loading of environment layers |
 | 6-reel layout too cramped on small screens | Low | Medium | Responsive breakpoints cap reels at 4 (mobile), 5 (tablet) |
 
 ---
