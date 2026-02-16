@@ -4,6 +4,40 @@ Required art and audio assets for Dopamine games, with technical specs, delivery
 
 ---
 
+## Wireframe Reference
+
+Use the annotated wireframe below as a visual guide when creating assets. It shows where each asset appears in the final game, with dimension annotations and color keys.
+
+**[`slot-machine-wireframe.svg`](wireframes/slot-machine-wireframe.svg)** — open in any browser or SVG editor (Inkscape) to inspect.
+
+![Slot Machine Wireframe](https://github.com/user-attachments/assets/27a8aded-744b-49e9-aefe-04ddd30c1239)
+
+The wireframe shows:
+- **Background layers** — parallax skyline, market stalls, neon signs, foreground particles
+- **Machine cabinet** — frame area (600×800), marquee strip, reel window
+- **3 reels** — symbol cells (128×128 each), payline indicator
+- **UI chrome** — credit/win display, controls (Start/Stop/Reset), status bar
+- **Annotation legend** — layer names, symbol color keys, audio file list
+
+---
+
+## Required Tools (Free Software Only)
+
+All asset creation should use **free and open-source software**. Do not assume contributors have access to paid tools.
+
+| Purpose | Recommended Tool | Notes |
+|---------|-----------------|-------|
+| 2D sprites & icons | [GIMP](https://www.gimp.org/) | Symbol sprites, particle textures, UI elements |
+| Vector graphics | [Inkscape](https://inkscape.org/) | SVG source files, clean scalable artwork |
+| 3D renders / scenes | [Blender](https://www.blender.org/) | Environment backgrounds, machine frame renders |
+| Audio editing | [Audacity](https://www.audacityteam.org/) | Sound effect creation, normalization, format export |
+| Pixel art | [LibreSprite](https://libresprite.github.io/) | Alternative for retro-style sprite work |
+| Compositing | [Krita](https://krita.org/) | Digital painting, layer compositing |
+
+> **Note:** Proprietary tools (Photoshop, Figma, FL Studio, etc.) may be used if the contributor already has access, but documentation and workflows should assume free alternatives. SOURCES.md should list the actual tool used.
+
+---
+
 ## Slot Machine: "Neon Night Market"
 
 ### 1. Symbol Sprites
@@ -57,7 +91,7 @@ Parallax layers for the "Neon Night Market" scene. Each layer scrolls independen
 | Separability | Each layer must have transparent regions where deeper layers show through | VR-6.1 |
 | Tile-ability | Far and mid layers should tile horizontally for infinite scroll | — |
 
-**Deliverables:** 4 images. Optional: layered PSD/Figma source.
+**Deliverables:** 4 images. Optional: layered source (GIMP `.xcf`, Krita `.kra`, or Blender `.blend`).
 
 ---
 
@@ -83,7 +117,7 @@ The slot machine cabinet and surrounding UI elements.
 | Transparency | Frame images need transparent reel window area for compositing |
 | Glow effects | Baked glow is acceptable; game adds dynamic CSS glow on top |
 
-**Deliverables:** 5 images. Optional: SVG/Figma source.
+**Deliverables:** 5 images. Optional: SVG (Inkscape) or `.xcf` (GIMP) source.
 
 ---
 
@@ -188,7 +222,7 @@ Assets will be specified in detail when the gacha game enters active development
    ```
 
 4. **Include a `SOURCES.md`** in each subdirectory with:
-   - Tool(s) used to create the asset (Photoshop, DALL-E, Audacity, etc.)
+   - Tool(s) used to create the asset (GIMP, Blender, Audacity, Inkscape, etc.)
    - License information (original work, CC0, CC-BY, etc.)
    - Attribution if required by the license
    - Brief description of the creative process
@@ -269,7 +303,7 @@ A validation script is available to check file specs before submitting a PR:
 # ❌ lemon-idle.png — Wrong format (expected .webp)
 ```
 
-> **Note:** The validation script (`scripts/validate-assets.sh`) will be created as assets begin arriving. Contributors can manually verify specs using any image editor or `identify` (ImageMagick) and `ffprobe` (FFmpeg) in the meantime.
+> **Note:** The validation script (`scripts/validate-assets.sh`) will be created as assets begin arriving. Contributors can manually verify specs using GIMP (Image → Canvas Size), `identify` (ImageMagick), or `ffprobe` (FFmpeg) — all free and cross-platform.
 
 ---
 
@@ -290,6 +324,7 @@ A validation script is available to check file specs before submitting a PR:
 
 | Document | What It Covers |
 |----------|---------------|
+| [Wireframe SVG](wireframes/slot-machine-wireframe.svg) | Annotated layout showing where each asset appears |
 | [Asset Workflow](ASSET_WORKFLOW.md) | 7-phase design pipeline (narrative → integration) |
 | [Art Briefs](concept-art/slot-machine/README.md) | Creative direction per category |
 | [AI Prompts](concept-art/slot-machine/AI_IMAGE_GENERATION_PROMPTS.md) | Prompt library for concept generation |
