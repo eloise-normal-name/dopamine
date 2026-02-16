@@ -6,23 +6,30 @@ This repository uses **GitHub Projects (Project #2)** to track all work items. W
 
 ## Available MCP Tools
 
-The coding agent has access to the following GitHub Projects MCP tools via the `github-projects` MCP server:
+The coding agent has access to the following tools via the `github-projects` MCP server:
 
-- **`projects_list`** — Discover available projects in the repository
-- **`projects_get`** — Get project details, including custom fields, field options, and current items
-- **`projects_write`** — Add items to a project and update custom field values
+### Issue Management Tools
+- **`create_issue`** — Create new issues in the repository
+- **`get_issue`** — Retrieve details of a specific issue
+- **`list_issues`** — Query and list repository issues with filters
+- **`close_issue`** — Close issues when work is complete
+- **`edit_issue`** — Update issue titles, descriptions, labels, etc.
 
-Additional tools available for issue management:
-- `create_issue`, `get_issue`, `list_issues`, `close_issue`, `edit_issue`
-- `add_project_item`, `create_project_item`, `edit_project_item`, `list_project_items`
-- `list_project_fields`, `view_project`, `create_project_field`
+### Project Management Tools
+- **`add_project_item`** — Add an existing issue to a project board
+- **`create_project_item`** — Create a draft project item (note-style card, not linked to an issue)
+- **`edit_project_item`** — Update custom field values (Priority, Size, Sprint, Status)
+- **`list_project_items`** — Query all items in a project with their field values
+- **`list_project_fields`** — Get the schema of custom fields in a project
+- **`view_project`** — Get high-level project information and metadata
+- **`create_project_field`** — Add new custom fields to a project (admin operation)
 
 ## Workflow: Creating Issues for Project Tracking
 
 When creating issues that should be tracked on the project board, follow this workflow:
 
-1. **Create the issue first** using standard GitHub tools (e.g., `create_issue`)
-2. **Add the issue to Project #2** using `add_project_item` or `create_project_item`
+1. **Create the issue first** using `create_issue`
+2. **Add the issue to Project #2** using `add_project_item` (note: use `create_project_item` only for draft notes, not for issues)
 3. **Set custom field values** using `edit_project_item`:
    - **Priority**: High, Medium, or Low
    - **Size**: S, M, L, or XL
@@ -32,8 +39,8 @@ When creating issues that should be tracked on the project board, follow this wo
 
 ```
 1. Create issue: "Implement audio mixing for slot machine"
-2. Add to project: Use add_project_item(project_id=2, issue_id=<created_issue_id>)
-3. Set fields:
+2. Add to project: Use add_project_item with the project node ID and issue ID
+3. Set fields using edit_project_item:
    - Priority: High
    - Size: L
    - Sprint: Sprint 1
@@ -70,11 +77,11 @@ Items move through these states:
 
 ## Discovering Project Details
 
-If you need to discover project IDs, field names, or valid field options:
+If you need to discover project node IDs, field names, or valid field options:
 
 ```
-1. Use projects_list to find available projects
-2. Use projects_get to retrieve project details and field schemas
+1. Use view_project to get project information and node ID
+2. Use list_project_fields to retrieve field schemas and valid options
 3. Use list_project_items to see existing items and their field values
 ```
 

@@ -133,15 +133,15 @@ const issue = await create_issue({
   labels: ["enhancement", "audio"]
 });
 
-// 2. Add to Project #2
+// 2. Add to Project #2 (use the project's node ID, e.g., "PVT_kwDOABcD1M4...")
 await add_project_item({
-  project_id: 2,
-  issue_id: issue.id
+  project_node_id: "PVT_kwDOABcD1M4AaBcD", // Example project node ID
+  content_id: issue.node_id // Use the issue's node ID
 });
 
 // 3. Set custom fields
 await edit_project_item({
-  project_id: 2,
+  project_node_id: "PVT_kwDOABcD1M4AaBcD",
   item_id: project_item.id,
   fields: {
     "Priority": "High",
@@ -150,6 +150,8 @@ await edit_project_item({
   }
 });
 ```
+
+> **Note**: GitHub Projects use node IDs (strings starting with 'PVT_' for projects, 'PVTI_' for project items) rather than numeric IDs. Use `view_project` to discover the correct node ID for Project #2.
 
 ## Troubleshooting
 
