@@ -10,7 +10,7 @@ Use the annotated wireframe below as a visual guide when creating assets. It sho
 
 **[`slot-machine-wireframe.svg`](wireframes/slot-machine-wireframe.svg)** — open in any browser or SVG editor (Inkscape) to inspect.
 
-![Slot Machine Wireframe](https://github.com/user-attachments/assets/27a8aded-744b-49e9-aefe-04ddd30c1239)
+![Slot Machine Wireframe](wireframes/slot-machine-wireframe.svg)
 
 The wireframe shows:
 - **Background layers** — parallax skyline, market stalls, neon signs, foreground particles
@@ -31,6 +31,7 @@ All asset creation should use **free and open-source software**. Do not assume c
 | Vector graphics | [Inkscape](https://inkscape.org/) | SVG source files, clean scalable artwork |
 | 3D renders / scenes | [Blender](https://www.blender.org/) | Environment backgrounds, machine frame renders |
 | Audio editing | [Audacity](https://www.audacityteam.org/) | Sound effect creation, normalization, format export |
+| Music / DAW | [LMMS](https://lmms.io/) | Music production, synthesis (if background music is added later) |
 | Pixel art | [LibreSprite](https://libresprite.github.io/) | Alternative for retro-style sprite work |
 | Compositing | [Krita](https://krita.org/) | Digital painting, layer compositing |
 
