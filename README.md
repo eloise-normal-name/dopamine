@@ -169,11 +169,14 @@ dopamine/
 
 ## 📚 Documentation
 
+### Core Documentation
 - **[Design Principles](DESIGN_PRINCIPLES.md)** - 🌟 **START HERE** - Core philosophy and design beliefs
 - **[Architecture Overview](ARCHITECTURE.md)** - System design and principles
 - **[Contributing Guide](CONTRIBUTING.md)** - How to add new games
 - **[Game Development](docs/GAME_DEVELOPMENT.md)** - Detailed development guide
 - **[API Reference](docs/API.md)** - Shared utilities documentation
+
+### Design Documentation
 - **[Design Documentation](docs/design/)** - Visual and audio design concepts
   - **[Game Narratives](docs/design/NARRATIVES.md)** - Colorful descriptions and emotional goals for each game
   - **[References & Inspirations](docs/design/REFERENCES.md)** - Similar games, design patterns, and their relevance
@@ -181,6 +184,11 @@ dopamine/
     - **[Slot Machine Iteration 01](docs/design/visual/SLOT_MACHINE_ITERATION_01.md)** - Initial slot narrative/design decisions and sample art
     - **[Gacha Iteration 01](docs/design/visual/GACHA_ITERATION_01.md)** - Treasure chest opening loop: narrative, rarity system, and animation pacing
   - **[Audio Design](docs/design/audio/)** - Sound effects, music direction
+
+### Project Management & Cloud Operations
+- **[GitHub Projects v2 Cloud Operations](docs/GITHUB_PROJECTS_CLOUD_OPERATIONS.md)** - Complete guide to using GitHub Projects in cloud environments
+- **[MCP Setup Guide](docs/MCP_SETUP.md)** - Model Context Protocol integration for project management
+- **[Agent Instructions](.github/copilot-instructions.md)** - Guidelines for GitHub Copilot agents working on this project
 
 ## 🛠️ Technology Stack
 
