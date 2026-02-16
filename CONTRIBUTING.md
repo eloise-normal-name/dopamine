@@ -107,6 +107,18 @@ When adding a game:
 4. Update documentation
 5. Submit PR with clear description
 
+## Submitting Art Assets
+
+Art contributions (images, sprites, audio) follow a dedicated process:
+
+1. Check [Art Asset Requirements](/docs/design/ART_ASSET_REQUIREMENTS.md) for specs and file formats
+2. Place files in the correct `assets/` subdirectory
+3. Include a `SOURCES.md` with license and attribution info
+4. Self-check against the validation checklist before opening a PR
+5. Open a PR titled `Art: <game> <category>` with thumbnail previews
+
+See the [Art Asset Requirements](/docs/design/ART_ASSET_REQUIREMENTS.md) document for the full delivery process and validation criteria.
+
 ## Questions?
 
 Open an issue for questions or suggestions!
