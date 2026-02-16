@@ -23,6 +23,7 @@ For the complete 7-phase pipeline, see **[ASSET_WORKFLOW.md](ASSET_WORKFLOW.md)*
 - **[REFERENCES.md](REFERENCES.md)** - Inspirations, similar games, and their relevance to Dopamine
 - **[ASSET_WORKFLOW.md](ASSET_WORKFLOW.md)** - 📋 7-phase workflow from narrative to implementation
 - **[ART_ASSET_REQUIREMENTS.md](ART_ASSET_REQUIREMENTS.md)** - 🎯 Required assets, specs, delivery process, and validation checklist
+- **[BLENDER_ASSET_CREATION.md](BLENDER_ASSET_CREATION.md)** - 🎬 Step-by-step Blender workflows for 3D-rendered game assets
 - **[CONCEPT_ART_SUMMARY.md](CONCEPT_ART_SUMMARY.md)** - Overview of concept art pipeline status
 - **[concept-art/](concept-art/)** - Prompt-based concept art pipeline and creative briefs
 - **[audio/](audio/)** - Audio design, sound effects concepts, and music direction
@@ -73,6 +74,7 @@ When adding design documentation:
 ### Visual Design
 - **Sketches**: PNG, JPG, or photos
 - **Mockups**: Figma, Sketch, Adobe XD exports
+- **3D Renders**: Blender (see [BLENDER_ASSET_CREATION.md](BLENDER_ASSET_CREATION.md) for workflows)
 - **Animations**: GIF, MP4, or Lottie JSON
 - **Icons/Graphics**: SVG preferred, PNG fallback
 

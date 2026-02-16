@@ -29,7 +29,7 @@ All asset creation should use **free and open-source software**. Do not assume c
 |---------|-----------------|-------|
 | 2D sprites & icons | [GIMP](https://www.gimp.org/) | Symbol sprites, particle textures, UI elements |
 | Vector graphics | [Inkscape](https://inkscape.org/) | SVG source files, clean scalable artwork |
-| 3D renders / scenes | [Blender](https://www.blender.org/) | Environment backgrounds, machine frame renders |
+| 3D renders / scenes | [Blender](https://www.blender.org/) | Environment backgrounds, machine frame renders — [**see Blender workflow guide**](BLENDER_ASSET_CREATION.md) |
 | Audio editing | [Audacity](https://www.audacityteam.org/) | Sound effect creation, normalization, format export |
 | Music / DAW | [LMMS](https://lmms.io/) | Music production, synthesis (if background music is added later) |
 | Pixel art | [LibreSprite](https://libresprite.github.io/) | Alternative for retro-style sprite work |
@@ -327,6 +327,7 @@ A validation script is available to check file specs before submitting a PR:
 |----------|---------------|
 | [Wireframe SVG](wireframes/slot-machine-wireframe.svg) | Annotated layout showing where each asset appears |
 | [Asset Workflow](ASSET_WORKFLOW.md) | 7-phase design pipeline (narrative → integration) |
+| [**Blender Asset Creation**](BLENDER_ASSET_CREATION.md) | **Step-by-step Blender workflows for all 3D-rendered assets** |
 | [Art Briefs](concept-art/slot-machine/README.md) | Creative direction per category |
 | [AI Prompts](concept-art/slot-machine/AI_IMAGE_GENERATION_PROMPTS.md) | Prompt library for concept generation |
 | [Artist Quickstart](concept-art/ARTIST_QUICKSTART.md) | 5-minute onboarding for new contributors |

@@ -88,6 +88,8 @@ Create optimized, game-ready files from the approved concepts.
 - Multiple resolution variants if needed
 - Performance testing (target: 60fps with all assets loaded)
 
+**Tools**: GIMP, Inkscape, Blender (see [BLENDER_ASSET_CREATION.md](BLENDER_ASSET_CREATION.md) for 3D workflows), Audacity
+
 **Output**: Production-ready image files added to `/assets/` (structure TBD based on asset types)
 
 ### Phase 7 — Integration
