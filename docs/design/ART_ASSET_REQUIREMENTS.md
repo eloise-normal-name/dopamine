@@ -51,7 +51,7 @@ Parallax layers for the "Neon Night Market" scene. Each layer scrolls independen
 | Property | Requirement | Reference |
 |----------|-------------|-----------|
 | Dimensions | 2560×1440 px (oversized for parallax panning) | Brief 02 |
-| Format | WebP (lossy, quality 80+) or JPEG | — |
+| Format | WebP (lossy, quality 80+) primary, PNG fallback (transparency required) | — |
 | File size | ≤ 200 KB per layer | PR-1.1 |
 | Color palette | Deep blue-purple `#1a1a2e` base, warm neon accents | VR-1.4, Brief 02 |
 | Separability | Each layer must have transparent regions where deeper layers show through | VR-6.1 |
