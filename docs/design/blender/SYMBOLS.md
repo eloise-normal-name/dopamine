@@ -9,9 +9,6 @@ Create consistent, high-quality symbol sprites by rendering 3D models.
 
 ---
 
-**Reference**: ART_ASSET_REQUIREMENTS.md § 1 (Symbol Sprites)  
-**Required outputs**: 15 images (5 symbols × 3 states), 128×128 px each
-
 ### General Workflow for All Symbols
 
 #### 1. Model the Symbol

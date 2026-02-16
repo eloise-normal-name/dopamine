@@ -9,9 +9,6 @@ Create the slot machine cabinet and UI elements with realistic materials.
 
 ---
 
-**Reference**: ART_ASSET_REQUIREMENTS.md § 3 (Machine Frame & UI Chrome)  
-**Required outputs**: 5 images (600×800 frame, 400×150 overlay, 600×60 marquee)
-
 ### Machine Frame (Default State)
 
 **Content**: Cabinet frame with neon edge lighting

@@ -9,9 +9,6 @@ Create parallax background layers for the "Neon Night Market" slot machine scene
 
 ---
 
-**Reference**: ART_ASSET_REQUIREMENTS.md § 2 (Background Environment Layers)  
-**Required outputs**: 4 layers at 2560×1440 px, WebP format, ≤200 KB each
-
 ### Layer 1: Far Background — City Skyline
 
 **Content**: Silhouetted city skyline with animated window lights

@@ -9,9 +9,6 @@ Create soft, blendable particle textures for the particle system.
 
 ---
 
-**Reference**: ART_ASSET_REQUIREMENTS.md § 4 (Particle Textures)  
-**Required outputs**: 4 images (32×32, 16×16, 16×8, 24×24 px)
-
 ### General Setup
 
 1. **Black background scene**:
