@@ -75,6 +75,7 @@ class SlotMachine {
   _setState(newPhase) {
     const from = this.state.phase;
     this.state.phase = newPhase;
+    console.log(`[SlotMachine] State transition: ${from} → ${newPhase}`);
     this.bus.emit('state:change', { from, to: newPhase });
   }
 

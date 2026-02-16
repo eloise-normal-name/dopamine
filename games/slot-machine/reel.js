@@ -114,6 +114,9 @@ class Reel {
    * @param {Function} [onComplete] — called when settle animation finishes
    */
   stopAt(symbol, onComplete) {
+    const stopStartTime = performance.now();
+    console.log(`[Reel ${this.index}] Stop sequence started for ${symbol.displayName} at ${stopStartTime.toFixed(2)}ms`);
+    
     this._result = symbol;
     this.phase = 'decelerating';
 
@@ -163,6 +166,7 @@ class Reel {
           onComplete: () => {
             this.phase = 'stopped';
             this._applyTransform(0);
+            console.log(`[Reel ${this.index}] Stop complete (total: ${(performance.now() - stopStartTime).toFixed(2)}ms)`);
             if (onComplete) onComplete();
           },
         });
