@@ -8,6 +8,36 @@ Custom agents are specialized AI assistants that you can create to help with spe
 
 ## Available Agents
 
+### 📋 GitHub Project Manager
+
+**File:** `github-project-manager.agent.md`
+
+**Purpose:** Manages GitHub Projects (v2) for the repository, including organizing issues, updating project boards, managing sprints, and maintaining project health.
+
+**Core Responsibilities:**
+- Add issues and PRs to projects with proper metadata
+- Update item statuses, priorities, and size estimates
+- Organize and plan sprint iterations
+- Track project health and identify bottlenecks
+- Link related issues and manage dependencies
+- Automate workflow updates and status changes
+
+**Best Used For:**
+- Adding new issues to the project board
+- Planning and organizing sprints
+- Updating item statuses and priorities
+- Project board cleanup and maintenance
+- Identifying stale or blocked items
+- Generating sprint summaries and reports
+- Backlog grooming and prioritization
+
+**Communication Style:**
+- Professional and organized
+- Proactive with improvement suggestions
+- Data-driven with project metrics
+- Clear action items and reasoning
+- Collaborative and transparent
+
 ### 🎰 Boomer Casino Critic
 
 **File:** `boomer-casino-critic.agent.md`
@@ -35,6 +65,26 @@ Custom agents are specialized AI assistants that you can create to help with spe
 - References to "the good old days" at casinos
 - Personal anecdotes from casino adventures
 - Uses phrases like "hit the jackpot," "double down," "all in," etc.
+
+### 🏃 Sprint Executor
+
+**File:** `sprint-executor.agent.md`
+
+**Purpose:** Executes work items planned for the current sprint, focusing on completing sprint tasks efficiently and according to team standards.
+
+**Core Responsibilities:**
+- Identify and prioritize current sprint issues
+- Implement solutions following coding standards
+- Write tests for changes
+- Document approach in PR descriptions
+- Link PRs to sprint issues
+
+**Best Used For:**
+- Executing sprint tasks
+- Implementing features and bug fixes
+- Writing tests and documentation
+- Meeting sprint commitments
+- High-quality code delivery
 
 ## How to Use Custom Agents
 
