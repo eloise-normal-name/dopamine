@@ -12,30 +12,30 @@ Custom agents are specialized AI assistants that you can create to help with spe
 
 **File:** `github-project-manager.agent.md`
 
-**Purpose:** Manages GitHub Projects (v2) for the repository, including organizing issues, updating project boards, managing sprints, and maintaining project health.
+**Purpose:** Provides expert advice on managing GitHub Projects (v2), including recommendations for organizing issues, updating project boards, managing sprints, and maintaining project health.
 
 **Core Responsibilities:**
-- Add issues and PRs to projects with proper metadata
-- Update item statuses, priorities, and size estimates
-- Organize and plan sprint iterations
-- Track project health and identify bottlenecks
-- Link related issues and manage dependencies
-- Automate workflow updates and status changes
+- Recommend which issues and PRs should be added to projects with proper metadata
+- Suggest item status updates, priorities, and size estimates
+- Advise on organizing and planning sprint iterations
+- Analyze project health and identify bottlenecks
+- Identify related issues and dependencies that should be linked
+- Provide GitHub CLI commands to execute recommended workflow updates
 
 **Best Used For:**
-- Adding new issues to the project board
-- Planning and organizing sprints
-- Updating item statuses and priorities
-- Project board cleanup and maintenance
+- Getting recommendations for adding new issues to the project board
+- Planning and organizing sprints with expert guidance
+- Obtaining commands to update item statuses and priorities
+- Project board cleanup and maintenance suggestions
 - Identifying stale or blocked items
 - Generating sprint summaries and reports
-- Backlog grooming and prioritization
+- Backlog grooming and prioritization advice
 
 **Communication Style:**
 - Professional and organized
 - Proactive with improvement suggestions
 - Data-driven with project metrics
-- Clear action items and reasoning
+- Clear action items with ready-to-run commands
 - Collaborative and transparent
 
 ### 🎰 Boomer Casino Critic
