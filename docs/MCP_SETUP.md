@@ -36,7 +36,7 @@ Add an MCP server configuration using the following JSON:
         "ghcr.io/marioalvial/gh-project-manager-mcp:latest"
       ],
       "env": {
-        "GH_TOKEN": "COPILOT_MCP_GH_TOKEN"
+        "GH_TOKEN": "COPILOT_MCP_GITHUB_TOKEN"
       },
       "tools": [
         "create_issue",
@@ -83,11 +83,11 @@ The MCP server requires a GitHub Personal Access Token with appropriate permissi
 1. Go to **Repository Settings → Secrets and variables → Codespaces**
 2. Click **New repository secret**
 3. Add the secret:
-   - **Name**: `COPILOT_MCP_GH_TOKEN`
+   - **Name**: `COPILOT_MCP_GITHUB_TOKEN`
    - **Value**: Paste the PAT you created
 4. Click **Add secret**
 
-> **Note**: The secret name `COPILOT_MCP_GH_TOKEN` must match the reference in the MCP configuration's `env` section.
+> **Note**: The secret name `COPILOT_MCP_GITHUB_TOKEN` must match the reference in the MCP configuration's `env` section.
 
 ## Required Permissions
 
@@ -156,7 +156,7 @@ await edit_project_item({
 ## Troubleshooting
 
 ### Authentication Errors
-- Verify the `COPILOT_MCP_GH_TOKEN` secret is set correctly
+- Verify the `COPILOT_MCP_GITHUB_TOKEN` secret is set correctly
 - Ensure the PAT hasn't expired
 - Check that the PAT has the required permissions
 

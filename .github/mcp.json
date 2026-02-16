@@ -12,7 +12,7 @@
         "ghcr.io/marioalvial/gh-project-manager-mcp:latest"
       ],
       "env": {
-        "GH_TOKEN": "COPILOT_MCP_GH_TOKEN"
+        "GH_TOKEN": "COPILOT_MCP_GITHUB_TOKEN"
       },
       "tools": [
         "create_issue",
