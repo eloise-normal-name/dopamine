@@ -33,6 +33,7 @@ export const config = {
   // ── Game rules ──
   initialCredits: 100,
   spinCost: 1,
+  maxCredits: 99999,         // credit cap threshold
 
   // ── Audio ──
   audioMixingStrategy: 'queue-fade',  // 'interrupt' | 'queue-fade' | 'duck'

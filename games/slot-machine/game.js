@@ -299,6 +299,12 @@ class SlotMachine {
       const winAmount = firstSymbol.payout * this.config.spinCost;
       const oldCredits = this.state.credits;
       this.state.credits += winAmount;
+      
+      // Apply credit cap
+      if (this.state.credits > this.config.maxCredits) {
+        this.state.credits = this.config.maxCredits;
+      }
+      
       this.state.lastWin = winAmount;
       this.updateStatus(`🎉 WIN! ${firstSymbol.displayName} - ${winAmount} credits!`);
       
