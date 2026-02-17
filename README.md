@@ -188,6 +188,7 @@ dopamine/
 ### Project Management & Cloud Operations
 - **[GitHub Projects v2 Cloud Operations](docs/GITHUB_PROJECTS_CLOUD_OPERATIONS.md)** - Complete guide to using GitHub Projects in cloud environments
 - **[MCP Setup Guide](docs/MCP_SETUP.md)** - Model Context Protocol integration for project management
+- **[MCP Docker Image Analysis](docs/MCP_DOCKER_IMAGE_ANALYSIS.md)** - Analysis of MCP server requirements
 - **[Agent Instructions](.github/copilot-instructions.md)** - Guidelines for GitHub Copilot agents working on this project
 
 ## 🛠️ Technology Stack

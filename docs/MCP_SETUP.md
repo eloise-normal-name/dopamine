@@ -173,3 +173,4 @@ await edit_project_item({
 - **MCP Configuration**: `.github/mcp.json`
 - **Agent Instructions**: `.github/copilot-instructions.md`
 - **MCP Server**: [gh-project-manager-mcp](https://github.com/marioalvial/gh-project-manager-mcp)
+- **Docker Image Analysis**: `docs/MCP_DOCKER_IMAGE_ANALYSIS.md` — Analysis of whether the Docker image is still needed
