@@ -41,6 +41,7 @@ class SlotMachine {
     this.reelModules = [];
     this.autoPlayTimer = null;
     this.lastMobileTapTime = 0;
+    this.resizeTimeout = null;
     this.init();
   }
   
@@ -58,7 +59,13 @@ class SlotMachine {
     this.handleReset = () => this.reset();
     this.handleKeydown = (e) => this._onKeydown(e);
     this.handleMobileToggle = (e) => this._onMobileToggle(e);
-    this.handleResize = () => this._updateStatusForDevice();
+    this.handleResize = () => {
+      // Debounce resize handler to avoid excessive updates
+      clearTimeout(this.resizeTimeout);
+      this.resizeTimeout = setTimeout(() => {
+        this._updateStatusForDevice();
+      }, 250);
+    };
     
     // Set up event listeners
     this.elements.startBtn.addEventListener('click', this.handleStart);
@@ -127,7 +134,8 @@ class SlotMachine {
     }
     this.lastMobileTapTime = now;
     
-    // Prevent default on touch events
+    // Only prevent default on touch events when actually toggling
+    // This preserves scroll behavior
     if (e.type === 'touchstart') {
       e.preventDefault();
     }
@@ -359,6 +367,10 @@ class SlotMachine {
     window.removeEventListener('resize', this.handleResize);
     this.container.removeEventListener('touchstart', this.handleMobileToggle);
     this.container.removeEventListener('click', this.handleMobileToggle);
+    // Clean up timeouts
+    if (this.resizeTimeout) {
+      clearTimeout(this.resizeTimeout);
+    }
     // Clean up reel modules
     this.reelModules.forEach((reel) => reel.destroy());
     // Clean up event bus
