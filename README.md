@@ -1,10 +1,10 @@
-# 🎮 Dopamine
+# 🎮 Gobbo Games
 
 Auto-playing web games that are fun to watch! A collection of browser-based games (slot machines, gacha, etc.) that run automatically, creating engaging visual experiences.
 
 ## 🎯 Project Goals
 
-Dopamine creates auto-playing web games that are fun to watch — simple, beautiful browser experiences with minimal interaction required. 
+Gobbo Games creates auto-playing web games that are fun to watch — simple, beautiful browser experiences with minimal interaction required. 
 
 **Core values**: Web-based with no build step, minimal dependencies, engaging auto-play, and modular architecture.
 
@@ -79,7 +79,7 @@ No build step, no dependencies to install!
 
 ### GitHub Pages (Recommended)
 
-The easiest way to deploy Dopamine is using GitHub Pages since it's a static site with no build step.
+The easiest way to deploy Gobbo Games is using GitHub Pages since it's a static site with no build step.
 
 #### Automatic Deployment with GitHub Actions
 
@@ -116,7 +116,7 @@ If you prefer not to use GitHub Actions:
 
 ### Alternative Deployment Options
 
-Since Dopamine is a static site with no dependencies, it can be deployed anywhere:
+Since Gobbo Games is a static site with no dependencies, it can be deployed anywhere:
 
 - **Netlify**: Drag and drop the folder or connect your GitHub repo
 - **Vercel**: Connect your repository for automatic deployments

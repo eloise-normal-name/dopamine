@@ -14,7 +14,7 @@ A configurable multi-reel slot machine (1-6 reels) that evolves from simple patt
 2. **Warm win language**  
    Wins should pulse and sparkle, never flash aggressively.
 3. **One strong visual hook**  
-   Keep the purple Dopamine gradient UI shell, but make the reel window feel like a glowing marquee.
+   Keep the purple Gobbo Games gradient UI shell, but make the reel window feel like a glowing marquee.
 4. **Layered visual depth**  
    Move beyond flat simplicity with parallax background layers, atmospheric particles, and animated environmental elements that create a living, breathing night market scene.
 5. **Configurable complexity**  
@@ -818,7 +818,7 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 ### 2. Visual Requirements
 
 #### VR-1: Color Palette
-- **VR-1.1** Base UI shall use Dopamine purple gradient (#8B5CF6 to #6366F1 range)
+- **VR-1.1** Base UI shall use Gobbo Games purple gradient (#8B5CF6 to #6366F1 range)
 - **VR-1.2** Reel window shall feature warm neon-glow accent (#FF6B9D or #FFB84D)
 - **VR-1.3** Symbols shall use high-saturation colors for instant differentiation:
   - Cherry: #FF3366 (red) with glossy highlight
@@ -1113,7 +1113,7 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - [x] Sample wireframe/low-fi art
 
 **Acceptance Criteria:**
-- [x] Narrative aligns with Dopamine brand (playful, watchable, satisfying)
+- [x] Narrative aligns with Gobbo Games brand (playful, watchable, satisfying)
 - [x] Theme is unique enough to differentiate from generic slots
 - [x] Design decisions are documented and justified
 - [x] References demonstrate visual direction feasibility
@@ -1142,7 +1142,7 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - [ ] Symbol legibility: Each symbol distinct at intended size?
 - [ ] Color contrast: All text meets WCAG AA (4.5:1)?
 - [ ] Neon aesthetic: Glow effects controlled, not overwhelming?
-- [ ] Dopamine brand: Purple gradient integrated cohesively?
+- [ ] Gobbo Games brand: Purple gradient integrated cohesively?
 - [ ] Anticipation pacing: Stop sequence feels satisfying?
 - [ ] Win celebration: Appropriate intensity for reward tier?
 - [ ] Responsive design: Works at 320px and 2560px width?
@@ -1240,7 +1240,7 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - [ ] Demo to stakeholders
 - [ ] Collect feedback on "feel" and pacing
 - [ ] Verify emotional goals met (anticipation, satisfaction)
-- [ ] Check brand cohesion with other Dopamine games
+- [ ] Check brand cohesion with other Gobbo Games
 - [ ] Validate "watchability" (passive viewing appeal)
 
 **Review Checklist:**
@@ -1248,7 +1248,7 @@ De-prioritize sources that are hard to parse or gated for agents (native-only st
 - [ ] Win celebrations feel appropriately rewarding?
 - [ ] Pacing neither too fast nor too slow?
 - [ ] Audio enhances experience without annoyance?
-- [ ] Fits Dopamine brand (matches other games' quality)?
+- [ ] Fits Gobbo Games brand (matches other games' quality)?
 - [ ] Theme ("Neon Night Market") comes through clearly?
 - [ ] No unexpected bugs or visual glitches?
 
@@ -1562,7 +1562,7 @@ The slot machine design is considered **complete** when:
 - [ ] API documentation current
 
 ✅ **Deployment:**
-- [ ] Game integrated into main Dopamine index
+- [ ] Game integrated into main Gobbo Games index
 - [ ] Assets deployed to correct directories
 - [ ] No build errors or console warnings
 - [ ] Smoke testing passed in production
@@ -1573,7 +1573,7 @@ The slot machine design is considered **complete** when:
 - Players/viewers report game is "satisfying to watch"
 - Win celebrations feel appropriately rewarding
 - Theme ("Neon Night Market") comes through clearly
-- Fits cohesively with other Dopamine games
+- Fits cohesively with other Gobbo Games
 
 **Quantitative (if analytics available):**
 - Average viewing session: >60 seconds
@@ -1627,7 +1627,7 @@ The slot machine design is considered **complete** when:
 - [ ] Documentation completion
 - [ ] Stakeholder demo and feedback
 - [ ] Get Stage 5 (User Acceptance) sign-off
-- [ ] Integration into main Dopamine site
+- [ ] Integration into main Gobbo Games site
 - [ ] Production deployment
 - [ ] Post-launch monitoring
 - [ ] Schedule Stage 6 (Post-Launch Review) in 2 weeks

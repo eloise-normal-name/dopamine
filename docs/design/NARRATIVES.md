@@ -1,6 +1,6 @@
 # Game Narratives & Descriptions
 
-This document provides colorful, narrative descriptions for each game in Dopamine. These descriptions establish the personality and experience of each game before development begins.
+This document provides colorful, narrative descriptions for each game in Gobbo Games. These descriptions establish the personality and experience of each game before development begins.
 
 > **Priority**: These narratives should be finalized before content development. They guide visual design, audio direction, and implementation decisions.
 
@@ -8,7 +8,7 @@ This document provides colorful, narrative descriptions for each game in Dopamin
 
 - **Set the tone** - Establish mood and personality before coding
 - **Guide design** - Visual and audio teams use these as creative briefs
-- **Maintain coherence** - Ensure all games feel like part of Dopamine
+- **Maintain coherence** - Ensure all games feel like part of Gobbo Games
 - **Inspire development** - Give developers context for their work
 
 ## Writing Guidelines
@@ -220,7 +220,7 @@ When adding a new game, create a narrative following this structure:
 
 Before development:
 1. Write narrative and share with team
-2. Iterate based on feedback (does it fit Dopamine?)
+2. Iterate based on feedback (does it fit Gobbo Games?)
 3. Create mood board from narrative
 4. Begin visual/audio concepting
 5. Only then start implementation
@@ -231,10 +231,10 @@ Narrative → Design → Development (in that order!)
 
 ## Maintaining Coherence
 
-All Dopamine games should embody shared design principles and qualities to feel like part of a cohesive collection.
+All Gobbo Games should embody shared design principles and qualities to feel like part of a cohesive collection.
 
 👉 **See [../../DESIGN_PRINCIPLES.md](../../DESIGN_PRINCIPLES.md) for complete details on:**
-- **The Dopamine Feel** - The 5 essential qualities (watchable, satisfying, colorful, polished, simple)
+- **The Gobbo Games Feel** - The 5 essential qualities (watchable, satisfying, colorful, polished, simple)
 - **Visual Coherence** - Purple gradient theme, animation timing, level of detail
 - **Audio Coherence** - Quality, volume levels, optional/mutable, pleasant tones
 - **Tonal Coherence** - Playful but not childish, calming but not boring, rewarding but not manipulative, fun but not chaotic

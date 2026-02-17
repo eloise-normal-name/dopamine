@@ -1,6 +1,6 @@
 # References & Inspirations
 
-This document catalogs games, experiences, and design patterns that inspire Dopamine's auto-playing game concept. Each reference includes an explanation of its relevance to our design philosophy.
+This document catalogs games, experiences, and design patterns that inspire Gobbo Games' auto-playing game concept. Each reference includes an explanation of its relevance to our design philosophy.
 
 ## Core Concept Inspirations
 

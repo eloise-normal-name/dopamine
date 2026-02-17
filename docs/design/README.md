@@ -1,6 +1,6 @@
 # Design Documentation
 
-This directory contains design concepts, mockups, and guidelines for Dopamine's visual and audio elements.
+This directory contains design concepts, mockups, and guidelines for Gobbo Games' visual and audio elements.
 
 ## 🎨 Design-First Approach
 
@@ -20,7 +20,7 @@ For the complete 7-phase pipeline, see **[ASSET_WORKFLOW.md](ASSET_WORKFLOW.md)*
 ## Structure
 
 - **[NARRATIVES.md](NARRATIVES.md)** - 🌟 **START HERE** - Colorful descriptions of each game's experience and emotional goals
-- **[REFERENCES.md](REFERENCES.md)** - Inspirations, similar games, and their relevance to Dopamine
+- **[REFERENCES.md](REFERENCES.md)** - Inspirations, similar games, and their relevance to Gobbo Games
 - **[ASSET_WORKFLOW.md](ASSET_WORKFLOW.md)** - 📋 7-phase workflow from narrative to implementation
 - **[ART_ASSET_REQUIREMENTS.md](ART_ASSET_REQUIREMENTS.md)** - 🎯 Required assets, specs, delivery process, and validation checklist
 - **[BLENDER_ASSET_CREATION.md](BLENDER_ASSET_CREATION.md)** - 🎬 Step-by-step Blender workflows for 3D-rendered game assets
@@ -42,7 +42,7 @@ The design documentation helps maintain consistency across all games and provide
 
 ## Design Philosophy
 
-Dopamine's visual and audio design follows core principles of being playful, clear, consistent, smooth, and satisfying.
+Gobbo Games' visual and audio design follows core principles of being playful, clear, consistent, smooth, and satisfying.
 
 👉 **See [../../DESIGN_PRINCIPLES.md](../../DESIGN_PRINCIPLES.md) for complete visual design principles, audio design principles, color system, typography, and animation guidelines.**
 

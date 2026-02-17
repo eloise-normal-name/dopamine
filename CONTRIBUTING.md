@@ -1,6 +1,6 @@
 # Contributing Guide
 
-Thank you for your interest in contributing to Dopamine! This guide will help you understand how to add new games or improve existing ones.
+Thank you for your interest in contributing to Gobbo Games! This guide will help you understand how to add new games or improve existing ones.
 
 ## Getting Started
 
@@ -10,7 +10,7 @@ Thank you for your interest in contributing to Dopamine! This guide will help yo
 
 ## Project Philosophy
 
-Dopamine is built on principles of simplicity, visual appeal, and accessibility — creating web games that are fun to watch with minimal dependencies.
+Gobbo Games is built on principles of simplicity, visual appeal, and accessibility — creating web games that are fun to watch with minimal dependencies.
 
 👉 **See [DESIGN_PRINCIPLES.md](DESIGN_PRINCIPLES.md) for the complete project philosophy and design beliefs.**
 
