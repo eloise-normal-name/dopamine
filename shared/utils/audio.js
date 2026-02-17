@@ -59,20 +59,20 @@
 
 /**
  * @typedef {Object} SoundConfig
- * @property {string} url — path to sound file
- * @property {number} [priority=10] — playback priority (higher interrupts lower)
- * @property {boolean} [loop=false] — whether sound should loop
- * @property {number} [volume=1.0] — sound-specific volume (0.0-1.0)
+ * @property {string} url - path to sound file
+ * @property {number} [priority=10] - playback priority (higher interrupts lower)
+ * @property {boolean} [loop=false] - whether sound should loop
+ * @property {number} [volume=1.0] - sound-specific volume (0.0-1.0)
  */
 
 /**
  * @typedef {Object} PlayingSoundNode
- * @property {string} id — sound identifier
- * @property {AudioBufferSourceNode} source — Web Audio source node
- * @property {GainNode} gainNode — volume control node
- * @property {number} priority — sound priority
- * @property {number} startTime — when playback started (performance.now())
- * @property {boolean} fadingOut — whether sound is currently fading out
+ * @property {string} id - sound identifier
+ * @property {AudioBufferSourceNode} source - Web Audio source node
+ * @property {GainNode} gainNode - volume control node
+ * @property {number} priority - sound priority
+ * @property {number} startTime - when playback started (performance.now())
+ * @property {boolean} fadingOut - whether sound is currently fading out
  */
 
 class AudioManager {
@@ -119,9 +119,9 @@ class AudioManager {
 
   /**
    * Load a sound file into memory.
-   * @param {string} id — unique sound identifier
-   * @param {string} url — path to audio file (MP3, OGG, WAV)
-   * @param {Partial<SoundConfig>} [config={}] — sound configuration
+   * @param {string} id - unique sound identifier
+   * @param {string} url - path to audio file (MP3, OGG, WAV)
+   * @param {Partial<SoundConfig>} [config={}] - sound configuration
    */
   async loadSound(id, url, config = {}) {
     if (!this._context) {
@@ -150,11 +150,11 @@ class AudioManager {
 
   /**
    * Play a loaded sound.
-   * @param {string} id — sound identifier
+   * @param {string} id - sound identifier
    * @param {Object} [options={}]
-   * @param {number} [options.volume] — override sound's default volume
-   * @param {number} [options.priority] — override sound's default priority
-   * @param {boolean} [options.loop] — override sound's default loop setting
+   * @param {number} [options.volume] - override sound's default volume
+   * @param {number} [options.priority] - override sound's default priority
+   * @param {boolean} [options.loop] - override sound's default loop setting
    */
   playSound(id, options = {}) {
     if (!this._context || !this._sounds.has(id)) {
@@ -202,7 +202,7 @@ class AudioManager {
 
   /**
    * Stop a specific sound.
-   * @param {string} id — sound identifier
+   * @param {string} id - sound identifier
    */
   stopSound(id) {
     const toStop = this._playing.filter((node) => node.id === id);
@@ -224,7 +224,7 @@ class AudioManager {
 
   /**
    * Set global volume.
-   * @param {number} volume — 0.0 (silent) to 1.0 (full)
+   * @param {number} volume - 0.0 (silent) to 1.0 (full)
    */
   setVolume(volume) {
     this._volume = Math.max(0, Math.min(1, volume));
@@ -350,7 +350,7 @@ class AudioManager {
 
   /**
    * Check if a sound is currently playing.
-   * @param {string} id — sound identifier
+   * @param {string} id - sound identifier
    * @returns {boolean}
    */
   isPlaying(id) {
