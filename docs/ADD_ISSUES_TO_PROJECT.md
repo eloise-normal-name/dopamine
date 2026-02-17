@@ -72,7 +72,7 @@ gh project item-add 2 --owner eloise-normal-name --url https://github.com/eloise
 gh project item-add 2 --owner eloise-normal-name --url https://github.com/eloise-normal-name/dopamine/issues/26
 gh project item-add 2 --owner eloise-normal-name --url https://github.com/eloise-normal-name/dopamine/issues/27
 gh project item-add 2 --owner eloise-normal-name --url https://github.com/eloise-normal-name/dopamine/issues/28
-gh project item-add 2 --owner eloise-normal-name/dopamine/issues/29
+gh project item-add 2 --owner eloise-normal-name --url https://github.com/eloise-normal-name/dopamine/issues/29
 gh project item-add 2 --owner eloise-normal-name --url https://github.com/eloise-normal-name/dopamine/issues/30
 
 # Then set metadata for each (this requires field IDs which you can get with):
