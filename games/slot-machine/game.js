@@ -249,14 +249,19 @@ class SlotMachine {
         this.animateCredits(oldCredits, this.config.maxCredits, () => {
           // After reaching max, animate down to initial credits
           setTimeout(() => {
-            this.animateCredits(this.config.maxCredits, this.config.initialCredits);
+            this.animateCredits(this.config.maxCredits, this.config.initialCredits, () => {
+              // Update all displays after animation completes
+              this.render();
+            });
           }, 500);
         });
       } else {
         this.updateStatus(`🎉 WIN! ${firstSymbol.displayName} - ${winAmount} credits!`);
         
         // Animate credit counter
-        this.animateCredits(oldCredits, this.state.credits);
+        this.animateCredits(oldCredits, this.state.credits, () => {
+          this.render();
+        });
       }
       
       return true;
@@ -292,7 +297,6 @@ class SlotMachine {
         requestAnimationFrame(animate);
       } else {
         this.elements.credits.textContent = to;
-        this.elements.lastWin.textContent = this.state.lastWin;
         if (onComplete) {
           onComplete();
         }
