@@ -1,6 +1,6 @@
 # Game Development Guide
 
-This guide provides detailed information on developing auto-playing games for Dopamine.
+This guide provides detailed information on developing auto-playing games for Gobbo Games.
 
 ## Game Lifecycle
 

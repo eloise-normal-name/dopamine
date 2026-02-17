@@ -1,6 +1,6 @@
 # Game Narratives & Descriptions
 
-This document provides colorful, narrative descriptions for each game in Dopamine. These descriptions establish the personality and experience of each game before development begins.
+This document provides colorful, narrative descriptions for each game in Gobbo Games. These descriptions establish the personality and experience of each game before development begins.
 
 > **Priority**: These narratives should be finalized before content development. They guide visual design, audio direction, and implementation decisions.
 
@@ -8,7 +8,7 @@ This document provides colorful, narrative descriptions for each game in Dopamin
 
 - **Set the tone** - Establish mood and personality before coding
 - **Guide design** - Visual and audio teams use these as creative briefs
-- **Maintain coherence** - Ensure all games feel like part of Dopamine
+- **Maintain coherence** - Ensure all games feel like part of Gobbo Games
 - **Inspire development** - Give developers context for their work
 
 ## Writing Guidelines

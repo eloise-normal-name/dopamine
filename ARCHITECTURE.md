@@ -1,11 +1,11 @@
 # Architecture Overview
 
 ## Project Purpose
-Dopamine is a collection of auto-playing web games (slot machines, gacha, etc.) that are fun to watch. Games run automatically in the browser with minimal user interaction required.
+Gobbo Games is a collection of auto-playing web games (slot machines, gacha, etc.) that are fun to watch. Games run automatically in the browser with minimal user interaction required.
 
 ## Core Principles
 
-Dopamine follows a set of core technical and design principles focused on web-based, auto-playing games with minimal dependencies and modular architecture.
+Gobbo Games follows a set of core technical and design principles focused on web-based, auto-playing games with minimal dependencies and modular architecture.
 
 👉 **See [DESIGN_PRINCIPLES.md](DESIGN_PRINCIPLES.md) for the complete philosophy and all core principles.**
 

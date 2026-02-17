@@ -1,6 +1,6 @@
 # 🎨 Design Principles
 
-This document is the **single authoritative source** for Dopamine's design beliefs, philosophy, and principles. All games in the Dopamine collection should align with these core values.
+This document is the **single authoritative source** for Gobbo Games' design beliefs, philosophy, and principles. All games in the Gobbo Games collection should align with these core values.
 
 > **Note**: For deeper dives into specific areas, see the detailed documentation linked throughout this document.
 
@@ -8,7 +8,7 @@ This document is the **single authoritative source** for Dopamine's design belie
 
 ## 🎯 Project Philosophy
 
-**Dopamine is a collection of auto-playing web games that are fun to watch.**
+**Gobbo Games is a collection of auto-playing web games that are fun to watch.**
 
 We create browser-based games that run automatically, creating engaging visual experiences with minimal user interaction. Think of them as **interactive screensavers** or **visual entertainment** — something delightful to have running in the background.
 
