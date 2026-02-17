@@ -1,6 +1,6 @@
 # Visual Design & Concepts
 
-This directory contains visual design documentation, mockups, and concept art for Dopamine games.
+This directory contains visual design documentation, mockups, and concept art for Gobbo Games.
 
 ## Start Here
 

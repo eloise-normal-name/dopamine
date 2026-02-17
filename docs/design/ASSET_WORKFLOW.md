@@ -1,10 +1,10 @@
 # Asset Development Workflow
 
-How Dopamine moves from a spark of an idea to polished, production-ready game art.
+How Gobbo Games moves from a spark of an idea to polished, production-ready game art.
 
 ## Overview
 
-Every game asset in Dopamine follows the same journey through seven phases. The process is deliberately front-loaded with imagination and discovery so that by the time we're cutting sprites and optimizing PNGs, we know *exactly* what we're building — and why it feels right.
+Every game asset in Gobbo Games follows the same journey through seven phases. The process is deliberately front-loaded with imagination and discovery so that by the time we're cutting sprites and optimizing PNGs, we know *exactly* what we're building — and why it feels right.
 
 ## The Seven Phases
 
@@ -54,7 +54,7 @@ Each brief specifies:
 
 ### Phase 4 — Concept Art (Prompt-Based)
 
-This is where Dopamine's approach differs from traditional pipelines.
+This is where Gobbo Games' approach differs from traditional pipelines.
 
 We use **AI-generated prompts** as the primary tool for visual exploration. Instead of hand-drawing concepts, we:
 

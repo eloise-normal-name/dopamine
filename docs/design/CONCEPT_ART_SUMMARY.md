@@ -1,6 +1,6 @@
 # Concept Art Pipeline — Summary
 
-Overview of the prompt-based concept art system established for Dopamine's visual development.
+Overview of the prompt-based concept art system established for Gobbo Games' visual development.
 
 ## What Was Created
 

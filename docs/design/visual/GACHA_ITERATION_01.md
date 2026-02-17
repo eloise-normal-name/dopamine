@@ -32,7 +32,7 @@ The loop repeats indefinitely with variation in chest style, rarity tier, and re
    Keep the viewport focused on a single chest. No grid, no multi-pull. Simplicity maximizes the drama of each reveal.
 
 4. **Warm, fantasy palette**  
-   Rich wood browns, antique gold hardware, jewel-tone glows (emerald common → sapphire rare → amethyst epic → molten gold legendary). Complement with the Dopamine purple gradient shell.
+   Rich wood browns, antique gold hardware, jewel-tone glows (emerald common → sapphire rare → amethyst epic → molten gold legendary). Complement with the Gobbo Games purple gradient shell.
 
 5. **Passive-first pacing**  
    The full open cycle should feel satisfying at ~4-6 seconds so the loop is mesmerizing as a background screen — fast enough to stay interesting, slow enough to read each beat.

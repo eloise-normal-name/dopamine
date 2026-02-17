@@ -1,6 +1,6 @@
 # Art Asset Requirements
 
-Required art and audio assets for Dopamine games, with technical specs, delivery instructions, and validation criteria.
+Required art and audio assets for Gobbo Games, with technical specs, delivery instructions, and validation criteria.
 
 ---
 
