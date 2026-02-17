@@ -142,9 +142,10 @@ export class AudioManager {
 
   /**
    * Handle mixing strategy when new sound wants to play
+   * @returns {boolean} True if sound was queued (don't play now), false if should play
    */
   async _handleMixing(newSound) {
-    if (!this.currentlyPlaying) return;
+    if (!this.currentlyPlaying) return false;
 
     const currentPriority = this.currentlyPlaying.priority;
     const newPriority = newSound.priority;
@@ -156,29 +157,30 @@ export class AudioManager {
           this._stopSound(this.currentlyPlaying);
           this.currentlyPlaying = null;
         }
-        break;
+        return false; // Sound should play
 
       case 'queue-fade':
         // Higher priority fades out current sound
         if (newPriority > currentPriority) {
           await this._fadeOut(this.currentlyPlaying);
           this.currentlyPlaying = null;
+          return false; // Sound should play now
         } else {
           // Lower priority gets queued - don't play now
           this.queue.push(newSound);
           return true; // Signal that sound was queued, not played
         }
-        break;
 
       case 'duck':
         // Reduce volume of lower-priority sounds
         if (newPriority > currentPriority) {
           this._duckVolume(this.currentlyPlaying, 0.3);
         }
-        break;
+        return false; // Sound should play
 
       default:
         console.warn(`[AudioManager] Unknown mixing strategy: ${this.mixingStrategy}`);
+        return false; // Default to playing the sound
     }
   }
 
