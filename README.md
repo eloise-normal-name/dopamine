@@ -242,6 +242,7 @@ Want to contribute? Here are some ideas:
 - ✅ Pure browser-based (no plugins)
 - ✅ Auto-play capability
 - ✅ Responsive design
+- ✅ Mobile tap-anywhere controls (tap to start/stop auto-play)
 - ✅ Minimal dependencies
 - ✅ Modular architecture
 - ✅ Well-documented
