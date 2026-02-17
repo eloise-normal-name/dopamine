@@ -253,3 +253,21 @@
     text-align: center;
   }
 }
+
+/* Mobile interaction: hide Start/Stop buttons, show only Reset */
+@media (max-width: 768px) {
+  #start-btn,
+  #stop-btn {
+    display: none;
+  }
+  
+  .controls {
+    justify-content: center;
+  }
+  
+  /* Make game container tappable */
+  .game-container {
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(255, 215, 0, 0.2);
+  }
+}
