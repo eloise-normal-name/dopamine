@@ -110,7 +110,10 @@ export class AudioManager {
     }
 
     // Handle mixing strategy
-    await this._handleMixing(soundData);
+    const wasQueued = await this._handleMixing(soundData);
+    
+    // If sound was queued (not played), return early
+    if (wasQueued) return;
 
     // Play the sound
     this._playSound(soundData, options);
@@ -161,8 +164,9 @@ export class AudioManager {
           await this._fadeOut(this.currentlyPlaying);
           this.currentlyPlaying = null;
         } else {
-          // Lower priority gets queued
+          // Lower priority gets queued - don't play now
           this.queue.push(newSound);
+          return true; // Signal that sound was queued, not played
         }
         break;
 
@@ -229,9 +233,9 @@ export class AudioManager {
         soundData.source = source;
         soundData.gainNode = gain;
 
-        source.addEventListener('ended', () => {
+        source.onended = () => {
           this._onSoundEnded(soundData);
-        });
+        };
       } else if (soundData.audio) {
         // Play with HTMLAudioElement
         soundData.audio.volume = volume;
@@ -271,6 +275,36 @@ export class AudioManager {
   }
 
   /**
+   * Get current volume of a sound
+   * @private
+   */
+  _getCurrentVolume(soundData) {
+    if (!soundData) return 1;
+    
+    if (soundData.gainNode) {
+      return soundData.gainNode.gain.value;
+    } else if (soundData.audio) {
+      return soundData.audio.volume;
+    }
+    
+    return 1;
+  }
+
+  /**
+   * Set volume of a sound
+   * @private
+   */
+  _setVolume(soundData, volume) {
+    if (!soundData) return;
+    
+    if (soundData.gainNode) {
+      soundData.gainNode.gain.value = volume;
+    } else if (soundData.audio) {
+      soundData.audio.volume = volume;
+    }
+  }
+
+  /**
    * Fade out a sound
    */
   async _fadeOut(soundData) {
@@ -278,18 +312,14 @@ export class AudioManager {
 
     return new Promise((resolve) => {
       const startTime = performance.now();
-      const startVolume = soundData.gainNode ? soundData.gainNode.gain.value : (soundData.audio ? soundData.audio.volume : 1);
+      const startVolume = this._getCurrentVolume(soundData);
 
       const fade = () => {
         const elapsed = performance.now() - startTime;
         const progress = Math.min(elapsed / this.fadeDuration, 1);
         const volume = startVolume * (1 - progress);
 
-        if (soundData.gainNode) {
-          soundData.gainNode.gain.value = volume;
-        } else if (soundData.audio) {
-          soundData.audio.volume = volume;
-        }
+        this._setVolume(soundData, volume);
 
         if (progress < 1) {
           requestAnimationFrame(fade);
@@ -307,13 +337,7 @@ export class AudioManager {
    * Duck (reduce) volume of a sound
    */
   _duckVolume(soundData, duckLevel = 0.3) {
-    if (!soundData) return;
-
-    if (soundData.gainNode) {
-      soundData.gainNode.gain.value = duckLevel;
-    } else if (soundData.audio) {
-      soundData.audio.volume = duckLevel;
-    }
+    this._setVolume(soundData, duckLevel);
   }
 
   /**
