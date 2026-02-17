@@ -169,6 +169,9 @@ dopamine/
 
 ## 📚 Documentation
 
+### Quick Links
+- **[FAQ](docs/FAQ.md)** - Frequently asked questions about the project, tools, and workflows
+
 ### Core Documentation
 - **[Design Principles](DESIGN_PRINCIPLES.md)** - 🌟 **START HERE** - Core philosophy and design beliefs
 - **[Architecture Overview](ARCHITECTURE.md)** - System design and principles
