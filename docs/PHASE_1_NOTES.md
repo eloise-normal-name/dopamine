@@ -40,7 +40,7 @@ However, several **design decisions and technical questions remain unresolved** 
 | Criterion | Status | Notes |
 |-----------|--------|-------|
 | Reels spin/stop with bounce physics | ⚠️ **Needs validation** | Visual inspection shows bounce, but timing not measured against TR-1 ±50ms requirement |
-| State transitions logged to console | ❌ **Missing** | No console logging currently implemented |
+| State transitions logged to console | ✅ **Implemented** | Console logs added in `games/slot-machine/game.js` (state transitions) and `games/slot-machine/reel.js` (timing measurements) |
 | Keyboard navigation functional | ✅ | Space and Escape work correctly |
 | 60 fps on Chrome/Firefox desktop | ⚠️ **Not measured** | No profiling performed yet |
 

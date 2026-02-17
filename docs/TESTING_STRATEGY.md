@@ -1,14 +1,20 @@
 # Test Tooling Integration Strategy
 
 **Date**: 2026-02-16  
-**Status**: Design Phase  
+**Status**: Backlog / Future Consideration  
 **Author**: Claudia [c35s]
 
 ---
 
 ## Executive Summary
 
-This document defines the testing strategy for the Dopamine slot machine game, focusing on automated verification of game state transitions, win logic, credit calculations, and event-driven behavior. The design prioritizes pragmatic, maintainable tests that validate core game logic without excessive mocking or brittle DOM assertions.
+**⚠️ Note**: This document describes a **future/comprehensive testing strategy** that is currently in the backlog. Per `docs/PHASE_1_NOTES.md` Section 7, the **current approach** is **Option B**: minimal Node.js assert-based unit tests for pattern.js only, with manual validation for visual/animation systems.
+
+This document is preserved for reference when the project is ready to adopt a full test framework in a future phase.
+
+---
+
+This document defines a comprehensive testing strategy for the Dopamine slot machine game, focusing on automated verification of game state transitions, win logic, credit calculations, and event-driven behavior. The design prioritizes pragmatic, maintainable tests that validate core game logic without excessive mocking or brittle DOM assertions.
 
 ### Design Goals
 
@@ -20,9 +26,11 @@ This document defines the testing strategy for the Dopamine slot machine game, f
 
 ---
 
-## Framework Recommendation: Vitest
+## Framework Recommendation: Vitest (Future Consideration)
 
-**Chosen**: [Vitest](https://vitest.dev/)
+**⚠️ Status**: **Backlog** — Not implemented in Phase 1. Current approach uses Node.js built-in assert module for minimal pattern.js testing only.
+
+**Proposed**: [Vitest](https://vitest.dev/)
 
 ### Rationale
 
@@ -35,7 +43,21 @@ This document defines the testing strategy for the Dopamine slot machine game, f
 | TypeScript support | ✅ Built-in | ✅ Via babel | ⚠️ Manual setup |
 | Async/Promise testing | ✅ Native | ✅ Native | ✅ Native |
 
-**Decision**: Vitest provides the best balance of speed, ES module support, and developer experience. `happy-dom` environment is sufficient for our needs (no complex DOM manipulation testing required).
+**Future Decision**: Vitest would provide the best balance of speed, ES module support, and developer experience. `happy-dom` environment would be sufficient for our needs (no complex DOM manipulation testing required).
+
+### Current vs Future Testing Approach
+
+| Aspect | Current (Phase 1-2) | Future (Backlog) |
+|--------|---------------------|------------------|
+| **Framework** | Node.js assert module | Vitest with happy-dom |
+| **Coverage** | pattern.js only | Full game logic |
+| **Visual Testing** | Manual screenshots | Still manual |
+| **Animation Testing** | Manual observation | Still manual |
+| **Performance Testing** | DevTools profiling | Still manual |
+| **Test Runner** | `node pattern.test.js` | `vitest` or `vitest watch` |
+| **Setup Time** | ~0 hours | ~2-4 hours |
+
+**Why Defer**: Per PHASE_1_NOTES.md, a full test framework (Vitest/Jest) is "overkill for the current scope." Pattern detection is the only deterministic logic requiring unit tests. Visual and animation systems require manual validation regardless of framework choice.
 
 ---
 
