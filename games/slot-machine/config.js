@@ -33,9 +33,7 @@ export const config = {
   // ── Game rules ──
   initialCredits: 100,
   spinCost: 1,
-  maxCredits: 99999,         // soft cap triggers overflow celebration
-  overflowBehavior: 'celebrate', // 'celebrate' = mega jackpot + reset
-  overflowAnimationDelay: 500, // delay between overflow animations (ms)
+  maxCredits: 99999,         // credit cap threshold
 
   // ── Visual ──
   symbolSize: 80,            // symbol height in pixels
