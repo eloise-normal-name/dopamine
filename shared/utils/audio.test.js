@@ -217,7 +217,7 @@ test('Slot machine scenario: reel stops + win sound (config validation)', () => 
 
 // ── Print Results ──
 
-console.log('\n' + '─'.repeat(50));
+console.log('\n' + '-'.repeat(50));
 console.log(`Tests: ${passedCount}/${testCount} passed`);
 
 if (passedCount === testCount) {
