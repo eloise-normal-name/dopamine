@@ -145,8 +145,6 @@ The game auto-initializes when `index.html` is loaded.
 The game logs state transitions and timing for debugging:
 
 ```
-[SlotMachine] Initializing game...
-[SlotMachine] Game initialized successfully
 [SlotMachine] State transition: idle → spinning
 [Reel 0] Stop sequence started for Cherry at 12345.67ms
 [Reel 0] Stop complete (total: 250.00ms)
