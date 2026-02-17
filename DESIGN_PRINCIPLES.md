@@ -59,7 +59,7 @@ These technical values guide every implementation decision:
 
 ---
 
-## 🌟 The Dopamine Feel
+## 🌟 The Gobbo Games Feel
 
 Every game in the collection must embody these five essential qualities:
 
@@ -70,7 +70,7 @@ Games must be interesting to observe passively. Even if you're not interacting, 
 Moments of resolution and completion should feel good. Whether it's reels settling into place, a capsule opening, or dice coming to rest — every outcome should have a sense of closure and satisfaction.
 
 ### 3. **Colorful**
-Vibrant but not overwhelming. Each game should have a distinct color personality within Dopamine's overall aesthetic. Colors should be pleasant, harmonious, and emotionally appropriate.
+Vibrant but not overwhelming. Each game should have a distinct color personality within Gobbo Games' overall aesthetic. Colors should be pleasant, harmonious, and emotionally appropriate.
 
 ### 4. **Polished**
 Smooth animations, good sound design, attention to detail. No janky movements, no harsh transitions. Every element should feel intentional and well-crafted.
@@ -178,7 +178,7 @@ Sound should enhance the experience without being intrusive. Games must work per
 
 ## 🎭 Tonal Coherence
 
-All Dopamine games should maintain a consistent emotional tone across visual, audio, and interaction design:
+All Gobbo Games should maintain a consistent emotional tone across visual, audio, and interaction design:
 
 ### Tone Balance
 
@@ -213,7 +213,7 @@ Each game has specific emotional targets (see [docs/design/NARRATIVES.md](docs/d
 
 ### Why Design-First?
 
-- **Coherence**: Ensures all games feel like they belong to Dopamine
+- **Coherence**: Ensures all games feel like they belong to Gobbo Games
 - **Quality**: Time spent on design prevents costly implementation mistakes
 - **Clarity**: Developers know exactly what they're building and why
 - **Consistency**: Visual and audio elements are planned together, not added piecemeal
@@ -227,9 +227,9 @@ Each game has specific emotional targets (see [docs/design/NARRATIVES.md](docs/d
 ### For Contributors
 
 **Before adding a game**:
-1. Review this document to understand Dopamine's philosophy
+1. Review this document to understand Gobbo Games' philosophy
 2. Write a narrative following [NARRATIVES.md](docs/design/NARRATIVES.md) template
-3. Ensure your concept embodies "The Dopamine Feel"
+3. Ensure your concept embodies "The Gobbo Games Feel"
 4. Follow the Design-First Workflow
 
 **During development**:
@@ -244,7 +244,7 @@ Each game has specific emotional targets (see [docs/design/NARRATIVES.md](docs/d
 
 ### For Designers
 
-Use this as your creative brief. Every design decision should trace back to these principles. When in doubt, ask: "Does this support the Dopamine Feel?"
+Use this as your creative brief. Every design decision should trace back to these principles. When in doubt, ask: "Does this support the Gobbo Games Feel?"
 
 ### For Developers
 
@@ -265,4 +265,4 @@ These principles should guide implementation choices. Technical decisions aren't
 
 ---
 
-*This document is a living guide. As Dopamine evolves, these principles may be refined, but the core philosophy remains: create auto-playing web games that are fun to watch.*
+*This document is a living guide. As Gobbo Games evolves, these principles may be refined, but the core philosophy remains: create auto-playing web games that are fun to watch.*

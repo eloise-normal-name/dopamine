@@ -42,7 +42,7 @@ The design documentation helps maintain consistency across all games and provide
 
 ## Design Philosophy
 
-Dopamine's visual and audio design follows core principles of being playful, clear, consistent, smooth, and satisfying.
+Gobbo Games' visual and audio design follows core principles of being playful, clear, consistent, smooth, and satisfying.
 
 👉 **See [../../DESIGN_PRINCIPLES.md](../../DESIGN_PRINCIPLES.md) for complete visual design principles, audio design principles, color system, typography, and animation guidelines.**
 
