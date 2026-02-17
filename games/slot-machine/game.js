@@ -242,18 +242,16 @@ class SlotMachine {
         this.updateStatus(`💥 MEGA JACKPOT! Hit the cap! Mega Win #${this.state.megaWins}! 💥`);
         this.bus.emit('megaWin', { megaWinCount: this.state.megaWins });
         
-        // Reset credits to initial value after cap reached
-        this.state.credits = this.config.initialCredits;
-        
         // Animate from old credits to max, then reset to initial
         this.animateCredits(oldCredits, this.config.maxCredits, () => {
-          // After reaching max, animate down to initial credits
+          // After reaching max, reset credits and animate down to initial credits
           setTimeout(() => {
+            this.state.credits = this.config.initialCredits;
             this.animateCredits(this.config.maxCredits, this.config.initialCredits, () => {
               // Update all displays after animation completes
               this.render();
             });
-          }, 500);
+          }, this.config.overflowAnimationDelay);
         });
       } else {
         this.updateStatus(`🎉 WIN! ${firstSymbol.displayName} - ${winAmount} credits!`);
