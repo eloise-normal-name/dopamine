@@ -38,6 +38,42 @@ export const config = {
   symbolSize: 80,            // symbol height in pixels
   animationEasing: 'easeOut',
 
+  // ── Audio ──
+  audio: {
+    // Mixing strategy: how to handle overlapping sounds (reel stops + win sounds)
+    // Options: 'interrupt' | 'queue-fade' | 'duck'
+    // Selected: 'queue-fade' — reel stops fade out over 100ms when win detected,
+    // win sound starts immediately. Balances immediacy with smoothness.
+    mixingStrategy: 'queue-fade',
+    fadeOutDuration: 100,    // fade-out time in ms for queue-fade strategy
+    duckVolume: 0.3,         // reduced volume for duck strategy (0.0-1.0)
+    volume: 0.7,             // global volume (0.0-1.0)
+    muted: false,            // whether audio is muted by default
+
+    // Sound priorities (higher = more important)
+    // Used by mixing strategy to determine which sounds take precedence
+    priorities: {
+      jackpot: 100,
+      big_win: 80,
+      medium_win: 60,
+      small_win: 40,
+      reel_stop: 20,
+      spin_start: 10,
+      ambient: 5,
+    },
+
+    // Sound file paths (to be populated when assets are available)
+    sounds: {
+      spin_start: '/assets/sounds/spin-start.mp3',
+      reel_stop: '/assets/sounds/reel-stop.mp3',
+      small_win: '/assets/sounds/win-small.mp3',
+      medium_win: '/assets/sounds/win-medium.mp3',
+      big_win: '/assets/sounds/win-big.mp3',
+      jackpot: '/assets/sounds/jackpot.mp3',
+      ambient: '/assets/sounds/ambient.mp3',
+    },
+  },
+
   // ── State machine ──
   states: {
     IDLE: 'idle',
