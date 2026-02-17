@@ -35,6 +35,10 @@ export const config = {
   spinCost: 1,
   maxCredits: 99999,         // credit cap threshold
 
+  // ── Audio ──
+  audioMixingStrategy: 'queue-fade',  // 'interrupt' | 'queue-fade' | 'duck'
+  audioFadeDuration: 100,              // fade-out duration in ms when queueing sounds
+
   // ── Visual ──
   symbolSize: 80,            // symbol height in pixels
   animationEasing: 'easeOut',

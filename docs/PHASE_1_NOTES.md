@@ -122,14 +122,19 @@ C. **True mixing with volume ducking** — All sounds play, but lower-priority o
 
 **Recommendation**: **Option B (queue with fade)** — Reel stops play normally, but if a win is detected, they fade out over 100ms and win sound starts immediately. Balances immediacy with smoothness.
 
-**Decision Needed By**: Before Phase 3 implementation begins  
-**Decision Owner**: Lead developer or UX reviewer  
-**Prototype Approach**: Implement both A and B as configurable option, playtest, choose winner
+**Decision Made**: ✅ **Option B (queue with fade)** implemented (Issue #24, Feb 2026)  
+**Implementation**: 
+- Added `audioMixingStrategy` and `audioFadeDuration` to config.js
+- Created shared/utils/audio.js with AudioManager class
+- Supports all three mixing strategies (interrupt, queue-fade, duck) as configurable options
+- Default: queue-fade with 100ms fade duration
+- Uses Web Audio API with HTMLAudioElement fallback
 
 **Action Items**:
-- [ ] Add `audioMixingStrategy` field to config.js with 'interrupt' | 'queue' | 'duck' options
-- [ ] Document choice and rationale in audio.js header comment
-- [ ] Test with various win scenarios during Phase 3
+- [x] Add `audioMixingStrategy` field to config.js with 'interrupt' | 'queue-fade' | 'duck' options
+- [x] Document choice and rationale in audio.js header comment
+- [ ] Test with actual audio files during Phase 3 implementation
+- [ ] Playtest and tune fade duration if needed
 
 ---
 
@@ -386,10 +391,34 @@ C. **Full test framework (Jest/Vitest)** — Set up proper test runner with cove
 **Decision Owner**: Developer
 
 **Action Items**:
-- [ ] Create `pattern.test.js` with test grids for all pattern types
-- [ ] Document test running procedure in CONTRIBUTING.md
-- [ ] Add test checklist to Phase 2–4 delivery gates
+- [x] Create `pattern.test.js` with test grids for all pattern types ✅ (completed 2026-02-17)
+- [x] Document test running procedure in CONTRIBUTING.md ✅ (completed 2026-02-17)
+- [x] Add test checklist to Phase 2–4 delivery gates ✅ (see below)
 - [ ] Consider visual regression testing (screenshot diffing) in Phase 4
+
+**Phase 2–4 Delivery Gate Checklist**:
+
+Before completing each phase, verify:
+
+1. **Pattern Detection Tests** (Phase 2+):
+   - [ ] Run `node shared/utils/pattern.test.js` - all tests pass
+   - [ ] New pattern types added to test suite (if applicable)
+   - [ ] Test coverage verified for edge cases
+   
+2. **Visual Validation** (All phases):
+   - [ ] Manual screenshot comparison with design references
+   - [ ] Test in Chrome, Firefox, Safari
+   - [ ] Verify responsive layout at mobile/tablet/desktop breakpoints
+   
+3. **Performance Validation** (All phases):
+   - [ ] DevTools FPS counter shows 60fps during animations
+   - [ ] Console timing logs meet TR-1 requirements (±50ms)
+   - [ ] No memory leaks during extended play sessions
+   
+4. **Accessibility Validation** (All phases):
+   - [ ] Keyboard navigation functional
+   - [ ] Screen reader announces state changes
+   - [ ] Reduced motion preferences respected
 
 ---
 
