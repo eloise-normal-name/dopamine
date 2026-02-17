@@ -233,8 +233,8 @@ This document provides manual test scenarios for validating the audio mixing str
 - ☐ Chrome 90+ (desktop)
 - ☐ Firefox 88+ (desktop)
 - ☐ Safari 14+ (desktop)
-- ☐ Chrome Android (mobile)
-- ☐ Safari iOS (mobile)
+- ☐ Chrome Android 90+ (mobile)
+- ☐ Safari iOS 14+ (mobile)
 
 **Expected Result**:
 - Audio plays correctly in all browsers

@@ -40,6 +40,9 @@ test('AudioManager constructor sets default options', () => {
   assert.strictEqual(audio.duckVolume, 0.3);
   assert.strictEqual(audio.getVolume(), 0.7);
   assert.strictEqual(audio.isMuted(), false);
+  
+  // Note: Behavioral testing (actual audio mixing) requires browser environment
+  // and is covered by manual tests in docs/AUDIO_MANUAL_TESTING.md
 });
 
 test('AudioManager constructor accepts custom options', () => {

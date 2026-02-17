@@ -138,7 +138,7 @@ class AudioManager {
       const response = await fetch(url);
       
       if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        throw new Error(`Failed to load sound '${id}': HTTP ${response.status}: ${response.statusText}`);
       }
       
       const arrayBuffer = await response.arrayBuffer();
@@ -168,8 +168,13 @@ class AudioManager {
    * @param {boolean} [options.loop] - override sound's default loop setting
    */
   playSound(id, options = {}) {
-    if (!this._context || !this._sounds.has(id)) {
-      console.warn(`Cannot play sound "${id}": not loaded`);
+    if (!this._context) {
+      console.warn(`Cannot play sound "${id}": AudioManager not initialized`);
+      return;
+    }
+    
+    if (!this._sounds.has(id)) {
+      console.warn(`Cannot play sound "${id}": sound not loaded`);
       return;
     }
 
