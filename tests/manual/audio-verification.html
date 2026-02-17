@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Manager Manual Verification</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      background: #f5f5f5;
+    }
+    h1 { color: #333; border-bottom: 3px solid #667eea; padding-bottom: 10px; }
+    h2 { color: #555; margin-top: 30px; }
+    button {
+      padding: 12px 24px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background: #667eea;
+      color: white;
+      transition: all 0.2s;
+    }
+    button:hover { background: #5568d3; transform: translateY(-1px); }
+    button:active { transform: translateY(0); }
+    button:disabled { background: #ccc; cursor: not-allowed; }
+    .test-section {
+      margin: 20px 0;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .status {
+      margin: 10px 0;
+      padding: 12px;
+      border-radius: 5px;
+      font-family: 'Monaco', 'Courier New', monospace;
+      font-size: 14px;
+    }
+    .pass { background: #d4edda; color: #155724; border-left: 4px solid #28a745; }
+    .fail { background: #f8d7da; color: #721c24; border-left: 4px solid #dc3545; }
+    .info { background: #d1ecf1; color: #0c5460; border-left: 4px solid #17a2b8; }
+    .warning { background: #fff3cd; color: #856404; border-left: 4px solid #ffc107; }
+    .instructions {
+      background: #e7f3ff;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      border-left: 4px solid #2196F3;
+    }
+    .test-number { 
+      display: inline-block;
+      background: #667eea;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔊 Audio Manager Manual Verification</h1>
+  
+  <div class="instructions">
+    <strong>📋 Instructions:</strong> Click each test button in sequence. Verify the expected behavior matches what you hear and see. Use headphones or speakers for best results.
+  </div>
+
+  <div id="init-status" class="status info">
+    ⏳ Initializing AudioManager... Click anywhere to start.
+  </div>
+
+  <!-- Test 1: Basic Playback -->
+  <div class="test-section">
+    <h2><span class="test-number">1</span>Basic Sound Playback</h2>
+    <p><strong>Expected:</strong> Hear a short beep (440 Hz) when clicking "Play Beep"</p>
+    <button id="test1-play">Play Beep</button>
+    <button id="test1-stop">Stop All</button>
+    <div id="test1-status" class="status info">Ready to test</div>
+  </div>
+
+  <!-- Test 2: Queue-Fade Strategy -->
+  <div class="test-section">
+    <h2><span class="test-number">2</span>Queue-Fade Mixing Strategy</h2>
+    <p><strong>Expected:</strong> When "Play High Priority" is clicked while low priority is playing, the low priority sound should fade out smoothly over 100ms, then high priority plays immediately.</p>
+    <button id="test2-low">Play Low Priority Sound (220 Hz, 1s)</button>
+    <button id="test2-high">Play High Priority Sound (880 Hz, 0.5s)</button>
+    <div id="test2-status" class="status info">Ready to test - click low priority first, then high priority</div>
+  </div>
+
+  <!-- Test 3: Priority Queueing -->
+  <div class="test-section">
+    <h2><span class="test-number">3</span>Priority-Based Queueing</h2>
+    <p><strong>Expected:</strong> Playing low priority while high priority plays should queue the low priority sound. It plays automatically after high priority finishes.</p>
+    <button id="test3-high">Play High Priority (660 Hz, 2s)</button>
+    <button id="test3-low">Queue Low Priority (220 Hz, 1s)</button>
+    <div id="test3-status" class="status info">Click high priority first, then queue low priority while it's playing</div>
+  </div>
+
+  <!-- Test 4: Enable/Disable -->
+  <div class="test-section">
+    <h2><span class="test-number">4</span>Enable/Disable Audio</h2>
+    <p><strong>Expected:</strong> When disabled, no sounds play. When re-enabled, sounds play normally.</p>
+    <button id="test4-disable">Disable Audio 🔇</button>
+    <button id="test4-play">Try Play (should be silent)</button>
+    <button id="test4-enable">Enable Audio 🔊</button>
+    <button id="test4-play2">Play (should work)</button>
+    <div id="test4-status" class="status info">Audio is currently enabled</div>
+  </div>
+
+  <!-- Test 5: Duck Strategy -->
+  <div class="test-section">
+    <h2><span class="test-number">5</span>Volume Ducking Strategy (Optional)</h2>
+    <p><strong>Expected:</strong> With duck strategy, high priority sounds reduce volume of lower priority sounds to 30% rather than stopping them. Both sounds play simultaneously.</p>
+    <button id="test5-change-strategy">Switch to Duck Strategy 🎚️</button>
+    <button id="test5-low">Play Low Priority</button>
+    <button id="test5-high">Play High Priority (should duck low)</button>
+    <button id="test5-reset">Reset to Queue-Fade</button>
+    <div id="test5-status" class="status info">Currently using queue-fade strategy</div>
+  </div>
+
+  <div class="test-section">
+    <h2>📊 Test Results Summary</h2>
+    <div id="summary-status" class="status info">
+      Complete all tests above. Results will be summarized here.
+    </div>
+  </div>
+
+  <script type="module">
+    import { AudioManager, SoundPriority } from '../../shared/utils/audio.js';
+
+    let audioManager;
+    let initialized = false;
+
+    // Helper to update status
+    function updateStatus(elementId, message, type = 'info') {
+      const el = document.getElementById(elementId);
+      el.textContent = message;
+      el.className = `status ${type}`;
+    }
+
+    // Create synthetic beep sounds using Web Audio API
+    function createBeepBuffer(audioContext, frequency, duration) {
+      const sampleRate = audioContext.sampleRate;
+      const numSamples = Math.floor(sampleRate * duration);
+      const buffer = audioContext.createBuffer(1, numSamples, sampleRate);
+      const data = buffer.getChannelData(0);
+      
+      // Generate sine wave with envelope (fade in/out to avoid clicks)
+      for (let i = 0; i < numSamples; i++) {
+        const t = i / sampleRate;
+        const envelope = Math.min(t * 10, (duration - t) * 10, 1);
+        data[i] = Math.sin(2 * Math.PI * frequency * i / sampleRate) * 0.3 * envelope;
+      }
+      
+      return buffer;
+    }
+
+    // Initialize on first user interaction
+    function initialize() {
+      if (initialized) return;
+      
+      try {
+        audioManager = new AudioManager({
+          mixingStrategy: 'queue-fade',
+          fadeDuration: 100
+        });
+
+        if (!audioManager.audioContext) {
+          updateStatus('init-status', '⚠️ Web Audio API not available - some tests may not work', 'warning');
+          return;
+        }
+
+        // Resume AudioContext if suspended (browser autoplay policy)
+        if (audioManager.audioContext.state === 'suspended') {
+          audioManager.audioContext.resume();
+        }
+
+        // Create test beeps
+        const beepBuffer = createBeepBuffer(audioManager.audioContext, 440, 0.3);
+        const lowPriorityBeep = createBeepBuffer(audioManager.audioContext, 220, 1.0);
+        const highPriorityBeep = createBeepBuffer(audioManager.audioContext, 880, 0.5);
+        const longBeep = createBeepBuffer(audioManager.audioContext, 660, 2.0);
+
+        // Register sounds
+        audioManager.sounds.set('beep', {
+          url: null,
+          priority: SoundPriority.MEDIUM_WIN,
+          audioBuffer: beepBuffer,
+          loaded: true
+        });
+
+        audioManager.sounds.set('low-beep', {
+          url: null,
+          priority: SoundPriority.REEL_STOP,
+          audioBuffer: lowPriorityBeep,
+          loaded: true
+        });
+
+        audioManager.sounds.set('high-beep', {
+          url: null,
+          priority: SoundPriority.JACKPOT,
+          audioBuffer: highPriorityBeep,
+          loaded: true
+        });
+
+        audioManager.sounds.set('long-beep', {
+          url: null,
+          priority: SoundPriority.BIG_WIN,
+          audioBuffer: longBeep,
+          loaded: true
+        });
+
+        initialized = true;
+        updateStatus('init-status', '✅ AudioManager initialized successfully! All tests ready.', 'pass');
+        
+      } catch (error) {
+        updateStatus('init-status', `❌ Initialization failed: ${error.message}`, 'fail');
+      }
+    }
+
+    // Initialize on any click
+    document.body.addEventListener('click', initialize, { once: true });
+
+    // Test 1: Basic Playback
+    document.getElementById('test1-play').onclick = () => {
+      if (!initialized) return;
+      audioManager.play('beep').catch(e => {
+        updateStatus('test1-status', `❌ Error: ${e.message}`, 'fail');
+      });
+      updateStatus('test1-status', '🔊 Playing beep (440 Hz, 0.3s)...', 'pass');
+      setTimeout(() => {
+        updateStatus('test1-status', '✅ Test 1 complete - did you hear the beep?', 'pass');
+      }, 500);
+    };
+
+    document.getElementById('test1-stop').onclick = () => {
+      if (!initialized) return;
+      audioManager.stopAll();
+      updateStatus('test1-status', '⏹️ All sounds stopped', 'pass');
+    };
+
+    // Test 2: Queue-Fade
+    document.getElementById('test2-low').onclick = () => {
+      if (!initialized) return;
+      audioManager.play('low-beep');
+      updateStatus('test2-status', '🔊 Playing low priority sound (220 Hz, 1 second)', 'info');
+    };
+
+    document.getElementById('test2-high').onclick = () => {
+      if (!initialized) return;
+      audioManager.play('high-beep');
+      updateStatus('test2-status', '⚡ High priority sound playing - low should fade out smoothly!', 'pass');
+      setTimeout(() => {
+        updateStatus('test2-status', '✅ Test 2 complete - did the low priority fade out smoothly?', 'pass');
+      }, 1000);
+    };
+
+    // Test 3: Queueing
+    document.getElementById('test3-high').onclick = () => {
+      if (!initialized) return;
+      audioManager.play('long-beep');
+      updateStatus('test3-status', '🔊 Playing high priority (660 Hz, 2 seconds) - now click "Queue Low Priority"', 'info');
+    };
+
+    document.getElementById('test3-low').onclick = () => {
+      if (!initialized) return;
+      audioManager.play('low-beep');
+      updateStatus('test3-status', '📋 Low priority queued - will play automatically after high finishes (~2s)', 'pass');
+      setTimeout(() => {
+        updateStatus('test3-status', '✅ Test 3 complete - did the low priority play after high finished?', 'pass');
+      }, 3500);
+    };
+
+    // Test 4: Enable/Disable
+    document.getElementById('test4-disable').onclick = () => {
+      if (!initialized) return;
+      audioManager.setEnabled(false);
+      updateStatus('test4-status', '🔇 Audio disabled - now click "Try Play"', 'info');
+    };
+
+    document.getElementById('test4-play').onclick = () => {
+      if (!initialized) return;
+      audioManager.play('beep');
+      const enabled = audioManager.enabled;
+      if (!enabled) {
+        updateStatus('test4-status', '✅ Tried to play while disabled - should be silent!', 'pass');
+      } else {
+        updateStatus('test4-status', '⚠️ Audio is enabled - test may not work correctly', 'warning');
+      }
+    };
+
+    document.getElementById('test4-enable').onclick = () => {
+      if (!initialized) return;
+      audioManager.setEnabled(true);
+      updateStatus('test4-status', '🔊 Audio enabled - now click "Play"', 'info');
+    };
+
+    document.getElementById('test4-play2').onclick = () => {
+      if (!initialized) return;
+      audioManager.play('beep');
+      updateStatus('test4-status', '✅ Test 4 complete - did you hear the sound after enabling?', 'pass');
+    };
+
+    // Test 5: Duck Strategy
+    document.getElementById('test5-change-strategy').onclick = () => {
+      if (!initialized) return;
+      audioManager.mixingStrategy = 'duck';
+      updateStatus('test5-status', '🎚️ Switched to "duck" mixing strategy - now test low + high priority', 'info');
+    };
+
+    document.getElementById('test5-low').onclick = () => {
+      if (!initialized) return;
+      audioManager.play('low-beep');
+      updateStatus('test5-status', '🔊 Playing low priority - now click high priority while this plays', 'info');
+    };
+
+    document.getElementById('test5-high').onclick = () => {
+      if (!initialized) return;
+      audioManager.play('high-beep');
+      updateStatus('test5-status', '🎚️ High priority playing - low should reduce to 30% volume (both playing)', 'pass');
+      setTimeout(() => {
+        updateStatus('test5-status', '✅ Test 5 complete - did both sounds play simultaneously with ducking?', 'pass');
+      }, 1000);
+    };
+
+    document.getElementById('test5-reset').onclick = () => {
+      if (!initialized) return;
+      audioManager.mixingStrategy = 'queue-fade';
+      updateStatus('test5-status', '✅ Reset to queue-fade strategy', 'pass');
+    };
+
+    // Log audio context state changes
+    if (typeof AudioContext !== 'undefined' || typeof webkitAudioContext !== 'undefined') {
+      const checkContext = setInterval(() => {
+        if (audioManager?.audioContext) {
+          console.log('[AudioTest] AudioContext state:', audioManager.audioContext.state);
+          if (audioManager.audioContext.state === 'running') {
+            clearInterval(checkContext);
+          }
+        }
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

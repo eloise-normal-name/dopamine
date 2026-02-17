@@ -2,7 +2,11 @@
  * Audio Manager Basic Tests
  * 
  * Tests the audio manager's core functionality without actual audio files.
- * Run with: node --input-type=module shared/utils/audio.test.js
+ * Run with: node shared/utils/audio.test.js
+ * 
+ * For manual browser testing and user verification, see:
+ * - docs/AUDIO_VERIFICATION_TESTING.md
+ * - tests/manual/audio-verification.html
  */
 
 import assert from 'assert';
