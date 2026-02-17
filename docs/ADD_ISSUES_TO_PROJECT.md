@@ -1,6 +1,22 @@
 # Adding Issues to Project #2
 
+**⚠️ CRITICAL WARNING: Always check issue state before setting project status!**
+
 This guide explains how to add the created issues (#23-30) to Project #2 with proper metadata.
+
+## ⚠️ Common Mistakes to Avoid
+
+**DO NOT:**
+- ❌ Set CLOSED issues to "Backlog" status (they should be "Done")
+- ❌ Overwrite existing "Done" status when updating other fields
+- ❌ Add issues to project without checking if they already exist
+- ❌ Ignore the GitHub issue state (OPEN/CLOSED) when setting project status
+
+**DO:**
+- ✅ Check if issue is CLOSED → Set status to "Done"
+- ✅ Check if issue is OPEN → Set status based on work progress
+- ✅ Verify issue doesn't already exist in project before adding
+- ✅ Preserve existing status when only updating Priority/Size
 
 ## Issues to Add
 
@@ -17,24 +33,39 @@ This guide explains how to add the created issues (#23-30) to Project #2 with pr
 
 ## Method 1: GitHub Web Interface (Recommended)
 
-1. **Navigate to Project #2**
+**⚠️ IMPORTANT: Before adding issues, check if they are already in the project and what their current status is!**
+
+1. **Check Issue State First**
+   - View each issue on GitHub to see if it's OPEN or CLOSED
+   - CLOSED issues should be marked as "Done" in the project
+   - OPEN issues can be "Backlog", "Ready", or "In progress"
+   
+2. **Navigate to Project #2**
    - Go to: https://github.com/eloise-normal-name/dopamine/projects/2
    
-2. **Add Each Issue**
+3. **Check if Issue Already Exists**
+   - Search the project board for the issue number before adding
+   - If already exists, only update Priority/Size, DO NOT change Status unless needed
+   
+4. **Add Each Issue** (if not already in project)
    - Click the "+ Add item" button at the bottom of any column
    - Type the issue number (e.g., "#23") in the search box
    - Click the issue to add it to the project
    
-3. **Set Metadata Fields**
+5. **Set Metadata Fields**
    - Once added, click on the issue card
    - In the right sidebar, you'll see custom fields
    - Set **Priority**: High or Medium (from the table above)
    - Set **Size**: S, M, or XL (from the table above)
-   - Set **Status**: "Backlog" (default) or "In Progress" if work has started
+   - Set **Status**: 
+     - **"Done"** if the issue is CLOSED
+     - **"Backlog"** if OPEN and not started
+     - **"Ready"** or **"In progress"** if OPEN and already being worked on
 
-4. **Verify**
+6. **Verify**
    - All 8 issues should appear in the project
    - Each should have Priority and Size values
+   - **CRITICAL**: CLOSED issues must have "Done" status, not "Backlog"
    - The project board should now be organized for sprint planning
 
 ## Method 2: Using GitHub Copilot Chat (When Available)
