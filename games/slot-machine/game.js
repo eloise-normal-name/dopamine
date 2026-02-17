@@ -22,12 +22,14 @@ class SlotMachine {
       credits: this.config.initialCredits,
       lastWin: 0,
       totalSpins: 0,
+      megaWins: 0,        // count of times player hit credit cap
       reels: [],
     };
     
     this.elements = {
       credits: document.getElementById('credits'),
       lastWin: document.getElementById('last-win'),
+      megaWins: document.getElementById('mega-wins'),
       status: document.getElementById('status'),
       startBtn: document.getElementById('start-btn'),
       stopBtn: document.getElementById('stop-btn'),
@@ -124,6 +126,7 @@ class SlotMachine {
     this.state.credits = this.config.initialCredits;
     this.state.lastWin = 0;
     this.state.totalSpins = 0;
+    this.state.megaWins = 0;
 
     // Rebuild reel strips
     this.reelModules.forEach((reel) => reel.destroy());
@@ -232,10 +235,29 @@ class SlotMachine {
       const oldCredits = this.state.credits;
       this.state.credits += winAmount;
       this.state.lastWin = winAmount;
-      this.updateStatus(`🎉 WIN! ${firstSymbol.displayName} - ${winAmount} credits!`);
       
-      // Animate credit counter
-      this.animateCredits(oldCredits, this.state.credits);
+      // Check for credit overflow
+      if (this.state.credits >= this.config.maxCredits && this.config.overflowBehavior === 'celebrate') {
+        this.state.megaWins++;
+        this.updateStatus(`💥 MEGA JACKPOT! Hit the cap! Mega Win #${this.state.megaWins}! 💥`);
+        this.bus.emit('megaWin', { megaWinCount: this.state.megaWins });
+        
+        // Reset credits to initial value after cap reached
+        this.state.credits = this.config.initialCredits;
+        
+        // Animate from old credits to max, then reset to initial
+        this.animateCredits(oldCredits, this.config.maxCredits, () => {
+          // After reaching max, animate down to initial credits
+          setTimeout(() => {
+            this.animateCredits(this.config.maxCredits, this.config.initialCredits);
+          }, 500);
+        });
+      } else {
+        this.updateStatus(`🎉 WIN! ${firstSymbol.displayName} - ${winAmount} credits!`);
+        
+        // Animate credit counter
+        this.animateCredits(oldCredits, this.state.credits);
+      }
       
       return true;
     } else {
@@ -250,8 +272,9 @@ class SlotMachine {
    * Animate credit counter from old value to new value.
    * @param {number} from - Starting credit value
    * @param {number} to - Ending credit value
+   * @param {Function} onComplete - Optional callback when animation completes
    */
-  animateCredits(from, to) {
+  animateCredits(from, to, onComplete) {
     const duration = 300; // ms
     const startTime = performance.now();
     
@@ -270,6 +293,9 @@ class SlotMachine {
       } else {
         this.elements.credits.textContent = to;
         this.elements.lastWin.textContent = this.state.lastWin;
+        if (onComplete) {
+          onComplete();
+        }
       }
     };
     
@@ -283,6 +309,9 @@ class SlotMachine {
   render() {
     this.elements.credits.textContent = this.state.credits;
     this.elements.lastWin.textContent = this.state.lastWin;
+    if (this.elements.megaWins) {
+      this.elements.megaWins.textContent = this.state.megaWins;
+    }
   }
   
   delay(ms) {
