@@ -386,10 +386,34 @@ C. **Full test framework (Jest/Vitest)** — Set up proper test runner with cove
 **Decision Owner**: Developer
 
 **Action Items**:
-- [ ] Create `pattern.test.js` with test grids for all pattern types
-- [ ] Document test running procedure in CONTRIBUTING.md
-- [ ] Add test checklist to Phase 2–4 delivery gates
+- [x] Create `pattern.test.js` with test grids for all pattern types ✅ (completed 2026-02-17)
+- [x] Document test running procedure in CONTRIBUTING.md ✅ (completed 2026-02-17)
+- [x] Add test checklist to Phase 2–4 delivery gates ✅ (see below)
 - [ ] Consider visual regression testing (screenshot diffing) in Phase 4
+
+**Phase 2–4 Delivery Gate Checklist**:
+
+Before completing each phase, verify:
+
+1. **Pattern Detection Tests** (Phase 2+):
+   - [ ] Run `node shared/utils/pattern.test.js` - all tests pass
+   - [ ] New pattern types added to test suite (if applicable)
+   - [ ] Test coverage verified for edge cases
+   
+2. **Visual Validation** (All phases):
+   - [ ] Manual screenshot comparison with design references
+   - [ ] Test in Chrome, Firefox, Safari
+   - [ ] Verify responsive layout at mobile/tablet/desktop breakpoints
+   
+3. **Performance Validation** (All phases):
+   - [ ] DevTools FPS counter shows 60fps during animations
+   - [ ] Console timing logs meet TR-1 requirements (±50ms)
+   - [ ] No memory leaks during extended play sessions
+   
+4. **Accessibility Validation** (All phases):
+   - [ ] Keyboard navigation functional
+   - [ ] Screen reader announces state changes
+   - [ ] Reduced motion preferences respected
 
 ---
 

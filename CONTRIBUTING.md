@@ -85,6 +85,32 @@ import { easeInOut } from '../../shared/utils/animation.js';
 
 ## Testing
 
+### Automated Unit Tests
+
+The project uses minimal, dependency-free unit testing for critical logic using Node.js built-in assert module.
+
+#### Running Pattern Detection Tests
+
+Pattern detection logic is tested with explicit test grids:
+
+```bash
+node shared/utils/pattern.test.js
+```
+
+This runs all pattern detection tests (linear, scatter, cluster, shape, transform) and reports results to the console.
+
+**Test Coverage:**
+- ✅ Pattern detection (unit tests with Node.js assert)
+- ✅ Visual appearance (manual screenshots)
+- ✅ Performance (manual DevTools profiling)
+- ✅ Cross-browser (manual testing matrix)
+- ❌ Animation timing (manual validation only)
+- ❌ Event bus behavior (low risk, simple implementation)
+
+### Manual Testing
+
+For visual and interactive features:
+
 - Test in multiple browsers (Chrome, Firefox, Safari, Edge)
 - Test on mobile devices
 - Verify auto-play works smoothly
