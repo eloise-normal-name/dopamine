@@ -111,7 +111,13 @@ class AudioManager {
   async init() {
     if (this._context) return; // already initialized
 
-    this._context = new (window.AudioContext || window.webkitAudioContext)();
+    // Check for Web Audio API support
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContextClass) {
+      throw new Error('Web Audio API is not supported in this browser');
+    }
+
+    this._context = new AudioContextClass();
     this._masterGain = this._context.createGain();
     this._masterGain.connect(this._context.destination);
     this._updateMasterGain();
@@ -130,6 +136,11 @@ class AudioManager {
 
     try {
       const response = await fetch(url);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      
       const arrayBuffer = await response.arrayBuffer();
       const audioBuffer = await this._context.decodeAudioData(arrayBuffer);
 

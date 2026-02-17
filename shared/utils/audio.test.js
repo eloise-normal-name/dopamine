@@ -25,7 +25,8 @@ function test(name, fn) {
     console.error(`✗ ${name}`);
     console.error(`  ${error.message}`);
     if (error.stack) {
-      console.error(`  ${error.stack.split('\n').slice(1, 3).join('\n')}`);
+      const stackLines = error.stack.split('\n').slice(1, 3).join('\n');
+      console.error(`  ${stackLines}`);
     }
   }
 }
