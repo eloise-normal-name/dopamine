@@ -122,14 +122,19 @@ C. **True mixing with volume ducking** — All sounds play, but lower-priority o
 
 **Recommendation**: **Option B (queue with fade)** — Reel stops play normally, but if a win is detected, they fade out over 100ms and win sound starts immediately. Balances immediacy with smoothness.
 
-**Decision Needed By**: Before Phase 3 implementation begins  
-**Decision Owner**: Lead developer or UX reviewer  
-**Prototype Approach**: Implement both A and B as configurable option, playtest, choose winner
+**Decision Made**: ✅ **Option B (queue with fade)** implemented (Issue #24, Feb 2026)  
+**Implementation**: 
+- Added `audioMixingStrategy` and `audioFadeDuration` to config.js
+- Created shared/utils/audio.js with AudioManager class
+- Supports all three mixing strategies (interrupt, queue-fade, duck) as configurable options
+- Default: queue-fade with 100ms fade duration
+- Uses Web Audio API with HTMLAudioElement fallback
 
 **Action Items**:
-- [ ] Add `audioMixingStrategy` field to config.js with 'interrupt' | 'queue' | 'duck' options
-- [ ] Document choice and rationale in audio.js header comment
-- [ ] Test with various win scenarios during Phase 3
+- [x] Add `audioMixingStrategy` field to config.js with 'interrupt' | 'queue-fade' | 'duck' options
+- [x] Document choice and rationale in audio.js header comment
+- [ ] Test with actual audio files during Phase 3 implementation
+- [ ] Playtest and tune fade duration if needed
 
 ---
 

@@ -34,6 +34,10 @@ export const config = {
   initialCredits: 100,
   spinCost: 1,
 
+  // ── Audio ──
+  audioMixingStrategy: 'queue-fade',  // 'interrupt' | 'queue-fade' | 'duck'
+  audioFadeDuration: 100,              // fade-out duration in ms when queueing sounds
+
   // ── Visual ──
   symbolSize: 80,            // symbol height in pixels
   animationEasing: 'easeOut',
