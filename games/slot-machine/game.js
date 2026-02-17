@@ -12,6 +12,9 @@ import { weightedRandom } from '../../shared/utils/random.js';
 import { delay } from '../../shared/utils/animation.js';
 
 class SlotMachine {
+  // Mobile breakpoint constant
+  static MOBILE_BREAKPOINT = 768;
+  
   constructor(containerId, options = {}) {
     this.container = document.getElementById(containerId);
     this.config = { ...config, ...options };
@@ -37,6 +40,7 @@ class SlotMachine {
     
     this.reelModules = [];
     this.autoPlayTimer = null;
+    this.lastMobileTapTime = 0;
     this.init();
   }
   
@@ -54,12 +58,14 @@ class SlotMachine {
     this.handleReset = () => this.reset();
     this.handleKeydown = (e) => this._onKeydown(e);
     this.handleMobileToggle = (e) => this._onMobileToggle(e);
+    this.handleResize = () => this._updateStatusForDevice();
     
     // Set up event listeners
     this.elements.startBtn.addEventListener('click', this.handleStart);
     this.elements.stopBtn.addEventListener('click', this.handleStop);
     this.elements.resetBtn.addEventListener('click', this.handleReset);
     document.addEventListener('keydown', this.handleKeydown);
+    window.addEventListener('resize', this.handleResize);
     
     // Mobile tap-anywhere toggle (both touch and click for mobile viewports)
     this.container.addEventListener('touchstart', this.handleMobileToggle);
@@ -102,19 +108,26 @@ class SlotMachine {
   /**
    * Handle mobile tap-anywhere toggle.
    * On mobile, tapping anywhere on the game container toggles auto-play on/off.
+   * Debounced to prevent double-firing from touch + click events.
    * @param {TouchEvent|MouseEvent} e
    */
   _onMobileToggle(e) {
     // Only handle on mobile viewports (where buttons are hidden)
-    if (window.innerWidth > 768) return;
+    if (window.innerWidth > SlotMachine.MOBILE_BREAKPOINT) return;
     
     // Don't handle if clicking/touching the reset button
     if (e.target.id === 'reset-btn' || e.target.closest('#reset-btn')) {
       return;
     }
     
-    // Prevent default on touch events to avoid double-firing
-    // For click events, let them through normally
+    // Debounce to prevent double-firing from touch + click events
+    const now = Date.now();
+    if (now - this.lastMobileTapTime < 300) {
+      return;
+    }
+    this.lastMobileTapTime = now;
+    
+    // Prevent default on touch events
     if (e.type === 'touchstart') {
       e.preventDefault();
     }
@@ -130,9 +143,10 @@ class SlotMachine {
   /**
    * Update status text based on device type.
    * Shows different instructions for mobile vs desktop.
+   * Called on init and window resize to adapt to viewport changes.
    */
   _updateStatusForDevice() {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= SlotMachine.MOBILE_BREAKPOINT) {
       this.updateStatus('Tap anywhere to start/stop');
     } else {
       this.updateStatus('Press Start to begin (Space to start, Escape to stop)');
@@ -342,6 +356,7 @@ class SlotMachine {
     this.elements.stopBtn.removeEventListener('click', this.handleStop);
     this.elements.resetBtn.removeEventListener('click', this.handleReset);
     document.removeEventListener('keydown', this.handleKeydown);
+    window.removeEventListener('resize', this.handleResize);
     this.container.removeEventListener('touchstart', this.handleMobileToggle);
     this.container.removeEventListener('click', this.handleMobileToggle);
     // Clean up reel modules
