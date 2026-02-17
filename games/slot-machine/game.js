@@ -201,6 +201,13 @@ class SlotMachine {
       // EVALUATING → CELEBRATING
       this._setState(this.config.states.CELEBRATING);
       this.bus.emit('win', { amount: this.state.lastWin, symbols: results });
+      
+      // Add win glow animation to slot machine
+      this.container.querySelector('.slot-machine').classList.add('winning');
+      setTimeout(() => {
+        this.container.querySelector('.slot-machine').classList.remove('winning');
+      }, 1800); // 3 iterations × 600ms
+      
       await delay(this.config.cooldownDelay);
     }
 
@@ -222,10 +229,14 @@ class SlotMachine {
     
     if (allMatch) {
       const winAmount = firstSymbol.payout * this.config.spinCost;
+      const oldCredits = this.state.credits;
       this.state.credits += winAmount;
       this.state.lastWin = winAmount;
       this.updateStatus(`🎉 WIN! ${firstSymbol.displayName} - ${winAmount} credits!`);
-      this.render();
+      
+      // Animate credit counter
+      this.animateCredits(oldCredits, this.state.credits);
+      
       return true;
     } else {
       this.state.lastWin = 0;
@@ -233,6 +244,36 @@ class SlotMachine {
       this.render();
       return false;
     }
+  }
+  
+  /**
+   * Animate credit counter from old value to new value.
+   * @param {number} from - Starting credit value
+   * @param {number} to - Ending credit value
+   */
+  animateCredits(from, to) {
+    const duration = 300; // ms
+    const startTime = performance.now();
+    
+    const animate = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Ease out cubic
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      
+      const currentValue = Math.floor(from + (to - from) * easeProgress);
+      this.elements.credits.textContent = currentValue;
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        this.elements.credits.textContent = to;
+        this.elements.lastWin.textContent = this.state.lastWin;
+      }
+    };
+    
+    requestAnimationFrame(animate);
   }
   
   updateStatus(message) {
